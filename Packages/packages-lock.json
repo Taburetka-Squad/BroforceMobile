@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.av.smart-inspector": {
+      "version": "0.8.0-pre.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
     "com.unity.2d.animation": {
       "version": "5.0.7",
       "depth": 0,
