@@ -3,7 +3,7 @@
 namespace Game.Weapons.Bullets
 {
     [CreateAssetMenu(menuName = "Game/Weapons/BulletData")]
-    class BulletData : MonoBehaviour
+    class BulletData : ScriptableObject
     {
         public float Damage => _damage;
 
