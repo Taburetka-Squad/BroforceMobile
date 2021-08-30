@@ -17,6 +17,7 @@ namespace Game
         [SerializeField] private float _jumpForce;
 
         private Rigidbody2D _rigidbody;
+        private const float raycastDistance = 1;
 
         private void Awake()
         {
@@ -31,7 +32,12 @@ namespace Game
         }
         protected void Jump()
         {
-            _rigidbody.AddForce(Vector2.up * _jumpForce);
+            RaycastHit2D raycastResult = Physics2D.Raycast(transform.position, Vector2.down, raycastDistance); ;
+
+            if(raycastResult.collider != null)
+            {
+                _rigidbody.AddForce(Vector2.up * _jumpForce);
+            }
         }
     }
 }
