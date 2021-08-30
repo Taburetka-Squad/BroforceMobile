@@ -25,11 +25,13 @@ namespace Game
 
         protected void Move(float direction)
         {
-            // TODO
+            Vector2 movement = new Vector2(direction, 0);
+
+            _rigidbody.velocity = new Vector2(movement.x * _speed, _rigidbody.velocity.y);
         }
         protected void Jump()
         {
-            // TODO
+            _rigidbody.AddForce(Vector2.up * _jumpForce);
         }
     }
 }
