@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ef70e8fb732afb44a0e3d30c14df7d6, type: 3}
-  m_Name: TestWeaponData
+  m_Script: {fileID: 11500000, guid: 47128f13d9e0cdb4893774a521fc687d, type: 3}
+  m_Name: TestBulletData
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 2394742887290787805, guid: 9d66b8ce2ef5bdb46bd9288090feb88d, type: 3}
-  _bulletData: {fileID: 11400000, guid: 8d0b52f4a97df3b4b931713d8cb9088d, type: 2}
-  _fireRate: 1
+  _prefab: {fileID: 1048833354623715301, guid: 01c98ca9b674f2840a3da29b3117c400, type: 3}
+  _damage: 1
+  _speed: 10

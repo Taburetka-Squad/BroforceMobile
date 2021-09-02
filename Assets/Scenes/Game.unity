@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &33795180 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3413519572789130861, guid: ecb595c3586a7ad40b4dcd9df7351c0a, type: 3}
+  m_PrefabInstance: {fileID: 216119692}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b161717dcda16a4d9508bf64f73aebe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &216119692
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -141,7 +152,11 @@ PrefabInstance:
     - target: {fileID: 1459315355141393841, guid: ecb595c3586a7ad40b4dcd9df7351c0a, type: 3}
       propertyPath: _weaponSlot
       value: 
-      objectReference: {fileID: 670751796988188566, guid: a414df96e5a715a46b615f333574c6c5, type: 3}
+      objectReference: {fileID: 33795180}
+    - target: {fileID: 1459315355141393841, guid: ecb595c3586a7ad40b4dcd9df7351c0a, type: 3}
+      propertyPath: raycastDistance
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3413519572789130861, guid: ecb595c3586a7ad40b4dcd9df7351c0a, type: 3}
       propertyPath: _startWeapon
       value: 

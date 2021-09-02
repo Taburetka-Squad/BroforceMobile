@@ -15,7 +15,7 @@ namespace Game.Weapons
 
         public void Shoot()
         {
-            // TODO
+            _data.BulletData.Spawn(_firePoint.position, _firePoint.rotation);
         }
     }
 }

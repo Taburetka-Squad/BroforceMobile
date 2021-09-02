@@ -6,11 +6,13 @@ namespace Game.Weapons.Bullets
     class BulletData : ScriptableObject
     {
         public float Damage => _damage;
+        public float Speed => _speed;
 
         [Header("References")]
         [SerializeField] private Bullet _prefab;
         [Header("Parameters")]
         [SerializeField] private float _damage;
+        [SerializeField] private float _speed;
 
         public Bullet Spawn(Vector2 position, Quaternion rotation)
         {
