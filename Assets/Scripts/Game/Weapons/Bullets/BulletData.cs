@@ -7,12 +7,14 @@ namespace Game.Weapons.Bullets
     {
         public float Damage => _damage;
         public float Speed => _speed;
+        public float LifeDistance => _lifeDistance;
 
         [Header("References")]
         [SerializeField] private Bullet _prefab;
         [Header("Parameters")]
         [SerializeField] private float _damage;
         [SerializeField] private float _speed;
+        [SerializeField] private int _lifeDistance;
 
         public Bullet Spawn(Vector2 position, Quaternion rotation)
         {

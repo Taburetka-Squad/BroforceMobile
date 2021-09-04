@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 namespace Game.Weapons
 {
@@ -7,15 +8,25 @@ namespace Game.Weapons
         [SerializeField] private Transform _firePoint;
 
         private WeaponData _data;
+        private float _shootDelay;
+        private float _lastShootTime;
 
         public void Initialize(WeaponData data)
         {
             _data = data;
+            _shootDelay = 1 / _data.FireRate;
         }
 
         public void Shoot()
         {
-            _data.BulletData.Spawn(_firePoint.position, _firePoint.rotation);
+            if (Time.time > _lastShootTime + _shootDelay)
+            {
+                var bullet = _data.BulletData.Spawn(_firePoint.position, _firePoint.rotation);
+
+                bullet.Move(_firePoint.right);
+
+                _lastShootTime = Time.time;
+            }
         }
     }
 }

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weaponSlot: {fileID: 3413519572789130861}
-  _speed: 0
-  _jumpForce: 0
-  raycastDistance: 0.1
+  _groundCollider: {fileID: 3691759628193172162}
+  _speed: 5
+  _jumpForce: 330
 --- !u!1001 &5176189263226815276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -76,6 +76,11 @@ PrefabInstance:
 --- !u!1 &5241799464340462397 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1111008546474678289, guid: 0541ed76d2221e54b8080ecb75f0b6f0, type: 3}
+  m_PrefabInstance: {fileID: 5176189263226815276}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &3691759628193172162 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: -797621573501171218, guid: 0541ed76d2221e54b8080ecb75f0b6f0, type: 3}
   m_PrefabInstance: {fileID: 5176189263226815276}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &3413519572789130861 stripped

@@ -7,22 +7,32 @@ namespace Game.Weapons.Bullets
     {
         private BulletData _data;
         private Rigidbody2D _rigidbody;
+        private Vector3 _startPosition;
 
         public void Initialize(BulletData data)
         {
             _data = data;
             _rigidbody = GetComponent<Rigidbody2D>();
-
-            Move();
         }
-        private void Move()
+        public void Move(Vector3 direction)
         {
-            _rigidbody.velocity = Vector2.right * _data.Speed;
+            _rigidbody.velocity = direction * _data.Speed;
         }
 
+        private void Start()
+        {
+            _startPosition = transform.position;
+        }
+        private void FixedUpdate()
+        {
+            if(Mathf.Abs(transform.position.x) > Mathf.Abs(_startPosition.x) + _data.LifeDistance)
+            {
+                Destroy(gameObject);
+            }
+        }
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            Destroy(this);
+            Destroy(gameObject);
             // TODO
         }
     }
