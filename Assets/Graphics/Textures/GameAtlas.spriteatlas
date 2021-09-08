@@ -44,13 +44,15 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 721349f640f332f429e7162a129f39dd, type: 3}
-    totalSpriteSurfaceArea: 0
+    totalSpriteSurfaceArea: 1024
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
-  m_PackedSprites: []
-  m_PackedSpriteNamesToIndex: []
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 5212f97d1b0b85e41ba58798e48daebc, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Square
   m_RenderDataMap: {}
   m_Tag: GameAtlas
   m_IsVariant: 0
