@@ -7,14 +7,8 @@ namespace Game.Map
 {
     class BlockTilemap : MonoBehaviour
     {
+        [Header("References")]
         [SerializeField] private Tilemap _tilemap;
-        [SerializeField] private Vector2Int _destroyPosition;
-
-        [ContextMenu("DestroyTest")]
-        public void DestroyTest()
-        {
-            DestroyIn(_destroyPosition);
-        }
 
         public void DestroyIn(Vector2Int position)
         {
