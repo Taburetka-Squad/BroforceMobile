@@ -12,16 +12,21 @@ namespace Game
 
         [Header("References")]
         [SerializeField] private WeaponSlot _weaponSlot;
+        [SerializeField] private BoxCollider2D _groundCollider;
         [Header("Parameters")]
         [SerializeField] private float _speed;
         [SerializeField] private float _jumpForce;
 
         private Rigidbody2D _rigidbody;
-        private const float raycastDistance = 1;
+        private bool _canJump;
 
         private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
+        }
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            _canJump = true;
         }
 
         protected void Move(float direction)
@@ -32,11 +37,11 @@ namespace Game
         }
         protected void Jump()
         {
-            RaycastHit2D raycastResult = Physics2D.Raycast(transform.position, Vector2.down, raycastDistance); ;
-
-            if(raycastResult.collider != null)
+            if(_canJump)
             {
                 _rigidbody.AddForce(Vector2.up * _jumpForce);
+
+                _canJump = false;
             }
         }
     }

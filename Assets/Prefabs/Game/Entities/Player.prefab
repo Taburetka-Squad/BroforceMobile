@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbce5cd985f4d9b478f39632b6202ed6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponSlot: {fileID: 0}
+  _weaponSlot: {fileID: 3413519572789130861}
+  _groundCollider: {fileID: 3691759628193172162}
   _speed: 5
   _jumpForce: 330
 --- !u!1001 &5176189263226815276
@@ -77,3 +78,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1111008546474678289, guid: 0541ed76d2221e54b8080ecb75f0b6f0, type: 3}
   m_PrefabInstance: {fileID: 5176189263226815276}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &3691759628193172162 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: -797621573501171218, guid: 0541ed76d2221e54b8080ecb75f0b6f0, type: 3}
+  m_PrefabInstance: {fileID: 5176189263226815276}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3413519572789130861 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7533050216491201857, guid: 0541ed76d2221e54b8080ecb75f0b6f0, type: 3}
+  m_PrefabInstance: {fileID: 5176189263226815276}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b161717dcda16a4d9508bf64f73aebe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

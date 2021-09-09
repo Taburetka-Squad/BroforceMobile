@@ -5,8 +5,7 @@ namespace Game.Weapons
     class WeaponSlot : MonoBehaviour
     {
         public Weapon CurrentWeapon { get; private set; }
-        public bool HasWeapon
-            => CurrentWeapon != null;
+        public bool HasWeapon => CurrentWeapon != null;
 
         [Header("References")]
         [SerializeField] WeaponData _startWeapon;
