@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbce5cd985f4d9b478f39632b6202ed6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 0
-  _jumpForce: 0
+  _weaponSlot: {fileID: 0}
+  _speed: 5
+  _jumpForce: 330
 --- !u!1001 &5176189263226815276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23,7 +24,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1111008546474678289, guid: 0541ed76d2221e54b8080ecb75f0b6f0, type: 3}
       propertyPath: m_Name
-      value: Entity
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 9098832138269941008, guid: 0541ed76d2221e54b8080ecb75f0b6f0, type: 3}
       propertyPath: m_RootOrder
