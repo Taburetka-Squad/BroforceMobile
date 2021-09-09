@@ -130,6 +130,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7098745015289862354, guid: 78a5e301d6ff8cd4b8501bcb7a85a536, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098745015289862354, guid: 78a5e301d6ff8cd4b8501bcb7a85a536, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7098745016960379764, guid: 78a5e301d6ff8cd4b8501bcb7a85a536, type: 3}
       propertyPath: m_RootOrder
       value: 4
