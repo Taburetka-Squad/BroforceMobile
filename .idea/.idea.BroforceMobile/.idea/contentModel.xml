@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\q3216\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\q3216\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_BroforceMobile.-253157138.00" t="ExcludeRecursive" />
+    <e p="C:\Users\q3216\Desktop\Projects\gameee\BroforceMobile" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Plugins" t="Include">
+          <e p="Hierarchy 2" t="Include">
+            <e p="Editor" t="Include">
+              <e p="GroupSelection.cs" t="Include" />
+              <e p="Hierarchy2Editor.asmdef" t="Include" />
+              <e p="HierarchyCanvas.cs" t="Include" />
+              <e p="HierarchyEditor.cs" t="Include" />
+              <e p="HierarchyFolderEditor.cs" t="Include" />
+              <e p="HierarchyLocalDataEditor.cs" t="Include" />
+              <e p="HierarchyResources.cs" t="Include" />
+              <e p="HierarchySettings.cs" t="Include" />
+              <e p="IHierarchyElement.cs" t="Include" />
+              <e p="IHierarchyShelf.cs" t="Include" />
+              <e p="InstantInspector.cs" t="Include" />
+              <e p="ObjectCustomization.cs" t="Include" />
+              <e p="OpenSettings.cs" t="Include" />
+              <e p="SceneRenamePopup.cs" t="Include" />
+              <e p="SelectionsRenamePopup.cs" t="Include" />
+            </e>
+            <e p="Runtime" t="Include">
+              <e p="CustomRowItem.cs" t="Include" />
+              <e p="Hierarchy2Runtime.asmdef" t="Include" />
+              <e p="HierarchyFolder.cs" t="Include" />
+              <e p="HierarchyLocalData.cs" t="Include" />
+              <e p="Texture2DExtensions.cs" t="Include" />
+              <e p="UIElements.cs" t="Include" />
+              <e p="VisualElementExstensions.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Sirenix" t="Include">
+            <e p="Odin Inspector" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="AssemblyImportSettingsAutomation.cs" t="Include" />
+                  <e p="BuildAOTAutomation.cs" t="Include" />
+                  <e p="EnsureOdinInspectorDefine.cs" t="Include" />
+                  <e p="FixBrokenUnityObjectWrapperDrawer.cs" t="Include" />
+                  <e p="SerializedNetworkBehaviour.cs" t="Include" />
+                  <e p="Sirenix.OdinInspector.CompatibilityLayer.Editor.asmdef" t="Include" />
+                  <e p="SyncListDrawer.cs" t="Include" />
+                  <e p="SyncVarAttributeDrawer.cs" t="Include" />
+                  <e p="Vector2IntMinMaxAttributeDrawer.cs" t="Include" />
+                  <e p="VectorIntDrawers.cs" t="Include" />
+                  <e p="VectorIntFormatters.cs" t="Include" />
+                  <e p="VectorIntPropertyResolvers.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Game" t="Include">
+            <e p="Enemy.cs" t="Include" />
+            <e p="Entity.cs" t="Include" />
+            <e p="Map" t="Include">
+              <e p="BlockTilemap.cs" t="Include" />
+              <e p="MouseBlockDestroyer.cs" t="Include" />
+              <e p="Tiles" t="Include">
+                <e p="Effectors" t="Include">
+                  <e p="ParticleEffector.cs" t="Include" />
+                  <e p="TileEffector.cs" t="Include" />
+                </e>
+                <e p="SmartTile.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Player.cs" t="Include" />
+            <e p="Weapons" t="Include">
+              <e p="Bullets" t="Include">
+                <e p="Bullet.cs" t="Include" />
+                <e p="BulletData.cs" t="Include" />
+              </e>
+              <e p="Weapon.cs" t="Include" />
+              <e p="WeaponData.cs" t="Include" />
+              <e p="WeaponSlot.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="BroforceMobile.sln" t="IncludeFlat" />
+      <e p="Hierarchy2Editor.csproj" t="IncludeRecursive" />
+      <e p="Hierarchy2Runtime.csproj" t="IncludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj" t="IncludeRecursive" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
