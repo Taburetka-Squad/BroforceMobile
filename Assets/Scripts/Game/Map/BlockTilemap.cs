@@ -13,19 +13,14 @@ namespace Game.Map
         public void DestroyIn(Vector2Int position)
         {
             if (TryGetTile(position, out SmartTile smartTile))
-            {
-                SetEmptyIn(position);
-                smartTile.DestroyIn(this, new Vector2(position.x + 0.5f, position.y + 0.5f));
-            }
+                smartTile.DestroyIn(this, position);
         }
-        public void SetEmptyIn(Vector2Int position, bool destroyBefore = false)
+        public void SetEmptyIn(Vector2Int position)
         {
-            SetIn(position, null, destroyBefore);
+            SetIn(position, null);
         }
-        public void SetIn(Vector2Int position, SmartTile block, bool destroyBefore = false)
+        public void SetIn(Vector2Int position, SmartTile block)
         {
-            if (destroyBefore) DestroyIn(position);
-
             _tilemap.SetTile((Vector3Int)position, block);
         }
 
@@ -38,6 +33,20 @@ namespace Game.Map
         private T GetTile<T>(Vector2Int position) where T : TileBase
         {
             return _tilemap.GetTile<T>((Vector3Int)position);
+        }
+
+        public Vector2 GetTileCenter(Vector2Int position)
+        {
+            return new Vector2(position.x + 0.5f, position.y + 0.5f);
+        }
+        public Vector2Int GetTilePositionFromCenter(Vector2 position)
+        {
+            var ceiledPosition = Vector2Int.CeilToInt(position);
+
+            ceiledPosition.x -= 1;
+            ceiledPosition.y -= 1;
+
+            return ceiledPosition;
         }
     }
 }

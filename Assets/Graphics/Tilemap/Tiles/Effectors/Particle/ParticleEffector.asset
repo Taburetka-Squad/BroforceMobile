@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33baacc6006ecca4b8b4fa02a8d0f1af, type: 3}
-  m_Name: FallParticleEffector
+  m_Name: ParticleEffector
   m_EditorClassIdentifier: 
   _prefab: {fileID: 4294255534574493125, guid: 404273ca3643e8f4b922aa4802629517, type: 3}
   _count: 50

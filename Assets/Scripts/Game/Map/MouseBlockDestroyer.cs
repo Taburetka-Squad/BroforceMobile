@@ -32,12 +32,8 @@ namespace Game.Map
         {
             var mouseScreenPosition = Input.mousePosition;
             var worldMousePosition = Camera.main.ScreenToWorldPoint(mouseScreenPosition);
-            var worldMousePositionCeiled = Vector2Int.CeilToInt(worldMousePosition);
 
-            worldMousePositionCeiled.x -= 1;
-            worldMousePositionCeiled.y -= 1;
-
-            return worldMousePositionCeiled;
+            return _tilemap.GetTilePositionFromCenter(worldMousePosition);
         }
         private void DestroyBlock(Vector2Int position)
         {
@@ -45,7 +41,7 @@ namespace Game.Map
         }
         private void PlaceBlock(Vector2Int position, SmartTile block)
         {
-            _tilemap.SetIn(position, block, false);
+            _tilemap.SetIn(position, block);
         }
     }
 }

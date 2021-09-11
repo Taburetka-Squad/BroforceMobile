@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4294255534574493125}
   - component: {fileID: 4294255534574493126}
   m_Layer: 0
-  m_Name: FallParticles
+  m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
