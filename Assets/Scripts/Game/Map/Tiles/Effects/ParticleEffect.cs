@@ -3,7 +3,7 @@
 namespace Game.Map.Tiles.Effectors
 {
     [CreateAssetMenu(menuName = "Game/Tiles/Effectors/Particle")]
-    class ParticleEffector : TileEffector
+    class ParticleEffect : TileEffect
     {
         [SerializeField] private ParticleSystem _prefab;
 

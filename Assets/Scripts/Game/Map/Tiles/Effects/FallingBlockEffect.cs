@@ -5,7 +5,7 @@ using Game.Map.Blocks;
 namespace Game.Map.Tiles.Effectors
 {
     [CreateAssetMenu(menuName = "Game/Tiles/Effectors/Falling")]
-    class FallingBlockEffector : TileEffector
+    class FallingBlockEffect : TileEffect
     {
         [SerializeField] private FallingBlock _prefab;
 

@@ -15,7 +15,7 @@ namespace Game.Map.Tiles
         [ShowIf(nameof(_canDestroy))]
         [SerializeField, Range(0, 100)] private int _chanceToDestroyUpBlock;
         [ShowIf(nameof(_canDestroy))]
-        [SerializeField] private TileEffector[] _destroyEffectors;
+        [SerializeField] private TileEffect[] _destroyEffects;
 
         public void DestroyIn(BlockTilemap tilemap, Vector2Int position)
         {
@@ -24,13 +24,13 @@ namespace Game.Map.Tiles
             tilemap.SetEmptyIn(position);
             var blockCenter = tilemap.GetTileCenter(position);
 
-            SpawnDestroyEffectors(tilemap, blockCenter);
+            SpawnDestroyEffects(tilemap, blockCenter);
             TryDestroyUpBlock(tilemap, position);
         }
-        private void SpawnDestroyEffectors(BlockTilemap tilemap, Vector2 position)
+        private void SpawnDestroyEffects(BlockTilemap tilemap, Vector2 position)
         {
-            foreach (var effector in _destroyEffectors)
-                effector.Spawn(tilemap, this, position);
+            foreach (var effect in _destroyEffects)
+                effect.Spawn(tilemap, this, position);
         }
         private void TryDestroyUpBlock(BlockTilemap tilemap, Vector2Int position)
         {
