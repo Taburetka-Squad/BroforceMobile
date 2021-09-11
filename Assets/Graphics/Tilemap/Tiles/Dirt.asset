@@ -36,5 +36,5 @@ MonoBehaviour:
   m_ColliderType: 1
   _canDestroy: 1
   _chanceToDestroyUpBlock: 40
-  _destroyEffectors:
+  _destroyEffects:
   - {fileID: 11400000, guid: 584646e9d1989a846b584ea09df596e6, type: 2}
