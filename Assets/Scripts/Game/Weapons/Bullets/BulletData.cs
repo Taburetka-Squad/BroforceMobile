@@ -7,18 +7,16 @@ namespace Game.Weapons.Bullets
     {
         public float Damage => _damage;
         public float Speed => _speed;
-        public float LifeDistance => _lifeDistance;
+        public float MaxDistance => _maxDistance;
 
-        [Header("References")] [SerializeField]
-        private Bullet _prefab;
-
-        [Header("Parameters")] [SerializeField]
-        private float _damage;
-
+        [Header("References")]
+        [SerializeField] private Bullet _prefab;
+        [Header("Parameters")]
+        [SerializeField] private float _damage;
         [SerializeField] private float _speed;
-        [SerializeField] private int _lifeDistance;
+        [SerializeField] private int _maxDistance;
 
-        public Bullet CreateBullet()
+        public Bullet Spawn()
         {
             var bullet = Instantiate(_prefab);
             bullet.Initialize(this);

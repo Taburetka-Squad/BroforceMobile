@@ -2,38 +2,34 @@
 
 namespace Game.Pools
 {
-    public class Pool<T> where T : PooledObject
+    class Pool<T> : IPoolReturn where T : PooledObject
     {
         private readonly Queue<T> _inactiveObjects = new Queue<T>();
 
-        public void AddObjectToPool(T obj)
+        public void Add(T obj)
         {
-            obj.Disabled += OnDisabled;
+            obj.AssignPool(this);
+        }
+        public void ReturnToPool(PooledObject obj)
+        {
+            obj.Disable();
+            _inactiveObjects.Enqueue((T)obj);
         }
 
-        private void OnDisabled(PooledObject obj)
+        public bool HasInactiveObjects()
         {
-            obj.gameObject.SetActive(false);
-            ReturnObjectToPool(obj);
+            return _inactiveObjects.Count > 0;
         }
-
-        private void ReturnObjectToPool(PooledObject obj)
+        public T GetInactiveObject()
         {
-            _inactiveObjects.Enqueue((T) obj);
+            var inactiveObject = _inactiveObjects.Dequeue();
+            inactiveObject.Enable();
+
+            return inactiveObject;
         }
-
-        public bool TryGetInactiveObject(out T pooledObject)
-        {
-            pooledObject = null;
-            var hasObject = _inactiveObjects.Count > 0;
-
-            if (hasObject)
-            {
-                pooledObject = _inactiveObjects.Dequeue();
-                pooledObject.gameObject.SetActive(true);
-            }
-
-            return hasObject;
-        }
+    }
+    interface IPoolReturn
+    {
+        void ReturnToPool(PooledObject obj);
     }
 }

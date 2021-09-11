@@ -1,6 +1,7 @@
-﻿using Game.Pools;
+﻿using UnityEngine;
+
+using Game.Pools;
 using Game.Weapons.Bullets;
-using UnityEngine;
 
 namespace Game.Weapons
 {
@@ -11,31 +12,35 @@ namespace Game.Weapons
         private WeaponData _data;
         private float _shootDelay;
         private float _lastShootTime;
-        private Pool<Bullet> _pool;
+
+        private Pool<Bullet> _bulletPool = new Pool<Bullet>();
 
         public void Initialize(WeaponData data)
         {
             _data = data;
             _shootDelay = 1 / _data.FireRate;
-            _pool = new Pool<Bullet>();
         }
 
         public void Shoot()
         {
-            if (Time.time > _lastShootTime + _shootDelay)
-            {
-                if (!_pool.TryGetInactiveObject(out var bullet))
-                {
-                    bullet = _data.BulletData.CreateBullet();
-                    _pool.AddObjectToPool(bullet);
-                }
+            var elapsedTime = Time.time - _lastShootTime;
+            var canShoot = elapsedTime > _shootDelay;
 
-                bullet.EnableInitialization(_firePoint.position, _firePoint.rotation);
+            if (canShoot == false) return;
+            else _lastShootTime = Time.time;
 
-                bullet.Move(_firePoint.right);
+            var bullet = GetBullet();
+            bullet.Initialize(_firePoint);
+        }
+        private Bullet GetBullet()
+        {
+            if (_bulletPool.HasInactiveObjects())
+                return _bulletPool.GetInactiveObject();
 
-                _lastShootTime = Time.time;
-            }
+            var bullet = _data.BulletData.Spawn();
+            _bulletPool.Add(bullet);
+
+            return bullet;
         }
     }
 }
