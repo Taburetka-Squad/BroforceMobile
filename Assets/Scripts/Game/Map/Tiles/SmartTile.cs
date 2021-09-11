@@ -37,6 +37,19 @@ namespace Game.Map.Tiles
             var randomNumber = Random.Range(0f,  100f);
             if (randomNumber <= _chanceToDestroyUpBlock)
                 tilemap.DestroyIn(position + Vector2Int.up);
+            
+            
+            /*
+            var blockCount = Random.Range(0, _blockCountToDestroy);
+            var currentPosition = position;
+            
+            for (var i = 0; i < blockCount; i++)
+            {
+                currentPosition += Vector2Int.up;
+                tilemap.DestroyIn(currentPosition);
+                
+            }
+            */
         }
     }
 }
