@@ -164,6 +164,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1459315355141393841, guid: ecb595c3586a7ad40b4dcd9df7351c0a, type: 3}
+      propertyPath: _entityData
+      value: 
+      objectReference: {fileID: 11400000, guid: d60a28503620cd946a2975280693d843, type: 2}
+    - target: {fileID: 1459315355141393841, guid: ecb595c3586a7ad40b4dcd9df7351c0a, type: 3}
       propertyPath: raycastDistance
       value: 1
       objectReference: {fileID: 0}
@@ -189,7 +193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4147831932365807164, guid: ecb595c3586a7ad40b4dcd9df7351c0a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4147831932365807164, guid: ecb595c3586a7ad40b4dcd9df7351c0a, type: 3}
       propertyPath: m_LocalRotation.x
@@ -197,7 +201,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4147831932365807164, guid: ecb595c3586a7ad40b4dcd9df7351c0a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4147831932365807164, guid: ecb595c3586a7ad40b4dcd9df7351c0a, type: 3}
       propertyPath: m_LocalRotation.z
@@ -209,7 +213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4147831932365807164, guid: ecb595c3586a7ad40b4dcd9df7351c0a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -180
       objectReference: {fileID: 0}
     - target: {fileID: 4147831932365807164, guid: ecb595c3586a7ad40b4dcd9df7351c0a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -220,8 +224,16 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5825108978857590776, guid: ecb595c3586a7ad40b4dcd9df7351c0a, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5825108978857590776, guid: ecb595c3586a7ad40b4dcd9df7351c0a, type: 3}
       propertyPath: m_BodyType
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5825108978857590776, guid: ecb595c3586a7ad40b4dcd9df7351c0a, type: 3}
+      propertyPath: m_GravityScale
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5825108978857590776, guid: ecb595c3586a7ad40b4dcd9df7351c0a, type: 3}
       propertyPath: m_UseFullKinematicContacts

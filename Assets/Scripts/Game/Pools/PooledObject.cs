@@ -2,7 +2,7 @@
 
 namespace Game.Pools
 {
-    abstract class PooledObject : MonoBehaviour
+    public abstract class PooledObject : MonoBehaviour
     {
         private IPoolReturn _pool;
 
@@ -10,10 +10,12 @@ namespace Game.Pools
         {
             _pool = pool;
         }
+        
         public void Enable()
         {
             gameObject.SetActive(true);
         }
+        
         public void Disable()
         {
             gameObject.SetActive(false);

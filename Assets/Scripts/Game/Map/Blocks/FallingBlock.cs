@@ -25,7 +25,7 @@ namespace Game.Map.Blocks
             Destroy(gameObject);
 
             var tilePosition = _tilemap.GetTilePositionFromCenter(transform.position);
-            _tilemap.SetIn(tilePosition, _tile);
+            _tilemap.SetAt(tilePosition, _tile);
         }
     }
 }

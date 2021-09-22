@@ -58,8 +58,15 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Game" t="Include">
+            <e p="Abilities" t="Include">
+              <e p="Grenade.cs" t="Include" />
+              <e p="GrenadeAbility.cs" t="Include" />
+              <e p="IAbility.cs" t="Include" />
+            </e>
             <e p="Enemy.cs" t="Include" />
             <e p="Entity.cs" t="Include" />
+            <e p="EntityData.cs" t="Include" />
+            <e p="IDamageable.cs" t="Include" />
             <e p="Map" t="Include">
               <e p="Blocks" t="Include">
                 <e p="FallingBlock.cs" t="Include" />
@@ -77,6 +84,7 @@
             </e>
             <e p="Player.cs" t="Include" />
             <e p="Pools" t="Include">
+              <e p="IPoolReturn.cs" t="Include" />
               <e p="Pool.cs" t="Include" />
               <e p="PooledObject.cs" t="Include" />
             </e>

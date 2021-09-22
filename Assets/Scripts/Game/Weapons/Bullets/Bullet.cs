@@ -5,7 +5,7 @@ using Game.Pools;
 namespace Game.Weapons.Bullets
 {
     [RequireComponent(typeof(Rigidbody2D))]
-    class Bullet : PooledObject
+    public class Bullet : PooledObject
     {
         private BulletData _data;
         private Rigidbody2D _rigidbody;
@@ -16,6 +16,7 @@ namespace Game.Weapons.Bullets
             _data = data;
             _rigidbody = GetComponent<Rigidbody2D>();
         }
+        
         public void Initialize(Transform firePoint)
         {
             transform.position = firePoint.position;

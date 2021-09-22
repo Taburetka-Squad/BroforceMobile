@@ -10,6 +10,7 @@ namespace Game.Pools
         {
             obj.AssignPool(this);
         }
+        
         public void ReturnToPool(PooledObject obj)
         {
             obj.Disable();
@@ -20,6 +21,7 @@ namespace Game.Pools
         {
             return _inactiveObjects.Count > 0;
         }
+        
         public T GetInactiveObject()
         {
             var inactiveObject = _inactiveObjects.Dequeue();
@@ -27,9 +29,5 @@ namespace Game.Pools
 
             return inactiveObject;
         }
-    }
-    interface IPoolReturn
-    {
-        void ReturnToPool(PooledObject obj);
     }
 }

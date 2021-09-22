@@ -37,11 +37,11 @@ namespace Game.Map
         }
         private void DestroyBlock(Vector2Int position)
         {
-            _tilemap.DestroyIn(position);
+            _tilemap.DestroyAt(position);
         }
         private void PlaceBlock(Vector2Int position, SmartTile block)
         {
-            _tilemap.SetIn(position, block);
+            _tilemap.SetAt(position, block);
         }
     }
 }

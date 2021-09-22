@@ -5,7 +5,7 @@ using Game.Weapons.Bullets;
 
 namespace Game.Weapons
 {
-    class Weapon : MonoBehaviour
+    public class Weapon : MonoBehaviour
     {
         [SerializeField] private Transform _firePoint;
 
@@ -27,17 +27,18 @@ namespace Game.Weapons
             var canShoot = elapsedTime > _shootDelay;
 
             if (canShoot == false) return;
-            else _lastShootTime = Time.time;
-
+            _lastShootTime = Time.time;
+            
             var bullet = GetBullet();
             bullet.Initialize(_firePoint);
         }
+        
         private Bullet GetBullet()
         {
             if (_bulletPool.HasInactiveObjects())
                 return _bulletPool.GetInactiveObject();
 
-            var bullet = _data.BulletData.Spawn();
+            var bullet = _data.BulletData.CreateInstance();
             _bulletPool.Add(bullet);
 
             return bullet;

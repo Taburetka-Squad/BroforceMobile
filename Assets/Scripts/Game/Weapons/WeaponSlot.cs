@@ -2,19 +2,14 @@
 
 namespace Game.Weapons
 {
-    class WeaponSlot : MonoBehaviour
+    public class WeaponSlot 
     {
-        public Weapon CurrentWeapon { get; private set; }
+        public Weapon CurrentWeapon { get; }
         public bool HasWeapon => CurrentWeapon != null;
 
-        [Header("References")]
-        [SerializeField] WeaponData _startWeapon;
-
-        private void Start()
+        public WeaponSlot(WeaponData weaponData, Transform parent)
         {
-            if (_startWeapon == null) return;
-
-            CurrentWeapon = _startWeapon.Spawn(transform);
+            CurrentWeapon = weaponData.CreateInstance(parent);
         }
     }
 }
