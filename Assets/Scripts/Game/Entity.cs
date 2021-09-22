@@ -39,7 +39,7 @@ namespace Game
         }
         protected void Jump()
         {
-            var canJump = _onGround || IsTouchWall();
+            var canJump = _onGround || IsTouchingWall();
             _onGround = false;
 
             if (canJump)
@@ -58,7 +58,7 @@ namespace Game
             transform.rotation = isFlip ? flipRotation : Quaternion.identity;
         }
 
-        private bool IsTouchWall()
+        private bool IsTouchingWall()
         {
             var direction = _isRotated ? Vector2.left : Vector2.right;
             var collider = Physics2D.Raycast(transform.position, direction, _raycastDistance);
