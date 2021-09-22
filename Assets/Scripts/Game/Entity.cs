@@ -16,9 +16,11 @@ namespace Game
         [Header("Parameters")]
         [SerializeField] private float _speed;
         [SerializeField] private float _jumpForce;
+        [SerializeField] private float _raycastDistance;
 
         private Rigidbody2D _rigidbody;
-        private bool _canJump;
+        private bool _onGround;
+        private bool _isRotated;
 
         private void Awake()
         {
@@ -26,7 +28,7 @@ namespace Game
         }
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            _canJump = true;
+            _onGround = true;
         }
 
         protected void Move(float direction)
@@ -37,12 +39,33 @@ namespace Game
         }
         protected void Jump()
         {
-            if(_canJump)
-            {
-                _rigidbody.AddForce(Vector2.up * _jumpForce);
+            var canJump = _onGround || IsTouchWall();
+            _onGround = false;
 
-                _canJump = false;
+            if (canJump)
+            {
+                _rigidbody.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
             }
+        }
+        protected void Rotate(float direction)
+        {
+            if (direction == 0) return;
+
+            var isFlip = direction < 0;
+            var flipRotation = new Quaternion(0, 180, 0, 0);
+
+            _isRotated = isFlip;
+            transform.rotation = isFlip ? flipRotation : Quaternion.identity;
+        }
+
+        private bool IsTouchWall()
+        {
+            var direction = _isRotated ? Vector2.left : Vector2.right;
+            var collider = Physics2D.Raycast(transform.position, direction, _raycastDistance);
+            
+            Debug.DrawRay(transform.position, direction, Color.red);
+
+            return collider;
         }
     }
 }

@@ -20,16 +20,5 @@ namespace Game
             if (canShoot)
                 WeaponSlot.CurrentWeapon.Shoot();
         }
-        private void Rotate(float direction)
-        {
-            if (direction == 1)
-            {
-                transform.rotation = new Quaternion(0, 0, 0, 0);
-            }
-            else if (direction == -1)
-            {
-                transform.rotation = new Quaternion(0, 180, 0, 0);
-            }
-        }
     }
 }
