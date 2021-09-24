@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-
 using Game.Weapons;
 
 namespace Game
@@ -15,20 +14,18 @@ namespace Game
         [SerializeField] private BoxCollider2D _groundCollider;
         [Header("Parameters")]
         [SerializeField] private float _speed;
+        [SerializeField] private float _slideSpeed;
         [SerializeField] private float _jumpForce;
-        [SerializeField] private float _raycastDistance;
+        [SerializeField] private float _wallJumpDelay;
+        [SerializeField] private float _wallCheckDistance;
 
         private Rigidbody2D _rigidbody;
-        private bool _onGround;
         private bool _isRotated;
+        private float _lastWallJumpTime;
 
         private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
-        }
-        private void OnTriggerEnter2D(Collider2D collision)
-        {
-            _onGround = true;
         }
 
         protected void Move(float direction)
@@ -39,8 +36,11 @@ namespace Game
         }
         protected void Jump()
         {
-            var canJump = _onGround || IsTouchingWall();
-            _onGround = false;
+            var _onGround = _groundCollider.IsTouchingLayers();
+            var isTimeOver = Time.time > _lastWallJumpTime + _wallJumpDelay;
+            var canJump = isTimeOver ? _onGround || IsTouchingWall() : _onGround;
+
+            _lastWallJumpTime = Time.time;
 
             if (canJump)
             {
@@ -51,17 +51,23 @@ namespace Game
         {
             if (direction == 0) return;
 
-            var isFlip = direction < 0;
-            var flipRotation = new Quaternion(0, 180, 0, 0);
+            _isRotated = direction < 0;
 
-            _isRotated = isFlip;
-            transform.rotation = isFlip ? flipRotation : Quaternion.identity;
+            transform.right = Vector2.right * direction;
+            //transform.right = _rigidbody.velocity.normalized;
+        }
+        protected void Slide()
+        {
+            if (IsTouchingWall() && _rigidbody.velocity.y < _slideSpeed)
+            {
+                _rigidbody.velocity = new Vector2(0, _slideSpeed);
+            }
         }
 
         private bool IsTouchingWall()
         {
             var direction = _isRotated ? Vector2.left : Vector2.right;
-            var collider = Physics2D.Raycast(transform.position, direction, _raycastDistance);
+            var collider = Physics2D.Raycast(transform.position, direction, _wallCheckDistance);
             
             Debug.DrawRay(transform.position, direction, Color.red);
 

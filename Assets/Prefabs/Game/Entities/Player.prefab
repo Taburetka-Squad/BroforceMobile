@@ -15,8 +15,10 @@ MonoBehaviour:
   _weaponSlot: {fileID: 3413519572789130861}
   _groundCollider: {fileID: 6309062718255529102}
   _speed: 5
+  _slideSpeed: 0.5
   _jumpForce: 7
-  _raycastDistance: 0.6
+  _wallJumpDelay: 0.2
+  _wallCheckDistance: 0.6
 --- !u!1001 &5176189263226815276
 PrefabInstance:
   m_ObjectHideFlags: 0

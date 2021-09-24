@@ -15,10 +15,18 @@ namespace Game
             Move(horizontalDirection);
 
             if (canJump)
+            {
                 Jump();
+            }
+            else
+            {
+                Slide();
+            }
 
             if (canShoot)
+            {
                 WeaponSlot.CurrentWeapon.Shoot();
+            }
         }
     }
 }
