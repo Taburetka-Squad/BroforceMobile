@@ -59,14 +59,25 @@
         <e p="Scripts" t="Include">
           <e p="Game" t="Include">
             <e p="Abilities" t="Include">
+              <e p="ExplodeAmmo.cs" t="Include" />
               <e p="Grenade.cs" t="Include" />
               <e p="GrenadeAbility.cs" t="Include" />
               <e p="IAbility.cs" t="Include" />
+              <e p="Rocket.cs" t="Include" />
+              <e p="RocketRainAbility.cs" t="Include" />
             </e>
-            <e p="Enemy.cs" t="Include" />
-            <e p="Entity.cs" t="Include" />
-            <e p="EntityData.cs" t="Include" />
-            <e p="IDamageable.cs" t="Include" />
+            <e p="CheckPoint.cs" t="Include" />
+            <e p="Entities" t="Include">
+              <e p="Enemy.cs" t="Include" />
+              <e p="Entity.cs" t="Include" />
+              <e p="EntityData.cs" t="Include" />
+              <e p="Player.cs" t="Include" />
+            </e>
+            <e p="Health" t="Include">
+              <e p="Health.cs" t="Include" />
+              <e p="HealthData.cs" t="Include" />
+              <e p="IDamageable.cs" t="Include" />
+            </e>
             <e p="Map" t="Include">
               <e p="Blocks" t="Include">
                 <e p="FallingBlock.cs" t="Include" />
@@ -82,7 +93,6 @@
                 <e p="SmartTile.cs" t="Include" />
               </e>
             </e>
-            <e p="Player.cs" t="Include" />
             <e p="Pools" t="Include">
               <e p="IPoolReturn.cs" t="Include" />
               <e p="Pool.cs" t="Include" />

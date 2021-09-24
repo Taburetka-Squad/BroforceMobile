@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Game.Map.Tiles.Effectors
+namespace Game.Map.Tiles.Effects
 {
     abstract class TileEffect : ScriptableObject
     {

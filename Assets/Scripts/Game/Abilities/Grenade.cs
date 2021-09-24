@@ -1,34 +1,20 @@
-﻿using DefaultNamespace;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Game.Abilities
 {
-    public class Grenade : MonoBehaviour
+    [RequireComponent(typeof(Rigidbody2D))]
+    public class Grenade : ExplodeAmmo
     {
-        [SerializeField, Range(0, 100)] private float _explosionRadius;
-        [SerializeField] private int _damage;
+        private Rigidbody2D _rigidbody2D;
 
-        private void Explode()
+        private void Awake()
         {
-            var colliders = Physics2D.OverlapCircleAll(transform.position, _explosionRadius);
-
-            foreach (var collider in colliders)
-            {
-                if (collider.TryGetComponent<IDamageable>(out var damageable))
-                {
-                    damageable.TakeDamage(_damage);
-                }
-            }
+            _rigidbody2D = gameObject.GetComponent<Rigidbody2D>();
         }
-
-#if UNITY_EDITOR
-
-        private void OnDrawGizmosSelected()
+        
+        public void Throw(Vector3 direction, float force)
         {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(transform.position, _explosionRadius);
+            _rigidbody2D.AddForce(direction * force, ForceMode2D.Impulse);
         }
-
-#endif
     }
 }

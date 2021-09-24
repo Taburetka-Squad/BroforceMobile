@@ -15,4 +15,5 @@ MonoBehaviour:
   _speed: 10
   _jumpForce: 20
   _weaponData: {fileID: 11400000, guid: fd27c8cb6d7eb5e4c8f9299cd79dcc14, type: 2}
+  _healthData: {fileID: 11400000, guid: bbd4fe646d3aa754f9c2e0da05033e95, type: 2}
   _prefab: {fileID: 0}

@@ -1,8 +1,8 @@
-﻿using Game;
+﻿using Game.Health;
 using Game.Weapons;
 using UnityEngine;
 
-namespace DefaultNamespace
+namespace Game.Entities
 {
     [CreateAssetMenu(menuName = "EntityData", order = 0)]
     public class EntityData : ScriptableObject
@@ -15,6 +15,9 @@ namespace DefaultNamespace
         
         public WeaponData WeaponData => _weaponData;
         [SerializeField] private WeaponData _weaponData;
+
+        public HealthData HealthData => _healthData;
+        [SerializeField] private HealthData _healthData;
         
         [SerializeField] private Entity _prefab;
 

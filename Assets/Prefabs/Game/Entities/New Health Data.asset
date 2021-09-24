@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47128f13d9e0cdb4893774a521fc687d, type: 3}
-  m_Name: TestBulletData
+  m_Script: {fileID: 11500000, guid: fc8bf7c889d945088d221c858c7080ee, type: 3}
+  m_Name: New Health Data
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 1048833354623715301, guid: 01c98ca9b674f2840a3da29b3117c400, type: 3}
-  _damage: 1
-  _speed: 50
-  _maxDistance: 20
+  _hitPoints: 1

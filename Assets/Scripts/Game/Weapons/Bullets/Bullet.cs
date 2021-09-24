@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Game.Health;
+using UnityEngine;
 
 using Game.Pools;
 
@@ -43,6 +44,12 @@ namespace Game.Weapons.Bullets
         private void OnCollisionEnter2D(Collision2D collision)
         {
             ReturnToPool();
+            
+            if(collision.gameObject.TryGetComponent<IDamageable>(out var damageable))
+            {
+                damageable.TakeDamage(_data.Damage);
+            }
+            
             // TODO
         }
     }

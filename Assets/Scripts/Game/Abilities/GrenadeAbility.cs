@@ -11,7 +11,7 @@ namespace Game.Abilities
         public void Use(Transform startTransform)
         {
             var grenade = Instantiate(_prefab, startTransform.position, startTransform.rotation);
-            grenade.GetComponent<Rigidbody2D>().AddForce(startTransform.right * _throwForce, ForceMode2D.Impulse);
+            grenade.Throw(startTransform.right, _throwForce);
         }
     }
 }

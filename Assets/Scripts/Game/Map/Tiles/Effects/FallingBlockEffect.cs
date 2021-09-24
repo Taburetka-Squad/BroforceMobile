@@ -1,8 +1,7 @@
-﻿using UnityEngine;
+﻿using Game.Map.Blocks;
+using UnityEngine;
 
-using Game.Map.Blocks;
-
-namespace Game.Map.Tiles.Effectors
+namespace Game.Map.Tiles.Effects
 {
     [CreateAssetMenu(menuName = "Game/Tiles/Effectors/Falling")]
     class FallingBlockEffect : TileEffect
