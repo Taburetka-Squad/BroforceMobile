@@ -1,11 +1,22 @@
 using Game.Abilities;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Game
+namespace Game.Entities
 {
     class Player : Entity
     {
-        private IAbility _ability;
+        [ShowInInspector] private IAbility _ability;
+        
+        public override void TakeDamage(int damage)
+        {
+           _health.TakeDamage(damage);
+        }
+        
+        protected override void OnDied()
+        {
+            Debug.Log("Player Died");
+        }
         
         // Input
         private void Update()
@@ -14,7 +25,7 @@ namespace Game
             var canJump = Input.GetKeyDown(KeyCode.Space);
             var canShoot = Input.GetMouseButton(0) && WeaponSlot.HasWeapon;
 
-            if (Input.GetKey(KeyCode.Mouse1))
+            if (Input.GetKeyDown(KeyCode.Mouse1))
             {
                 _ability.Use(transform);
             }
@@ -29,6 +40,7 @@ namespace Game
                 WeaponSlot.CurrentWeapon.Shoot();
             
         }
+        
         private void Rotate(float direction)
         {
             if (direction == 1)
@@ -40,5 +52,6 @@ namespace Game
                 transform.rotation = new Quaternion(0, 180, 0, 0);
             }
         }
+
     }
 }

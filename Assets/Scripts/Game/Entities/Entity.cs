@@ -1,12 +1,12 @@
-﻿using DefaultNamespace;
-using UnityEngine;
+﻿using Game.Health;
 using Game.Weapons;
+using UnityEngine;
 
-namespace Game
+namespace Game.Entities
 {
     [RequireComponent(typeof(Rigidbody2D))]
     [RequireComponent(typeof(BoxCollider2D))]
-    public abstract class Entity : MonoBehaviour
+    public abstract class Entity : MonoBehaviour, IDamageable
     {
         protected WeaponSlot WeaponSlot => _weaponSlot;
 
@@ -16,15 +16,21 @@ namespace Game
         [SerializeField] private BoxCollider2D _groundCollider;
         [SerializeField] private EntityData _entityData;
 
+        protected Health.Health _health;
+        
         private Rigidbody2D _rigidbody;
         private bool _canJump;
 
         public void Initialize(EntityData data)
         {
             _entityData = data;
+            _health = data.HealthData.GetInstance();
+            _health.Died += OnDied;
             _weaponSlot = new WeaponSlot(data.WeaponData, transform);
         }
 
+        public abstract void TakeDamage(int damage);
+        
         private void Awake()
         {
             Initialize(_entityData);
@@ -52,5 +58,8 @@ namespace Game
                 _canJump = false;
             }
         }
+
+        protected abstract void OnDied();
+
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace DefaultNamespace
+﻿namespace Game.Health
 {
     public interface IDamageable
     {
