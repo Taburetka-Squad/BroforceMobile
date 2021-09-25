@@ -1,58 +1,60 @@
 ﻿using UnityEngine;
-using UnityEngine.Tilemaps;
 
-using Game.Health;
 using Game.Map.Tiles;
 
 namespace Game.Map
 {
-    class BlockTilemap : MonoBehaviour, IDamageable
+    public class BlockTilemap : MonoBehaviour
     {
         [Header("References")]
-        [SerializeField] private Tilemap _tilemap;
+        [SerializeField] private UnityEngine.Tilemaps.Tilemap _tilemap;
 
-        public void DestroyAt(Vector2Int position)
+        private void Start()
         {
-            if (TryGetTile(position, out SmartTile smartTile))
-                smartTile.Destroy(this, position);
-        }
-        public void SetEmptyAt(Vector2Int position)
-        {
-            SetAt(position, null);
-        }
-        public void SetAt(Vector2Int position, SmartTile block)
-        {
-            _tilemap.SetTile((Vector3Int)position, block);
+            SpawnBlocks();
         }
 
-        private bool TryGetTile<T>(Vector2Int position, out T tile) where T : TileBase
+        private void SpawnBlocks()
         {
-            tile = GetTile<T>(position);
+            foreach (var localPosition in _tilemap.cellBounds.allPositionsWithin)
+            {
+                var tile = GetTile(localPosition);
+                if (tile == null) continue;
 
-            return tile != null;
+                SpawnBlock(tile, localPosition);
+            }
         }
-        private T GetTile<T>(Vector2Int position) where T : TileBase
+        public void SpawnBlock(BlockTile tile, Vector3Int localPosition)
         {
-            return _tilemap.GetTile<T>((Vector3Int)position);
+            var position = _tilemap.CellToWorld(localPosition);
+            var rotation = _tilemap.GetTransformMatrix(localPosition).rotation;
+
+            tile.SpawnBlock(position, rotation, transform);
+
+            RemoveTile(localPosition);
         }
 
-        public void TakeDamage(int damage)
+        private BlockTile GetTile(Vector3Int localPosition)
         {
-            Debug.Log("Abobus " + damage);
+            return _tilemap.GetTile<BlockTile>(localPosition);
+        }
+        private void RemoveTile(Vector3Int localPosition)
+        {
+            _tilemap.SetTile(localPosition, null);
         }
 
-        public Vector2 GetTileCenter(Vector2Int position)
+        public Vector2 GetTileCenter(Vector2 position)
         {
             return new Vector2(position.x + 0.5f, position.y + 0.5f);
         }
-        public Vector2Int GetTilePositionFromCenter(Vector2 position)
+        public Vector2 GetTilePosition(Vector2 position)
         {
             var ceiledPosition = Vector2Int.CeilToInt(position);
 
             ceiledPosition.x -= 1;
             ceiledPosition.y -= 1;
 
-            return ceiledPosition;
+            return ceiledPosition; // (Vector2Int)_tilemap.WorldToCell(worldPosition);
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 using Game.Weapons;
-using Game.Health;
+using Game.Damage;
 
 namespace Game.Entities
 {

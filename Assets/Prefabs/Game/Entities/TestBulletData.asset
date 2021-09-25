@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefab: {fileID: 1048833354623715301, guid: 01c98ca9b674f2840a3da29b3117c400, type: 3}
   _damage: 1
-  _speed: 50
+  _speed: 20
   _maxDistance: 20

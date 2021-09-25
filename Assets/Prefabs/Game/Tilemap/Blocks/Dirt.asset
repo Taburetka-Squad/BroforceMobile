@@ -34,7 +34,4 @@ MonoBehaviour:
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 1
   m_ColliderType: 1
-  _canDestroy: 1
-  _chanceToDestroyUpBlock: 40
-  _destroyEffects:
-  - {fileID: 11400000, guid: 584646e9d1989a846b584ea09df596e6, type: 2}
+  _prefab: {fileID: 656520378744476931, guid: 0dc5eaa7ddd5d4c478e9ad9e613f3f4c, type: 3}

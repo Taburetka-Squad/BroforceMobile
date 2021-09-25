@@ -7,7 +7,7 @@ namespace Game.Map.Tiles.Effects
     {
         [SerializeField] private ParticleSystem _prefab;
 
-        public override void Spawn(BlockTilemap tilemap, SmartTile tile, Vector2 position)
+        public override void Spawn(BlockTilemap tilemap, BlockTile tile, Vector2 position)
         {
             var particleSystem = Instantiate(_prefab, position, Quaternion.identity);
 
