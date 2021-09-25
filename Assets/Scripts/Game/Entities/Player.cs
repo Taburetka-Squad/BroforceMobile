@@ -1,12 +1,12 @@
 using UnityEngine;
-using Sirenix.OdinInspector;
+
 using Game.Abilities;
 
 namespace Game.Entities
 {
     class Player : Entity
     {
-        [ShowInInspector] private IAbility _ability;
+        [SerializeField] private ScriptableAbility _ability;
 
         public override void TakeDamage(int damage)
         {
@@ -36,7 +36,7 @@ namespace Game.Entities
                 WeaponSlot.CurrentWeapon.Shoot();
 
             if (Input.GetKeyDown(KeyCode.Mouse1))
-                _ability.Use(transform);
+                _ability?.Use(transform);
         }
     }
 }

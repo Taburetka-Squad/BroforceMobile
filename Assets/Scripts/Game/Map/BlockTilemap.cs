@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.Tilemaps;
 
+using Game.Health;
 using Game.Map.Tiles;
 
 namespace Game.Map
 {
-    class BlockTilemap : MonoBehaviour
+    class BlockTilemap : MonoBehaviour, IDamageable
     {
         [Header("References")]
         [SerializeField] private Tilemap _tilemap;
@@ -15,12 +16,10 @@ namespace Game.Map
             if (TryGetTile(position, out SmartTile smartTile))
                 smartTile.Destroy(this, position);
         }
-        
         public void SetEmptyAt(Vector2Int position)
         {
             SetAt(position, null);
         }
-        
         public void SetAt(Vector2Int position, SmartTile block)
         {
             _tilemap.SetTile((Vector3Int)position, block);
@@ -32,17 +31,20 @@ namespace Game.Map
 
             return tile != null;
         }
-        
         private T GetTile<T>(Vector2Int position) where T : TileBase
         {
             return _tilemap.GetTile<T>((Vector3Int)position);
+        }
+
+        public void TakeDamage(int damage)
+        {
+            Debug.Log("Abobus " + damage);
         }
 
         public Vector2 GetTileCenter(Vector2Int position)
         {
             return new Vector2(position.x + 0.5f, position.y + 0.5f);
         }
-        
         public Vector2Int GetTilePositionFromCenter(Vector2 position)
         {
             var ceiledPosition = Vector2Int.CeilToInt(position);

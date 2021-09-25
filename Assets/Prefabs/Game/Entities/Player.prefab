@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _groundCollider: {fileID: 6309062718255529102}
-  _entityData: {fileID: 0}
+  _entityData: {fileID: 11400000, guid: d60a28503620cd946a2975280693d843, type: 2}
   _speed: 5
   _slideSpeed: 0.5
-  _jumpForce: 7
-  _wallJumpDelay: 0.2
-  _wallCheckDistance: 0.5
+  _jumpForce: 18
+  _wallJumpDelay: 0.4
+  _wallCheckDistance: 0.6
 --- !u!1001 &5176189263226815276
 PrefabInstance:
   m_ObjectHideFlags: 0

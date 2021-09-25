@@ -1,14 +1,15 @@
-﻿using Game.Health;
-using Game.Map.Tiles.Effects;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Tilemaps;
 
 using Sirenix.OdinInspector;
 
+using Game.Health;
+using Game.Map.Tiles.Effects;
+
 namespace Game.Map.Tiles
 {
     [CreateAssetMenu(menuName = "Game/Tiles/SmartTile")]
-    class SmartTile : Tile, IDamageable
+    class SmartTile : Tile
     {
         [Header("Destroy")]
         [SerializeField] private bool _canDestroy;
@@ -28,11 +29,6 @@ namespace Game.Map.Tiles
 
             SpawnDestroyEffects(tilemap, blockCenter);
             TryDestroyUpBlock(tilemap, position);
-        }
-        
-        public void TakeDamage(int damage)
-        {
-
         }
         
         private void SpawnDestroyEffects(BlockTilemap tilemap, Vector2 position)

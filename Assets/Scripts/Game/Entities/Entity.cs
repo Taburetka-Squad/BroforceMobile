@@ -2,7 +2,6 @@
 
 using Game.Weapons;
 using Game.Health;
-using UnityEngine.Networking.Types;
 
 namespace Game.Entities
 {
@@ -13,7 +12,6 @@ namespace Game.Entities
         protected WeaponSlot WeaponSlot => _weaponSlot;
 
         [Header("References")]
-        [SerializeField] private WeaponSlot _weaponSlot;
         [SerializeField] private BoxCollider2D _groundCollider;
         [SerializeField] private EntityData _entityData;
 
@@ -24,6 +22,7 @@ namespace Game.Entities
         [SerializeField] private float _wallJumpDelay;
         [SerializeField] private float _wallCheckDistance;
 
+        private WeaponSlot _weaponSlot;
         protected Health.Health _health;
 
         private Rigidbody2D _rigidbody;
@@ -33,6 +32,7 @@ namespace Game.Entities
         private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
+            Initialize(_entityData);
         }
 
         public void Initialize(EntityData data)
