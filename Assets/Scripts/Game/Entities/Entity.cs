@@ -54,17 +54,6 @@ namespace Game.Entities
 
             _rigidbody.velocity = new Vector2(movement.x * _speed, _rigidbody.velocity.y);
         }
-        protected void Jump()
-        {
-            var _onGround = _groundCollider.IsTouchingLayers();
-            var isTimeOver = Time.time > _lastWallJumpTime + _wallJumpDelay;
-            var canJump = isTimeOver ? _onGround || IsTouchingWall() : _onGround;
-
-            _lastWallJumpTime = Time.time;
-
-            if (canJump)
-                _rigidbody.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
-        }
         protected void Rotate(float direction)
         {
             if (direction == 0) return;
@@ -72,12 +61,25 @@ namespace Game.Entities
             _isRotated = direction < 0;
 
             transform.right = Vector2.right * direction;
-            //transform.right = _rigidbody.velocity.normalized;
         }
-        protected void Slide()
+        protected void Slide(float direction)
         {
-            if (IsTouchingWall() && _rigidbody.velocity.y < _slideSpeed)
+            var canSlide = IsTouchingWall() && _rigidbody.velocity.y < _slideSpeed && direction != 0;
+            
+            if (canSlide)
                 _rigidbody.velocity = new Vector2(0, _slideSpeed);
+        }
+        protected void Jump()
+        {
+            var _onGround = _groundCollider.IsTouchingLayers();
+            var isTimeOver = Time.time > _lastWallJumpTime + _wallJumpDelay;
+            var canJump = isTimeOver ? _onGround || IsTouchingWall() : _onGround;
+
+            if (canJump)
+            {
+                _lastWallJumpTime = Time.time;
+                _rigidbody.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
+            }
         }
 
         private bool IsTouchingWall()
@@ -85,7 +87,7 @@ namespace Game.Entities
             var direction = _isRotated ? Vector2.left : Vector2.right;
             var collider = Physics2D.Raycast(transform.position, direction, _wallCheckDistance);
 
-            Debug.DrawRay(transform.position, direction, Color.red);
+            Debug.DrawRay(transform.position, direction * _wallCheckDistance, Color.red);
 
             return collider;
         }
