@@ -32,7 +32,7 @@ namespace Game.Map.Tiles
         
         public void TakeDamage(int damage)
         {
-           
+
         }
         
         private void SpawnDestroyEffects(BlockTilemap tilemap, Vector2 position)

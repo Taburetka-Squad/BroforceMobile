@@ -1,5 +1,6 @@
 ﻿using Game.Health;
 using Game.Weapons;
+
 using UnityEngine;
 
 namespace Game.Entities
@@ -7,24 +8,27 @@ namespace Game.Entities
     [CreateAssetMenu(menuName = "EntityData", order = 0)]
     public class EntityData : ScriptableObject
     {
-        public float Speed => _speed;
-        [SerializeField] private float _speed;
-        
-        public float JumpForce => _jumpForce;
-        [SerializeField] private float _jumpForce;
-        
+        public Entity Prefab => _prefab;
         public WeaponData WeaponData => _weaponData;
+        public HealthData HealthData => _healthData;
+
+        public float Speed => _speed;
+        public float JumpForce => _jumpForce;
+
+        [Header("References")]
+        [SerializeField] private Entity _prefab;
+        [SerializeField] private HealthData _healthData;
         [SerializeField] private WeaponData _weaponData;
 
-        public HealthData HealthData => _healthData;
-        [SerializeField] private HealthData _healthData;
+        [Header("Parameters")]
+        [SerializeField] private float _speed;
+        [SerializeField] private float _jumpForce;
         
-        [SerializeField] private Entity _prefab;
-
-        public Entity GetEntityInstance()
+        public Entity CreateInstance()
         {
             var entity = Instantiate(_prefab);
             entity.Initialize(this);
+
             return entity;
         }
     }
