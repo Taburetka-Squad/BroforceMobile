@@ -1,7 +1,5 @@
 using UnityEngine;
-
 using Sirenix.OdinInspector;
-
 using Game.Abilities;
 
 namespace Game.Entities
