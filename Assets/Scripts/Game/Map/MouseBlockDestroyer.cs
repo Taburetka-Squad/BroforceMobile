@@ -12,7 +12,7 @@ namespace Game.Map
 
         private void Update()
         {
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButtonDown(0))
                 DestroyBlock();
             if (Input.GetMouseButtonDown(1))
                 PlaceBlock();
@@ -42,10 +42,9 @@ namespace Game.Map
         }
         private void DestroyBlock(Block block)
         {
-            Destroy(block);
+            Destroy(block.gameObject);
         }
 
-        
         private Vector2 GetTilePositionByMouse()
         {
             var screenPosition = Input.mousePosition;
@@ -58,7 +57,7 @@ namespace Game.Map
         {
             block = null;
 
-            var collider = Physics2D.Raycast(position, Vector2.zero).collider;
+            var collider = Physics2D.OverlapPoint(position);
             if (collider == null) return false;
 
             return collider.TryGetComponent(out block);

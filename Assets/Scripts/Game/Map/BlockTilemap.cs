@@ -43,18 +43,15 @@ namespace Game.Map
             _tilemap.SetTile(localPosition, null);
         }
 
+        public Vector2 GetTilePosition(Vector2 position)
+        {
+            var center = GetTileCenter(position);
+
+            return (Vector2Int)_tilemap.WorldToCell(center);
+        }
         public Vector2 GetTileCenter(Vector2 position)
         {
             return new Vector2(position.x + 0.5f, position.y + 0.5f);
-        }
-        public Vector2 GetTilePosition(Vector2 position)
-        {
-            var ceiledPosition = Vector2Int.CeilToInt(position);
-
-            ceiledPosition.x -= 1;
-            ceiledPosition.y -= 1;
-
-            return ceiledPosition; // (Vector2Int)_tilemap.WorldToCell(worldPosition);
         }
     }
 }
