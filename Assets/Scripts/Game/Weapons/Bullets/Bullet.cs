@@ -32,7 +32,7 @@ namespace Game.Weapons.Bullets
             _rigidbody.velocity = direction * _data.Speed;
         }
         
-        private void FixedUpdate()
+        private void Update()
         {
             var distance = Mathf.Abs(transform.position.x - _startPosition.x);
             var isOutOfRange = distance > _data.MaxDistance;

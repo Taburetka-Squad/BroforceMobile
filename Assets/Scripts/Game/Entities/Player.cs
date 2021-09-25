@@ -30,7 +30,7 @@ namespace Game.Entities
 
             if (canJump)
                 Jump();
-            else Slide();
+            else Slide(horizontalDirection);
 
             if (canShoot)
                 WeaponSlot.CurrentWeapon.Shoot();

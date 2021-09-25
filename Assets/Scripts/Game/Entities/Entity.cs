@@ -73,9 +73,11 @@ namespace Game.Entities
 
             transform.right = Vector2.right * direction;
         }
-        protected void Slide()
+        protected void Slide(float direction)
         {
-            if (IsTouchingWall() && _rigidbody.velocity.y < _slideSpeed)
+            var canSlide = IsTouchingWall() && _rigidbody.velocity.y < _slideSpeed && direction != 0;
+
+            if (canSlide)
                 _rigidbody.velocity = new Vector2(0, _slideSpeed);
         }
 
