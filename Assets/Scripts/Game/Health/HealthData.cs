@@ -1,15 +1,16 @@
-﻿using UnityEngine;
+﻿using Sirenix.OdinInspector;
+using UnityEngine;
 
 namespace Game.Health
 {
     [CreateAssetMenu(menuName = "HealthData", order = 0)]
     public class HealthData : ScriptableObject
     {
-        [SerializeField] private int _hitPoints;
-        
+        [MinMaxSlider(0, 100), SerializeField] private Vector2Int _hitPoints;
+
         public Health GetInstance()
         {
-            return new Health(_hitPoints);
+            return new Health(Random.Range(_hitPoints.x, _hitPoints.y));
         }
     }
 }

@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
-
 using Game.Map.Tiles;
+using UnityEngine.Tilemaps;
 
 namespace Game.Map
 {
     public class BlockTilemap : MonoBehaviour
     {
-        [Header("References")]
-        [SerializeField] private UnityEngine.Tilemaps.Tilemap _tilemap;
+        [Header("References")] 
+        [SerializeField] private Tilemap _tilemap;
 
         private void Start()
         {
@@ -24,6 +24,7 @@ namespace Game.Map
                 SpawnBlock(tile, localPosition);
             }
         }
+
         public void SpawnBlock(BlockTile tile, Vector3Int localPosition)
         {
             var position = _tilemap.CellToWorld(localPosition);
@@ -38,6 +39,7 @@ namespace Game.Map
         {
             return _tilemap.GetTile<BlockTile>(localPosition);
         }
+
         private void RemoveTile(Vector3Int localPosition)
         {
             _tilemap.SetTile(localPosition, null);
@@ -47,8 +49,9 @@ namespace Game.Map
         {
             var center = GetTileCenter(position);
 
-            return (Vector2Int)_tilemap.WorldToCell(center);
+            return (Vector2Int) _tilemap.WorldToCell(center);
         }
+
         public Vector2 GetTileCenter(Vector2 position)
         {
             return new Vector2(position.x + 0.5f, position.y + 0.5f);

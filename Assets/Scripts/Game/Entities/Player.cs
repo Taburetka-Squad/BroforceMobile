@@ -1,12 +1,14 @@
 using UnityEngine;
-
 using Game.Abilities;
+using Game.Damage;
 
 namespace Game.Entities
 {
     class Player : Entity
     {
         [SerializeField] private ScriptableAbility _ability;
+        [SerializeField] private float _meleeAttackDistance;
+        [SerializeField] private int _meleeAttackDamage;
 
         public override void TakeDamage(int damage)
         {
@@ -18,7 +20,6 @@ namespace Game.Entities
             Debug.Log("Player Died");
         }
 
-        // Input
         private void Update()
         {
             var horizontalDirection = Input.GetAxisRaw("Horizontal");
@@ -37,6 +38,25 @@ namespace Game.Entities
 
             if (Input.GetKeyDown(KeyCode.Mouse1))
                 _ability?.Use(transform);
+
+            if (Input.GetKey(KeyCode.Q))
+            {
+                UseMeleeAttack();
+            }
+            
+        }
+
+        private void UseMeleeAttack()
+        {
+            var hit = Physics2D.Raycast(transform.position, transform.right, _meleeAttackDistance);
+
+            if (hit.collider == null)
+                return;
+            
+            if (hit.collider.TryGetComponent<IDamageable>(out var damageable))
+            {
+                damageable.TakeDamage(_meleeAttackDamage);
+            }
         }
     }
 }

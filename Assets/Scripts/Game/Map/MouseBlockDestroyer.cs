@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿#if UNITY_EDITOR
+using UnityEngine;
 
 using Game.Map.Tiles;
 using Game.Map.Blocks;
@@ -64,3 +65,4 @@ namespace Game.Map
         }
     }
 }
+#endif
