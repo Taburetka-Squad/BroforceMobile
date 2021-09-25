@@ -54,17 +54,6 @@ namespace Game.Entities
 
             _rigidbody.velocity = new Vector2(movement.x * _speed, _rigidbody.velocity.y);
         }
-        protected void Jump()
-        {
-            var _onGround = _groundCollider.IsTouchingLayers();
-            var isTimeOver = Time.time > _lastWallJumpTime + _wallJumpDelay;
-            var canJump = isTimeOver ? _onGround || IsTouchingWall() : _onGround;
-
-            _lastWallJumpTime = Time.time;
-
-            if (canJump)
-                _rigidbody.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
-        }
         protected void Rotate(float direction)
         {
             if (direction == 0) return;
@@ -76,9 +65,21 @@ namespace Game.Entities
         protected void Slide(float direction)
         {
             var canSlide = IsTouchingWall() && _rigidbody.velocity.y < _slideSpeed && direction != 0;
-
+            
             if (canSlide)
                 _rigidbody.velocity = new Vector2(0, _slideSpeed);
+        }
+        protected void Jump()
+        {
+            var _onGround = _groundCollider.IsTouchingLayers();
+            var isTimeOver = Time.time > _lastWallJumpTime + _wallJumpDelay;
+            var canJump = isTimeOver ? _onGround || IsTouchingWall() : _onGround;
+
+            if (canJump)
+            {
+                _lastWallJumpTime = Time.time;
+                _rigidbody.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
+            }
         }
 
         private bool IsTouchingWall()
