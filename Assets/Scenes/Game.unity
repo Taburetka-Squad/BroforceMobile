@@ -164,21 +164,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1459315355141393841, guid: ecb595c3586a7ad40b4dcd9df7351c0a, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1459315355141393841, guid: ecb595c3586a7ad40b4dcd9df7351c0a, type: 3}
-      propertyPath: _jumpForce
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 1459315355141393841, guid: ecb595c3586a7ad40b4dcd9df7351c0a, type: 3}
-      propertyPath: _slideSpeed
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1459315355141393841, guid: ecb595c3586a7ad40b4dcd9df7351c0a, type: 3}
-      propertyPath: _wallJumpDelay
-      value: 0.4
-      objectReference: {fileID: 0}
+      propertyPath: _ability
+      value: 
+      objectReference: {fileID: 11400000, guid: 76a9d599bf3f0f349830ed7fd7f56c82, type: 2}
     - target: {fileID: 1459315355141393841, guid: ecb595c3586a7ad40b4dcd9df7351c0a, type: 3}
       propertyPath: raycastDistance
       value: 1

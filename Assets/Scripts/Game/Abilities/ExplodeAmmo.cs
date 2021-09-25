@@ -29,14 +29,11 @@ namespace Game.Abilities
         }
         
 #if UNITY_EDITOR
-
         private void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(transform.position, _explosionRadius);
         }
-
 #endif
-        
     }
 }

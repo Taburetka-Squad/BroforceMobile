@@ -5,8 +5,6 @@ namespace Game.Abilities
     [RequireComponent(typeof(Rigidbody2D))]
     public class Rocket : ExplodeAmmo
     {
-        [SerializeField, Range(0, 100)] private float _explosionRadius;
-        [SerializeField] private int _damage;
         private Rigidbody2D _rigidbody2D;
         
         private void Awake()
