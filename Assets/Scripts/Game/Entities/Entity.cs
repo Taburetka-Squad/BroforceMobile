@@ -72,7 +72,6 @@ namespace Game.Entities
             _isRotated = direction < 0;
 
             transform.right = Vector2.right * direction;
-            //transform.right = _rigidbody.velocity.normalized;
         }
         protected void Slide()
         {
@@ -85,7 +84,7 @@ namespace Game.Entities
             var direction = _isRotated ? Vector2.left : Vector2.right;
             var collider = Physics2D.Raycast(transform.position, direction, _wallCheckDistance);
 
-            Debug.DrawRay(transform.position, direction, Color.red);
+            Debug.DrawRay(transform.position, direction * _wallCheckDistance, Color.red);
 
             return collider;
         }
