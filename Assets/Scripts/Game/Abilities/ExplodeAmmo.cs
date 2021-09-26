@@ -1,4 +1,5 @@
-﻿using Game.Health;
+﻿using Game.Damage;
+
 using UnityEngine;
 
 namespace Game.Abilities

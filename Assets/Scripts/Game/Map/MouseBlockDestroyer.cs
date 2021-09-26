@@ -1,47 +1,66 @@
 ﻿using UnityEngine;
 
 using Game.Map.Tiles;
+using Game.Map.Blocks;
 
 namespace Game.Map
 {
     public class MouseBlockDestroyer : MonoBehaviour
     {
         [SerializeField] private BlockTilemap _tilemap;
-        [SerializeField] private SmartTile _placeBlock;
+        [SerializeField] private BlockTile _placingTileBlock;
 
         private void Update()
         {
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButtonDown(0))
                 DestroyBlock();
-            else if (Input.GetMouseButton(1))
+            if (Input.GetMouseButtonDown(1))
                 PlaceBlock();
+        }
+
+        private void PlaceBlock()
+        {
+            var position = GetTilePositionByMouse();
+
+            if (TryRaycastBlock(position, out var block))
+                DestroyBlock(block);
+
+            PlaceBlock(position, _placingTileBlock);
+        }
+        private void PlaceBlock(Vector2 position, BlockTile tile)
+        {
+            var tilePosition = new Vector3Int((int)position.x, (int)position.y, 0);
+            _tilemap.SpawnBlock(tile, tilePosition);
         }
 
         private void DestroyBlock()
         {
-            var tilePosition = GetTilePositionByMouse();
-            DestroyBlock(tilePosition);
+            var position = GetTilePositionByMouse();
+
+            if (TryRaycastBlock(position, out var block))
+                DestroyBlock(block);
         }
-        private void PlaceBlock()
+        private void DestroyBlock(Block block)
         {
-            var tilePosition = GetTilePositionByMouse();
-            PlaceBlock(tilePosition, _placeBlock);
+            Destroy(block.gameObject);
         }
 
-        private Vector2Int GetTilePositionByMouse()
+        private Vector2 GetTilePositionByMouse()
         {
-            var mouseScreenPosition = Input.mousePosition;
-            var worldMousePosition = Camera.main.ScreenToWorldPoint(mouseScreenPosition);
+            var screenPosition = Input.mousePosition;
+            var worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
+            var cellPosition = _tilemap.GetTilePosition(worldPosition);
 
-            return _tilemap.GetTilePositionFromCenter(worldMousePosition);
+            return cellPosition;
         }
-        private void DestroyBlock(Vector2Int position)
+        private bool TryRaycastBlock(Vector2 position, out Block block)
         {
-            _tilemap.DestroyAt(position);
-        }
-        private void PlaceBlock(Vector2Int position, SmartTile block)
-        {
-            _tilemap.SetAt(position, block);
+            block = null;
+
+            var collider = Physics2D.OverlapPoint(position);
+            if (collider == null) return false;
+
+            return collider.TryGetComponent(out block);
         }
     }
 }

@@ -1,23 +1,32 @@
-﻿using Game.Health;
-using UnityEngine;
+﻿using UnityEngine;
 
 using Game.Pools;
+using Game.Damage;
 
 namespace Game.Weapons.Bullets
 {
     [RequireComponent(typeof(Rigidbody2D))]
+    [RequireComponent(typeof(DamageDealer))]
     public class Bullet : PooledObject
     {
         private BulletData _data;
+
         private Rigidbody2D _rigidbody;
+        private DamageDealer _damageDealer;
+
         private Vector2 _startPosition;
+
+        private void Awake()
+        {
+            _damageDealer = GetComponent<DamageDealer>();
+            _rigidbody = GetComponent<Rigidbody2D>();
+        }
 
         public void Initialize(BulletData data)
         {
             _data = data;
-            _rigidbody = GetComponent<Rigidbody2D>();
+            _damageDealer.Initialize(data.Damage);
         }
-        
         public void Initialize(Transform firePoint)
         {
             transform.position = firePoint.position;
@@ -40,17 +49,9 @@ namespace Game.Weapons.Bullets
             if (isOutOfRange)
                 ReturnToPool();
         }
-        
         private void OnCollisionEnter2D(Collision2D collision)
         {
             ReturnToPool();
-            
-            if(collision.gameObject.TryGetComponent<IDamageable>(out var damageable))
-            {
-                damageable.TakeDamage(_data.Damage);
-            }
-            
-            // TODO
         }
     }
 }
