@@ -240,6 +240,14 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5825108978857590776, guid: ecb595c3586a7ad40b4dcd9df7351c0a, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5825108978857590776, guid: ecb595c3586a7ad40b4dcd9df7351c0a, type: 3}
+      propertyPath: m_GravityScale
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5825108978857590776, guid: ecb595c3586a7ad40b4dcd9df7351c0a, type: 3}
       propertyPath: m_UseFullKinematicContacts
       value: 1
       objectReference: {fileID: 0}
