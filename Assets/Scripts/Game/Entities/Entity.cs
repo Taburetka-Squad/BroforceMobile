@@ -51,11 +51,9 @@ namespace Game.Entities
         public abstract void TakeDamage(int damage);
         protected abstract void OnDied();
 
-        protected void Move(float xDirection)
+        protected void Move(float direction)
         {
-            var direction = new Vector2(xDirection, Rigidbody.velocity.y);
-
-            Rigidbody.velocity = direction;
+            Rigidbody.velocity = new Vector2(direction * _speed, Rigidbody.velocity.y);
         }
 
         protected void Rotate(float direction)

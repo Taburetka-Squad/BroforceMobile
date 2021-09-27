@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
+using Game.Map.Blocks;
+using UnityEngine;
 using Game.Map.Tiles;
 using UnityEngine.Tilemaps;
 
@@ -9,9 +12,21 @@ namespace Game.Map
         [Header("References")] 
         [SerializeField] private Tilemap _tilemap;
 
+        private List<Block> _blocks;
+
         private void Start()
         {
+            _blocks = new List<Block>();
+            Initialize();
+        }
+
+        private void Initialize()
+        {
             SpawnBlocks();
+            foreach (var block in _blocks)
+            {
+                block.Initialize();
+            }
         }
 
         private void SpawnBlocks()
@@ -21,18 +36,20 @@ namespace Game.Map
                 var tile = GetTile(localPosition);
                 if (tile == null) continue;
 
-                SpawnBlock(tile, localPosition);
+                var block = SpawnBlock(tile, localPosition);
+                _blocks.Add(block);
             }
         }
 
-        public void SpawnBlock(BlockTile tile, Vector3Int localPosition)
+        public Block SpawnBlock(BlockTile tile, Vector3Int localPosition)
         {
             var position = _tilemap.CellToWorld(localPosition);
             var rotation = _tilemap.GetTransformMatrix(localPosition).rotation;
 
-            tile.SpawnBlock(position, rotation, transform);
+            var block = tile.SpawnBlock(position, rotation, transform);
 
             RemoveTile(localPosition);
+            return block;
         }
 
         private BlockTile GetTile(Vector3Int localPosition)

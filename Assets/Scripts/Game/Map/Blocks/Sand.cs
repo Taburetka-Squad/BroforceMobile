@@ -1,0 +1,62 @@
+﻿using System;
+using Game.Damage;
+using Game.Healths;
+using UnityEngine;
+
+namespace Game.Map.Blocks
+{
+    public class Sand : Block, IDie
+    {
+        [Header("References")] [SerializeField]
+        private HealthData _healthData;
+        
+        public event Action Died;
+        protected Health Health;
+        
+        public override void Initialize()
+        {
+            Health = _healthData.GetInstance();
+            Health.Died += OnDied;
+            
+            if (!TryGetBottomNeighbor(out var bottomNeighbor)) return;
+
+            if (bottomNeighbor.TryGetComponent(out IDie die))
+            {
+                die.Died += OnBottomNeighborDie;
+            }
+        }
+
+        public void TakeDamage(int damage)
+        {
+            Health.TakeDamage(damage);
+        }
+        
+        private void OnDied()
+        {
+            Died?.Invoke();
+            Died = null;
+            Destroy(gameObject);
+        }
+
+        private bool TryGetBottomNeighbor(out Collider2D collider)
+        {
+            var hit = Physics2D.Raycast(transform.position, Vector2.down, 1);
+            collider = hit.collider;
+            return hit.collider != null;
+        }
+
+        private void OnBottomNeighborDie()
+        {
+            Fall();
+        }
+
+        private void Fall()
+        {
+            if (Rigidbody2D != null)
+            {
+                Rigidbody2D.bodyType = RigidbodyType2D.Dynamic;
+                Rigidbody2D.gravityScale = 1;
+            }
+        }
+    }
+}
