@@ -71,29 +71,28 @@
             <e p="Damage" t="Include">
               <e p="DamageDealer.cs" t="Include" />
               <e p="IDamageable.cs" t="Include" />
+              <e p="IDie.cs" t="Include" />
             </e>
             <e p="Entities" t="Include">
+              <e p="AI.cs" t="Include" />
               <e p="Enemy.cs" t="Include" />
               <e p="Entity.cs" t="Include" />
               <e p="EntityData.cs" t="Include" />
               <e p="Player.cs" t="Include" />
             </e>
-            <e p="Health" t="Include">
+            <e p="Healths" t="Include">
               <e p="Health.cs" t="Include" />
               <e p="HealthData.cs" t="Include" />
             </e>
             <e p="Map" t="Include">
               <e p="Blocks" t="Include">
                 <e p="Block.cs" t="Include" />
+                <e p="DestructibleBlock.cs" t="Include" />
               </e>
               <e p="BlockTilemap.cs" t="Include" />
               <e p="MouseBlockDestroyer.cs" t="Include" />
               <e p="Tiles" t="Include">
                 <e p="BlockTile.cs" t="Include" />
-                <e p="Effects" t="Include">
-                  <e p="ParticleEffect.cs" t="Include" />
-                  <e p="TileEffect.cs" t="Include" />
-                </e>
               </e>
             </e>
             <e p="Pools" t="Include">

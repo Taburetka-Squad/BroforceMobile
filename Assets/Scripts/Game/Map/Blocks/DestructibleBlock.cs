@@ -1,16 +1,18 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 using Game.Damage;
-using Game.Health;
+using Game.Healths;
 
 namespace Game.Map.Blocks
 {
-    public class DestructibleBlock : Block, IDamageable
+    public class DestructibleBlock : Block, IDie
     {
         [Header("References")]
         [SerializeField] private HealthData _healthData;
 
-        private Health.Health _health;
+        public event Action Died;
+        private Health _health;
 
         private void Start()
         {
@@ -27,5 +29,6 @@ namespace Game.Map.Blocks
         {
             Destroy(gameObject);
         }
+
     }
 }

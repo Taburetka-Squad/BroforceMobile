@@ -2,8 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c97c43c-d2ae-4947-b594-a59615abe769" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BroforceMobile/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BroforceMobile/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BroforceMobile/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BroforceMobile/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Entities/New Health Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/Entities/New Health Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Textures/GameAtlas.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/Textures/GameAtlas.spriteatlas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/Textures/UIAtlas.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/Textures/UIAtlas.spriteatlas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Tilemap/Blocks/Block.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/Tilemap/Blocks/Block.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/AI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/AI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Entity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/EntityData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/EntityData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Health.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Healths.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Health/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Healths/Health.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Health/Health.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Healths/Health.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Health/HealthData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Healths/HealthData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Health/HealthData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Healths/HealthData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/DestructibleBlock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/DestructibleBlock.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,11 +45,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Entities/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Abilities/IAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Abilities/GrenadeAbility.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/DestructibleBlock.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Abilities/Grenade.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Weapons/Bullets/BulletData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Map/MouseBlockDestroyer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Weapons/Bullets/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Health/HealthData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Healths/HealthData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/CheckPoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Weapons/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Abilities/ScriptableAbility.cs" root0="FORCE_HIGHLIGHTING" />
@@ -45,8 +60,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Weapons/WeaponSlot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BCE5E9CF-72A6-4554-937D-40E2CE78291E/cf/cc219d39/TileBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Damage/IDamageable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Entities/AI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Damage/DamageDealer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Health/Health.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Healths/Health.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -78,9 +94,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/CheckPoint.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Enemy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Entity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/EntityData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Health/Health.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Health/IDamageable.cs" />
@@ -98,7 +111,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Health/HealthData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Map/BlockTilemap.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Map/MouseBlockDestroyer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/CheckPoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/AI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Healths/Health.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Healths/HealthData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Entity.cs" />
       </list>
     </option>
   </component>
@@ -150,6 +169,9 @@
       <workItem from="1632500282050" duration="2106000" />
       <workItem from="1632589958046" duration="2020000" />
       <workItem from="1632592049073" duration="1366000" />
+      <workItem from="1632662356814" duration="57000" />
+      <workItem from="1632662464092" duration="955000" />
+      <workItem from="1632759077622" duration="1293000" />
     </task>
     <servers />
   </component>

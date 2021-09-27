@@ -9,10 +9,14 @@ namespace Game.Entities
         [SerializeField] private ScriptableAbility _ability;
         [SerializeField] private float _meleeAttackDistance;
         [SerializeField] private int _meleeAttackDamage;
+        [SerializeField] private float _slideSpeed;
+        [SerializeField] private float _wallCheckDistance;
+
+        protected override bool CanJump => GroundCollider.IsTouchingLayers() || IsTouchingWall();
 
         public override void TakeDamage(int damage)
         {
-            _health.TakeDamage(damage);
+            Health.TakeDamage(damage);
         }
 
         protected override void OnDied()
@@ -37,13 +41,12 @@ namespace Game.Entities
                 WeaponSlot.CurrentWeapon.Shoot();
 
             if (Input.GetKeyDown(KeyCode.Mouse1))
-                _ability?.Use(transform);
+                _ability.Use(transform);
 
             if (Input.GetKey(KeyCode.Q))
             {
                 UseMeleeAttack();
             }
-            
         }
 
         private void UseMeleeAttack()
@@ -57,6 +60,22 @@ namespace Game.Entities
             {
                 damageable.TakeDamage(_meleeAttackDamage);
             }
+        }
+        
+        protected void Slide(float direction)
+        {
+            var canSlide = IsTouchingWall() && Rigidbody.velocity.y < _slideSpeed && direction != 0;
+
+            if (canSlide)
+                Rigidbody.velocity = new Vector2(0, _slideSpeed);
+        }
+        
+        private bool IsTouchingWall()
+        {
+            var direction = transform.right;
+            var collider = Physics2D.Raycast(transform.position, direction, _wallCheckDistance);
+            
+            return collider;
         }
     }
 }
