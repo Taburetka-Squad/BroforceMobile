@@ -25,7 +25,7 @@ namespace Game.Map
             SpawnBlocks();
             foreach (var block in _blocks)
             {
-                block.Initialize();
+                block.OnMapInitialized();
             }
         }
 

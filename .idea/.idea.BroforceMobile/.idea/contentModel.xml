@@ -74,19 +74,42 @@
               <e p="IDie.cs" t="Include" />
             </e>
             <e p="Entities" t="Include">
-              <e p="AI.cs" t="Include" />
-              <e p="Enemy.cs" t="Include" />
+              <e p="Enemies" t="Include">
+                <e p="Enemy.cs" t="Include" />
+              </e>
               <e p="Entity.cs" t="Include" />
               <e p="EntityData.cs" t="Include" />
-              <e p="Player.cs" t="Include" />
+              <e p="Player" t="Include">
+                <e p="Player.cs" t="Include" />
+              </e>
             </e>
             <e p="Healths" t="Include">
               <e p="Health.cs" t="Include" />
               <e p="HealthData.cs" t="Include" />
             </e>
+            <e p="Inputs" t="Include">
+              <e p="AbilityInput" t="Include">
+                <e p="IAbilityInput.cs" t="Include" />
+                <e p="KeyBoardAbilityInput.cs" t="Include" />
+              </e>
+              <e p="DirectionInput" t="Include">
+                <e p="IDirectionInput.cs" t="Include" />
+                <e p="KeyBoardDirectionInput.cs" t="Include" />
+              </e>
+              <e p="IInput.cs" t="Include" />
+              <e p="MeleeAttackInput" t="Include">
+                <e p="IMeleeAttackInput.cs" t="Include" />
+                <e p="KeyBoardMeleeAttackInput.cs" t="Include" />
+              </e>
+              <e p="ShootInput" t="Include">
+                <e p="IShootInput.cs" t="Include" />
+                <e p="KeyBoardShootInput.cs" t="Include" />
+              </e>
+            </e>
             <e p="Map" t="Include">
               <e p="Blocks" t="Include">
                 <e p="Block.cs" t="Include" />
+                <e p="Dirt.cs" t="Include" />
                 <e p="Sand.cs" t="Include" />
               </e>
               <e p="BlockTilemap.cs" t="Include" />

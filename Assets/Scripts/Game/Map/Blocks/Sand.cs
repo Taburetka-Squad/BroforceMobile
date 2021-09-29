@@ -13,7 +13,7 @@ namespace Game.Map.Blocks
         public event Action Died;
         protected Health Health;
         
-        public override void Initialize()
+        public override void OnMapInitialized()
         {
             Health = _healthData.GetInstance();
             Health.Died += OnDied;
