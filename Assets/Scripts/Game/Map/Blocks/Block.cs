@@ -16,7 +16,7 @@ namespace Game.Map.Blocks
             Rigidbody2D = GetComponent<Rigidbody2D>();
         }
 
-        public abstract void Initialize();
+        public abstract void OnMapInitialized();
         
         public void Initialize(Sprite sprite, Color color)
         {

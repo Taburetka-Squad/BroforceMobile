@@ -1,7 +1,9 @@
-﻿using UnityEngine;
+﻿using DefaultNamespace;
+using UnityEngine;
 using Game.Weapons;
 using Game.Damage;
 using Game.Healths;
+using Game.Inputs;
 
 namespace Game.Entities
 {
@@ -15,7 +17,7 @@ namespace Game.Entities
         [SerializeField] 
         protected BoxCollider2D GroundCollider;
         [SerializeField] 
-        private EntityData _entityData;
+        protected EntityData EntityData;
 
         [Header("Parameters")] 
         [SerializeField]
@@ -27,6 +29,8 @@ namespace Game.Entities
 
         protected abstract bool CanJump { get; }
         private float _lastJumpTime;
+        protected IDirectionInput DirectionInput = new KeyBoardDirectionInput();
+        protected IShootInput ShootInput = new KeyBoardShootInput();
         
         protected Rigidbody2D Rigidbody;
         protected Health Health;
@@ -35,12 +39,11 @@ namespace Game.Entities
         private void Awake()
         {
             Rigidbody = GetComponent<Rigidbody2D>();
-            Initialize(_entityData);
+            Initialize(EntityData);
         }
-
         public void Initialize(EntityData data)
         {
-            _entityData = data;
+            EntityData = data;
 
             Health = data.HealthData.GetInstance();
             Health.Died += OnDied;
@@ -51,18 +54,18 @@ namespace Game.Entities
         public abstract void TakeDamage(int damage);
         protected abstract void OnDied();
 
-        protected void Move(float direction)
+        protected void Move()
         {
-            Rigidbody.velocity = new Vector2(direction * _speed, Rigidbody.velocity.y);
+            var direction = DirectionInput.Direction;
+            Rigidbody.velocity = new Vector2(direction.x * _speed, Rigidbody.velocity.y);
         }
-
-        protected void Rotate(float direction)
+        protected void Rotate()
         {
-            if (direction == 0) return;
+            var direction = DirectionInput.Direction;
+            if (direction.x == 0) return;
 
             transform.right = Vector2.right * direction;
         }
-
         protected void Jump()
         {
             var isTimeOver = Time.time > _lastJumpTime + _wallJumpDelay;

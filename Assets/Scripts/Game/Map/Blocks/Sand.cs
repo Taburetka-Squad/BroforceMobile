@@ -7,13 +7,14 @@ namespace Game.Map.Blocks
 {
     public class Sand : Block, IDie
     {
-        [Header("References")] [SerializeField]
+        [Header("References")] 
+        [SerializeField]
         private HealthData _healthData;
         
         public event Action Died;
         protected Health Health;
         
-        public override void Initialize()
+        public override void OnMapInitialized()
         {
             Health = _healthData.GetInstance();
             Health.Died += OnDied;
@@ -34,6 +35,7 @@ namespace Game.Map.Blocks
         private void OnDied()
         {
             Died?.Invoke();
+            Health.Died -= OnDied;
             Died = null;
             Destroy(gameObject);
         }
