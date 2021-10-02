@@ -17,7 +17,7 @@ namespace Game.Entities
         [SerializeField] 
         protected BoxCollider2D GroundCollider;
         [SerializeField] 
-        private EntityData _entityData;
+        protected EntityData EntityData;
 
         [Header("Parameters")] 
         [SerializeField]
@@ -29,8 +29,8 @@ namespace Game.Entities
 
         protected abstract bool CanJump { get; }
         private float _lastJumpTime;
-        protected IDirectionInput DirectionInput;
-        protected IShootInput ShootInput;
+        protected IDirectionInput DirectionInput = new KeyBoardDirectionInput();
+        protected IShootInput ShootInput = new KeyBoardShootInput();
         
         protected Rigidbody2D Rigidbody;
         protected Health Health;
@@ -39,11 +39,11 @@ namespace Game.Entities
         private void Awake()
         {
             Rigidbody = GetComponent<Rigidbody2D>();
-            Initialize(_entityData);
+            Initialize(EntityData);
         }
         public void Initialize(EntityData data)
         {
-            _entityData = data;
+            EntityData = data;
 
             Health = data.HealthData.GetInstance();
             Health.Died += OnDied;
@@ -66,7 +66,7 @@ namespace Game.Entities
 
             transform.right = Vector2.right * direction;
         }
-        protected bool TryJump()
+        protected void Jump()
         {
             var isTimeOver = Time.time > _lastJumpTime + _wallJumpDelay;
 
@@ -74,10 +74,7 @@ namespace Game.Entities
             {
                 _lastJumpTime = Time.time;
                 Rigidbody.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
-                return true;
             }
-
-            return false;
         }
     }
 }

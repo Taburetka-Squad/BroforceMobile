@@ -2,44 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c97c43c-d2ae-4947-b594-a59615abe769" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Enemies.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Player.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/AbilityInput.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/AbilityInput/IAbilityInput.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/AbilityInput/IAbilityInput.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/AbilityInput/KeyBoardAbilityInput.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/AbilityInput/KeyBoardAbilityInput.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/DirectionInput.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/DirectionInput/IDirectionInput.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/DirectionInput/IDirectionInput.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/DirectionInput/KeyBoardDirectionInput.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/DirectionInput/KeyBoardDirectionInput.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/IInput.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/IInput.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/MeleeAttackInput.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/MeleeAttackInput/IMeleeAttackInput.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/MeleeAttackInput/IMeleeAttackInput.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/MeleeAttackInput/KeyBoardMeleeAttackInput.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/MeleeAttackInput/KeyBoardMeleeAttackInput.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/ShootInput.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/ShootInput/IShootInput.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/ShootInput/IShootInput.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/ShootInput/KeyBoardShootInput.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/ShootInput/KeyBoardShootInput.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Dirt.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Dirt.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BroforceMobile/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BroforceMobile/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BroforceMobile/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BroforceMobile/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/AI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/AI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Enemies/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Enemy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Enemies/Enemy.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Tilemap/Blocks/Sand.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Tilemap/Blocks/Sand.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Tilemap/Blocks/Square.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/Tilemap/Blocks/Square.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Entity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Player.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Player/Player.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Map/BlockTilemap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Map/BlockTilemap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Block.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Block.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Dirt.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Dirt.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Sand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Sand.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -128,9 +97,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Map/Tiles/BlockTile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Map/BlockTilemap.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/DestructibleBlock.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Sand.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Block.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Dirt.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Damage/IDamageable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/IInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/IDirectionProvider.cs" />
@@ -148,6 +115,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Entity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Player/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Sand.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Dirt.cs" />
       </list>
     </option>
   </component>
@@ -205,6 +174,8 @@
       <workItem from="1632772029774" duration="162000" />
       <workItem from="1632840509915" duration="1214000" />
       <workItem from="1632911618279" duration="2821000" />
+      <workItem from="1632929218032" duration="693000" />
+      <workItem from="1633022669021" duration="1854000" />
     </task>
     <servers />
   </component>
@@ -218,70 +189,70 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="478" height="464" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1632411935080" />
-    <state width="1877" height="345" key="GridCell.Tab.0.bottom" timestamp="1632764436797">
+    <state width="1877" height="345" key="GridCell.Tab.0.bottom" timestamp="1633024537223">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1632764436797" />
-    <state width="1877" height="345" key="GridCell.Tab.0.center" timestamp="1632764436797">
+    <state width="1877" height="345" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1633024537223" />
+    <state width="1877" height="345" key="GridCell.Tab.0.center" timestamp="1633024537223">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1632764436797" />
-    <state width="1877" height="345" key="GridCell.Tab.0.left" timestamp="1632764436797">
+    <state width="1877" height="345" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1633024537223" />
+    <state width="1877" height="345" key="GridCell.Tab.0.left" timestamp="1633024537223">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1632764436797" />
-    <state width="1877" height="345" key="GridCell.Tab.0.right" timestamp="1632764436797">
+    <state width="1877" height="345" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1633024537223" />
+    <state width="1877" height="345" key="GridCell.Tab.0.right" timestamp="1633024537223">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1632764436797" />
-    <state width="1877" height="345" key="GridCell.Tab.1.bottom" timestamp="1632764436798">
+    <state width="1877" height="345" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1633024537223" />
+    <state width="1877" height="345" key="GridCell.Tab.1.bottom" timestamp="1633024537223">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1632764436798" />
-    <state width="1877" height="345" key="GridCell.Tab.1.center" timestamp="1632764436798">
+    <state width="1877" height="345" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1633024537223" />
+    <state width="1877" height="345" key="GridCell.Tab.1.center" timestamp="1633024537223">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1632764436798" />
-    <state width="1877" height="345" key="GridCell.Tab.1.left" timestamp="1632764436798">
+    <state width="1877" height="345" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1633024537223" />
+    <state width="1877" height="345" key="GridCell.Tab.1.left" timestamp="1633024537223">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1632764436798" />
-    <state width="1877" height="345" key="GridCell.Tab.1.right" timestamp="1632764436798">
+    <state width="1877" height="345" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1633024537223" />
+    <state width="1877" height="345" key="GridCell.Tab.1.right" timestamp="1633024537223">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1632764436798" />
-    <state width="1877" height="345" key="GridCell.Tab.2.bottom" timestamp="1632764436798">
+    <state width="1877" height="345" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1633024537223" />
+    <state width="1877" height="345" key="GridCell.Tab.2.bottom" timestamp="1633024537223">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1632764436798" />
-    <state width="1877" height="345" key="GridCell.Tab.2.center" timestamp="1632764436797">
+    <state width="1877" height="345" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1633024537223" />
+    <state width="1877" height="345" key="GridCell.Tab.2.center" timestamp="1633024537223">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1632764436797" />
-    <state width="1877" height="345" key="GridCell.Tab.2.left" timestamp="1632764436797">
+    <state width="1877" height="345" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1633024537223" />
+    <state width="1877" height="345" key="GridCell.Tab.2.left" timestamp="1633024537223">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1632764436797" />
-    <state width="1877" height="345" key="GridCell.Tab.2.right" timestamp="1632764436797">
+    <state width="1877" height="345" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1633024537223" />
+    <state width="1877" height="345" key="GridCell.Tab.2.right" timestamp="1633024537223">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1632764436797" />
-    <state width="1877" height="345" key="GridCell.Tab.3.bottom" timestamp="1632764436798">
+    <state width="1877" height="345" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1633024537223" />
+    <state width="1877" height="345" key="GridCell.Tab.3.bottom" timestamp="1633024537223">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1632764436798" />
-    <state width="1877" height="345" key="GridCell.Tab.3.center" timestamp="1632764436798">
+    <state width="1877" height="345" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1633024537223" />
+    <state width="1877" height="345" key="GridCell.Tab.3.center" timestamp="1633024537223">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1632764436798" />
-    <state width="1877" height="345" key="GridCell.Tab.3.left" timestamp="1632764436798">
+    <state width="1877" height="345" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1633024537223" />
+    <state width="1877" height="345" key="GridCell.Tab.3.left" timestamp="1633024537223">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1632764436798" />
-    <state width="1877" height="345" key="GridCell.Tab.3.right" timestamp="1632764436798">
+    <state width="1877" height="345" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1633024537223" />
+    <state width="1877" height="345" key="GridCell.Tab.3.right" timestamp="1633024537223">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1632764436798" />
+    <state width="1877" height="345" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1633024537223" />
     <state x="832" y="219" key="RiderGenerateDialog" timestamp="1632913935722">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
