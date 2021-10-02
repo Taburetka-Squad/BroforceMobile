@@ -1,31 +1,25 @@
 ﻿using UnityEngine;
 
-using Game.Pools;
-using Game.Damage;
-
-namespace Game.Weapons.Bullets
+namespace Game.Projectiles.Bullets
 {
     [RequireComponent(typeof(Rigidbody2D))]
-    [RequireComponent(typeof(DamageDealer))]
-    public class Bullet : PooledObject
+    public class Bullet : Projectile
     {
         private BulletData _data;
 
         private Rigidbody2D _rigidbody;
-        private DamageDealer _damageDealer;
 
         private Vector2 _startPosition;
 
         private void Awake()
         {
-            _damageDealer = GetComponent<DamageDealer>();
             _rigidbody = GetComponent<Rigidbody2D>();
         }
 
         public void Initialize(BulletData data)
         {
             _data = data;
-            _damageDealer.Initialize(data.Damage);
+            base.Initialize(data.Damage);
         }
         public void Initialize(Transform firePoint)
         {
@@ -51,6 +45,7 @@ namespace Game.Weapons.Bullets
         }
         private void OnCollisionEnter2D(Collision2D collision)
         {
+            TryDamageObject(collision.gameObject);
             ReturnToPool();
         }
     }

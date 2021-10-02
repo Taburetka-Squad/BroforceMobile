@@ -15,7 +15,7 @@ MonoBehaviour:
   GroundCollider: {fileID: 6309062718255529102}
   EntityData: {fileID: 11400000, guid: d60a28503620cd946a2975280693d843, type: 2}
   _speed: 5
-  _jumpForce: 18
+  _jumpForce: 100
   _wallJumpDelay: 0.4
   _ability: {fileID: 11400000, guid: 76a9d599bf3f0f349830ed7fd7f56c82, type: 2}
   _meleeAttackDistance: 1
@@ -51,6 +51,10 @@ PrefabInstance:
       value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: 1658298234020166868, guid: 0541ed76d2221e54b8080ecb75f0b6f0, type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1658298234020166868, guid: 0541ed76d2221e54b8080ecb75f0b6f0, type: 3}
       propertyPath: m_GravityScale
       value: 5
       objectReference: {fileID: 0}
@@ -84,11 +88,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9098832138269941008, guid: 0541ed76d2221e54b8080ecb75f0b6f0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.31
       objectReference: {fileID: 0}
     - target: {fileID: 9098832138269941008, guid: 0541ed76d2221e54b8080ecb75f0b6f0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.69
       objectReference: {fileID: 0}
     - target: {fileID: 9098832138269941008, guid: 0541ed76d2221e54b8080ecb75f0b6f0, type: 3}
       propertyPath: m_LocalPosition.z

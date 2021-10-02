@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 using Game.Pools;
-using Game.Weapons.Bullets;
+using Game.Projectiles.Bullets;
 
 namespace Game.Weapons
 {

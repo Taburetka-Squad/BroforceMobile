@@ -22,7 +22,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2258510917248857817, guid: e0b01df85cf6d5e4d99e978af8319896, type: 3}
       propertyPath: m_Name
-      value: Square
+      value: Square Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2580003430383208192, guid: e0b01df85cf6d5e4d99e978af8319896, type: 3}
+      propertyPath: m_Size.x
+      value: 0.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 2580003430383208192, guid: e0b01df85cf6d5e4d99e978af8319896, type: 3}
+      propertyPath: m_Size.y
+      value: 0.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 2580003430383208192, guid: e0b01df85cf6d5e4d99e978af8319896, type: 3}
+      propertyPath: m_EdgeRadius
+      value: 0.009
       objectReference: {fileID: 0}
     - target: {fileID: 4670572926852391855, guid: e0b01df85cf6d5e4d99e978af8319896, type: 3}
       propertyPath: m_RootOrder
@@ -67,6 +79,26 @@ PrefabInstance:
     - target: {fileID: 4670572926852391855, guid: e0b01df85cf6d5e4d99e978af8319896, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015588214361851682, guid: e0b01df85cf6d5e4d99e978af8319896, type: 3}
+      propertyPath: m_Mass
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015588214361851682, guid: e0b01df85cf6d5e4d99e978af8319896, type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015588214361851682, guid: e0b01df85cf6d5e4d99e978af8319896, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 597cd126a46e5d54499738666e30537c, type: 2}
+    - target: {fileID: 9015588214361851682, guid: e0b01df85cf6d5e4d99e978af8319896, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015588214361851682, guid: e0b01df85cf6d5e4d99e978af8319896, type: 3}
+      propertyPath: m_GravityScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0b01df85cf6d5e4d99e978af8319896, type: 3}

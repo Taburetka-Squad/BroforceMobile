@@ -1,6 +1,5 @@
-﻿using UnityEngine;
-
-using Game.Weapons.Bullets;
+﻿using Game.Projectiles.Bullets;
+using UnityEngine;
 
 namespace Game.Weapons
 {

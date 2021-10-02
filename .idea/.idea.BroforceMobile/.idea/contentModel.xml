@@ -69,7 +69,6 @@
             </e>
             <e p="CheckPoint.cs" t="Include" />
             <e p="Damage" t="Include">
-              <e p="DamageDealer.cs" t="Include" />
               <e p="IDamageable.cs" t="Include" />
               <e p="IDie.cs" t="Include" />
             </e>
@@ -106,6 +105,9 @@
                 <e p="KeyBoardShootInput.cs" t="Include" />
               </e>
             </e>
+            <e p="Levels" t="Include">
+              <e p="Level.cs" t="Include" />
+            </e>
             <e p="Map" t="Include">
               <e p="Blocks" t="Include">
                 <e p="Block.cs" t="Include" />
@@ -113,7 +115,7 @@
                 <e p="Sand.cs" t="Include" />
               </e>
               <e p="BlockTilemap.cs" t="Include" />
-              <e p="MouseBlockDestroyer.cs" t="Include" />
+              <e p="SpawnPoint.cs" t="Include" />
               <e p="Tiles" t="Include">
                 <e p="BlockTile.cs" t="Include" />
               </e>
@@ -123,11 +125,14 @@
               <e p="Pool.cs" t="Include" />
               <e p="PooledObject.cs" t="Include" />
             </e>
-            <e p="Weapons" t="Include">
+            <e p="Projectiles" t="Include">
               <e p="Bullets" t="Include">
                 <e p="Bullet.cs" t="Include" />
                 <e p="BulletData.cs" t="Include" />
               </e>
+              <e p="Projectile.cs" t="Include" />
+            </e>
+            <e p="Weapons" t="Include">
               <e p="Weapon.cs" t="Include" />
               <e p="WeaponData.cs" t="Include" />
               <e p="WeaponSlot.cs" t="Include" />

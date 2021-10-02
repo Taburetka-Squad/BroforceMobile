@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel;
 using Game.Map.Blocks;
 using UnityEngine;
 using Game.Map.Tiles;
@@ -7,66 +6,60 @@ using UnityEngine.Tilemaps;
 
 namespace Game.Map
 {
-    public class BlockTilemap : MonoBehaviour
+    public class BlockTilemap
     {
-        [Header("References")] 
-        [SerializeField] private Tilemap _tilemap;
-
         private List<Block> _blocks;
-
-        private void Start()
+        
+        public BlockTilemap(Tilemap tilemap)
         {
             _blocks = new List<Block>();
-            Initialize();
-        }
-
-        private void Initialize()
-        {
-            SpawnBlocks();
+            
+            SpawnBlocks(tilemap);
+            
             foreach (var block in _blocks)
             {
                 block.OnMapInitialized();
             }
         }
 
-        private void SpawnBlocks()
+        private void SpawnBlocks(Tilemap tilemap)
         {
-            foreach (var localPosition in _tilemap.cellBounds.allPositionsWithin)
+            foreach (var localPosition in tilemap.cellBounds.allPositionsWithin)
             {
-                var tile = GetTile(localPosition);
+                var tile = GetTile(localPosition, tilemap);
                 if (tile == null) continue;
 
-                var block = SpawnBlock(tile, localPosition);
+                var block = SpawnBlock(tile, localPosition, tilemap);
                 _blocks.Add(block);
             }
         }
 
-        public Block SpawnBlock(BlockTile tile, Vector3Int localPosition)
+        public Block SpawnBlock(BlockTile tile, Vector3Int localPosition, Tilemap tilemap)
         {
-            var position = _tilemap.CellToWorld(localPosition);
-            var rotation = _tilemap.GetTransformMatrix(localPosition).rotation;
+            var position = tilemap.CellToWorld(localPosition);
+            var rotation = tilemap.GetTransformMatrix(localPosition).rotation;
 
-            var block = tile.SpawnBlock(position, rotation, transform);
+            var block = tile.SpawnBlock(position, rotation);
 
-            RemoveTile(localPosition);
+            RemoveTile(localPosition, tilemap);
             return block;
         }
 
-        private BlockTile GetTile(Vector3Int localPosition)
+        private BlockTile GetTile(Vector3Int localPosition, Tilemap tilemap)
         {
-            return _tilemap.GetTile<BlockTile>(localPosition);
+            return tilemap.GetTile<BlockTile>(localPosition);
         }
 
-        private void RemoveTile(Vector3Int localPosition)
+        private void RemoveTile(Vector3Int localPosition, Tilemap tilemap)
         {
-            _tilemap.SetTile(localPosition, null);
+            tilemap.SetTile(localPosition, null);
         }
 
-        public Vector2 GetTilePosition(Vector2 position)
+        public Vector2 GetTilePosition(Vector2 position, Tilemap tilemap)
         {
             var center = GetTileCenter(position);
 
-            return (Vector2Int) _tilemap.WorldToCell(center);
+            return (Vector2Int) tilemap.WorldToCell(center);
         }
 
         public Vector2 GetTileCenter(Vector2 position)

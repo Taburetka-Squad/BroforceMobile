@@ -10,9 +10,9 @@ namespace Game.Map.Tiles
     {
         [SerializeField] private Block _prefab;
 
-        public Block SpawnBlock(Vector2 position, Quaternion rotation, Transform container)
+        public Block SpawnBlock(Vector2 position, Quaternion rotation)
         {
-            var block = Instantiate(_prefab, position, rotation, container);
+            var block = Instantiate(_prefab, position, rotation);
             block.Initialize(sprite, color);
             return block;
         }
