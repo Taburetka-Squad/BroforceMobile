@@ -31,13 +31,13 @@ namespace Game.Entities
             ShootInput.ReadInput();
             _abilityInput.ReadInput();
             _meleeAttackInput.ReadInput();
-            Move();
 
-            Rotate();
+            Move(DirectionInput.Direction);
+            Rotate(DirectionInput.Direction);
+
             if (DirectionInput.Direction.y > 0)
                 Jump();
             else
-
                 Slide();
         }
 

@@ -51,14 +51,13 @@ namespace Game.Entities
             _weaponSlot = new WeaponSlot(data.WeaponData, transform);
         }
 
-        protected void Move()
+        protected void Move(Vector2 direction)
         {
-            var direction = DirectionInput.Direction;
+            Debug.Log(direction);
             Rigidbody.velocity = new Vector2(direction.x * _speed, Rigidbody.velocity.y);
         }
-        protected void Rotate()
+        protected void Rotate(Vector2 direction)
         {
-            var direction = DirectionInput.Direction;
             if (direction.x == 0) return;
 
             transform.right = Vector2.right * direction;
