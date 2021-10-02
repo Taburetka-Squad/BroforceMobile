@@ -10,6 +10,8 @@ namespace Game.Entities
 
         private States _state;
 
+        protected override bool CanJump { get; }
+
         private void Awake()
         {
             _state = States.Idle;

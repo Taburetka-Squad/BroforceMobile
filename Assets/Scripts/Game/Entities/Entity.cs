@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
-
 using Game.Weapons;
 using Game.Damage;
+using Game.Healths;
 
 namespace Game.Entities
 {
@@ -12,26 +12,29 @@ namespace Game.Entities
         protected WeaponSlot WeaponSlot => _weaponSlot;
 
         [Header("References")]
-        [SerializeField] private BoxCollider2D _groundCollider;
-        [SerializeField] private EntityData _entityData;
+        [SerializeField] 
+        protected BoxCollider2D GroundCollider;
+        [SerializeField] 
+        private EntityData _entityData;
 
-        [Header("Parameters")]
-        [SerializeField] private float _speed;
-        [SerializeField] private float _slideSpeed;
-        [SerializeField] private float _jumpForce;
-        [SerializeField] private float _wallJumpDelay;
-        [SerializeField] private float _wallCheckDistance;
+        [Header("Parameters")] 
+        [SerializeField]
+        private float _speed;
+        [SerializeField]
+        private float _jumpForce;
+        [SerializeField] 
+        private float _wallJumpDelay;
 
+        protected abstract bool CanJump { get; }
+        private float _lastJumpTime;
+        
+        protected Rigidbody2D Rigidbody;
+        protected Health Health;
         private WeaponSlot _weaponSlot;
-        protected Health.Health _health;
-
-        private Rigidbody2D _rigidbody;
-        private bool _isRotated;
-        private float _lastWallJumpTime;
 
         private void Awake()
         {
-            _rigidbody = GetComponent<Rigidbody2D>();
+            Rigidbody = GetComponent<Rigidbody2D>();
             Initialize(_entityData);
         }
 
@@ -39,8 +42,8 @@ namespace Game.Entities
         {
             _entityData = data;
 
-            _health = data.HealthData.GetInstance();
-            _health.Died += OnDied;
+            Health = data.HealthData.GetInstance();
+            Health.Died += OnDied;
 
             _weaponSlot = new WeaponSlot(data.WeaponData, transform);
         }
@@ -50,46 +53,25 @@ namespace Game.Entities
 
         protected void Move(float direction)
         {
-            var movement = new Vector2(direction, 0);
-
-            _rigidbody.velocity = new Vector2(movement.x * _speed, _rigidbody.velocity.y);
+            Rigidbody.velocity = new Vector2(direction * _speed, Rigidbody.velocity.y);
         }
+
         protected void Rotate(float direction)
         {
             if (direction == 0) return;
 
-            _isRotated = direction < 0;
-
             transform.right = Vector2.right * direction;
         }
-        protected void Slide(float direction)
-        {
-            var canSlide = IsTouchingWall() && _rigidbody.velocity.y < _slideSpeed && direction != 0;
-            
-            if (canSlide)
-                _rigidbody.velocity = new Vector2(0, _slideSpeed);
-        }
+
         protected void Jump()
         {
-            var _onGround = _groundCollider.IsTouchingLayers();
-            var isTimeOver = Time.time > _lastWallJumpTime + _wallJumpDelay;
-            var canJump = isTimeOver ? _onGround || IsTouchingWall() : _onGround;
+            var isTimeOver = Time.time > _lastJumpTime + _wallJumpDelay;
 
-            if (canJump)
+            if (isTimeOver && CanJump)
             {
-                _lastWallJumpTime = Time.time;
-                _rigidbody.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
+                _lastJumpTime = Time.time;
+                Rigidbody.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
             }
-        }
-
-        private bool IsTouchingWall()
-        {
-            var direction = _isRotated ? Vector2.left : Vector2.right;
-            var collider = Physics2D.Raycast(transform.position, direction, _wallCheckDistance);
-
-            Debug.DrawRay(transform.position, direction * _wallCheckDistance, Color.red);
-
-            return collider;
         }
     }
 }

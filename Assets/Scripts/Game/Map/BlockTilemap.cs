@@ -1,17 +1,32 @@
-﻿using UnityEngine;
-
+﻿using System.Collections.Generic;
+using System.ComponentModel;
+using Game.Map.Blocks;
+using UnityEngine;
 using Game.Map.Tiles;
+using UnityEngine.Tilemaps;
 
 namespace Game.Map
 {
     public class BlockTilemap : MonoBehaviour
     {
-        [Header("References")]
-        [SerializeField] private UnityEngine.Tilemaps.Tilemap _tilemap;
+        [Header("References")] 
+        [SerializeField] private Tilemap _tilemap;
+
+        private List<Block> _blocks;
 
         private void Start()
         {
+            _blocks = new List<Block>();
+            Initialize();
+        }
+
+        private void Initialize()
+        {
             SpawnBlocks();
+            foreach (var block in _blocks)
+            {
+                block.Initialize();
+            }
         }
 
         private void SpawnBlocks()
@@ -21,23 +36,27 @@ namespace Game.Map
                 var tile = GetTile(localPosition);
                 if (tile == null) continue;
 
-                SpawnBlock(tile, localPosition);
+                var block = SpawnBlock(tile, localPosition);
+                _blocks.Add(block);
             }
         }
-        public void SpawnBlock(BlockTile tile, Vector3Int localPosition)
+
+        public Block SpawnBlock(BlockTile tile, Vector3Int localPosition)
         {
             var position = _tilemap.CellToWorld(localPosition);
             var rotation = _tilemap.GetTransformMatrix(localPosition).rotation;
 
-            tile.SpawnBlock(position, rotation, transform);
+            var block = tile.SpawnBlock(position, rotation, transform);
 
             RemoveTile(localPosition);
+            return block;
         }
 
         private BlockTile GetTile(Vector3Int localPosition)
         {
             return _tilemap.GetTile<BlockTile>(localPosition);
         }
+
         private void RemoveTile(Vector3Int localPosition)
         {
             _tilemap.SetTile(localPosition, null);
@@ -47,8 +66,9 @@ namespace Game.Map
         {
             var center = GetTileCenter(position);
 
-            return (Vector2Int)_tilemap.WorldToCell(center);
+            return (Vector2Int) _tilemap.WorldToCell(center);
         }
+
         public Vector2 GetTileCenter(Vector2 position)
         {
             return new Vector2(position.x + 0.5f, position.y + 0.5f);
