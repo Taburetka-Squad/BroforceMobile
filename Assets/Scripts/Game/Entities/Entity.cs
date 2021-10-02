@@ -14,33 +14,33 @@ namespace Game.Entities
         protected WeaponSlot WeaponSlot => _weaponSlot;
 
         [Header("References")]
-        [SerializeField] 
-        protected BoxCollider2D GroundCollider;
-        [SerializeField] 
-        protected EntityData EntityData;
+        [SerializeField] protected BoxCollider2D GroundCollider;
+        [SerializeField] protected EntityData EntityData;
 
         [Header("Parameters")] 
-        [SerializeField]
-        private float _speed;
-        [SerializeField]
-        private float _jumpForce;
-        [SerializeField] 
-        private float _wallJumpDelay;
+        [SerializeField] private float _speed;
+        [SerializeField] private float _jumpForce;
+        [SerializeField] private float _wallJumpDelay;
 
         protected abstract bool CanJump { get; }
-        private float _lastJumpTime;
+
         protected IDirectionInput DirectionInput = new KeyBoardDirectionInput();
         protected IShootInput ShootInput = new KeyBoardShootInput();
-        
         protected Rigidbody2D Rigidbody;
         protected Health Health;
+
         private WeaponSlot _weaponSlot;
+        private float _lastJumpTime;
 
         private void Awake()
         {
             Rigidbody = GetComponent<Rigidbody2D>();
             Initialize(EntityData);
         }
+
+        public abstract void TakeDamage(int damage);
+        protected abstract void OnDied();
+
         public void Initialize(EntityData data)
         {
             EntityData = data;
@@ -50,9 +50,6 @@ namespace Game.Entities
 
             _weaponSlot = new WeaponSlot(data.WeaponData, transform);
         }
-
-        public abstract void TakeDamage(int damage);
-        protected abstract void OnDied();
 
         protected void Move()
         {

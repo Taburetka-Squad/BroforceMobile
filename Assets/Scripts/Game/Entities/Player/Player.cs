@@ -8,11 +8,12 @@ namespace Game.Entities
     class Player : Entity
     {
         [SerializeField] private ScriptableAbility _ability;
-        [SerializeField] private float _meleeAttackDistance;
-        [SerializeField] private int _meleeAttackDamage;
+        [SerializeField] private int _hitRate;
         [SerializeField] private float _slideSpeed;
         [SerializeField] private float _wallCheckDistance;
-        [SerializeField] private int _hitRate;
+        [SerializeField] private float _meleeAttackDistance;
+        [SerializeField] private int _meleeAttackDamage;
+
         private IAbilityInput _abilityInput = new KeyBoardAbilityInput();
         private IMeleeAttackInput _meleeAttackInput = new KeyBoardMeleeAttackInput();
         private float _hitDelay => 1 / _hitRate;
@@ -24,47 +25,6 @@ namespace Game.Entities
         {
             Initialize();
         }
-
-        public void Initialize()
-        {
-            base.Initialize(EntityData);
-            ShootInput.Shot += WeaponSlot.CurrentWeapon.Shoot;
-            _abilityInput.AbilityUsed += OnAbilityUsed;
-            _meleeAttackInput.MeleeAttackUsed += UseMeleeAttack;
-        }
-
-        private void OnAbilityUsed()
-        {
-            _ability.Use(transform);
-        }
-
-        private void UseMeleeAttack()
-        {
-            var elapsedTime = Time.time - _lastHitTime;
-            var canHit = elapsedTime > _hitDelay;
-
-            if (canHit == false) return;
-            _lastHitTime = Time.time;
-            
-            var hit = Physics2D.Raycast(transform.position, transform.right, _meleeAttackDistance);
-            if (hit.collider == null)
-                return;
-            if (hit.collider.TryGetComponent<IDamageable>(out var damageable))
-            {
-                damageable.TakeDamage(_meleeAttackDamage);
-            }
-        }
-
-        public override void TakeDamage(int damage)
-        {
-            Health.TakeDamage(damage);
-        }
-
-        protected override void OnDied()
-        {
-            Debug.Log("Player Died");
-        }
-
         private void Update()
         {
             DirectionInput.ReadInput();
@@ -81,6 +41,18 @@ namespace Game.Entities
                 Slide();
         }
 
+        public void Initialize()
+        {
+            base.Initialize(EntityData);
+            ShootInput.Shot += WeaponSlot.CurrentWeapon.Shoot;
+            _abilityInput.AbilityUsed += OnAbilityUsed;
+            _meleeAttackInput.MeleeAttackUsed += UseMeleeAttack;
+        }
+        public override void TakeDamage(int damage)
+        {
+            Health.TakeDamage(damage);
+        }
+
         protected void Slide()
         {
             var direction = DirectionInput.Direction;
@@ -89,7 +61,31 @@ namespace Game.Entities
             if (canSlide)
                 Rigidbody.velocity = new Vector2(0, _slideSpeed);
         }
+        protected override void OnDied()
+        {
+            Debug.Log("Player Died");
+        }
 
+        private void OnAbilityUsed()
+        {
+            _ability.Use(transform);
+        }
+        private void UseMeleeAttack()
+        {
+            var elapsedTime = Time.time - _lastHitTime;
+            var canHit = elapsedTime > _hitDelay;
+
+            if (canHit == false) return;
+            _lastHitTime = Time.time;
+
+            var hit = Physics2D.Raycast(transform.position, transform.right, _meleeAttackDistance);
+            if (hit.collider == null)
+                return;
+            if (hit.collider.TryGetComponent<IDamageable>(out var damageable))
+            {
+                damageable.TakeDamage(_meleeAttackDamage);
+            }
+        }
         private bool IsTouchingWall()
         {
             var direction = transform.right;
