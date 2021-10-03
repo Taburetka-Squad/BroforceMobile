@@ -53,7 +53,6 @@ namespace Game.Entities
 
         protected void Move(Vector2 direction)
         {
-            Debug.Log(direction);
             Rigidbody.velocity = new Vector2(direction.x * _speed, Rigidbody.velocity.y);
         }
         protected void Rotate(Vector2 direction)
