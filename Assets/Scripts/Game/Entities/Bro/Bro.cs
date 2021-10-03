@@ -1,33 +1,44 @@
-using UnityEngine;
 using Game.Abilities;
-using Game.Damage;
+using Game.Healths;
+using UnityEngine;
 using Game.Inputs;
 
 namespace Game.Entities
 {
-    class Player : Entity
+    public class Bro : Entity
     {
-        [SerializeField] private ScriptableAbility _ability;
-        [SerializeField] private float _meleeAttackDistance;
-        [SerializeField] private int _meleeAttackDamage;
-        [SerializeField] private float _slideSpeed;
-        [SerializeField] private float _wallCheckDistance;
-        [SerializeField] private int _hitRate;
+        private const float WallCheckDistance = 0.6f;
+        private const float MeleeAttackDistance = 0.6f;
+
         private IAbilityInput _abilityInput = new KeyBoardAbilityInput();
         private IMeleeAttackInput _meleeAttackInput = new KeyBoardMeleeAttackInput();
-        private float _hitDelay => 1 / _hitRate;
+        private IAbility _ability;
+
+        private float _hitDelay;
+        private float _slideSpeed;
+        private int _meleeAttackDamage;
+        
         private float _lastHitTime;
 
-        protected override bool CanJump => GroundCollider.IsTouchingLayers() || IsTouchingWall();
+        protected override bool CanJump =>
+            DirectionInput.Direction.x != 0
+            && IsTouchingWall()
+            || GroundCollider.IsTouchingLayers();
 
-        private void Start()
+
+        public void Initialize(BroData data)
         {
-            Initialize();
+            base.Initialize(data);
+
+            _hitDelay = 1 / data.Speed;
+            _ability = data.Ability;
+            _slideSpeed = data.SlideSpeed;
+            _meleeAttackDamage = data.MeleeAttackDamage;
+
+            Subscribe();
         }
-
-        public void Initialize()
+        private void Subscribe()
         {
-            base.Initialize(EntityData);
             ShootInput.Shot += WeaponSlot.CurrentWeapon.Shoot;
             _abilityInput.AbilityUsed += OnAbilityUsed;
             _meleeAttackInput.MeleeAttackUsed += UseMeleeAttack;
@@ -37,7 +48,6 @@ namespace Game.Entities
         {
             _ability.Use(transform);
         }
-
         private void UseMeleeAttack()
         {
             var elapsedTime = Time.time - _lastHitTime;
@@ -45,24 +55,19 @@ namespace Game.Entities
 
             if (canHit == false) return;
             _lastHitTime = Time.time;
-            
-            var hit = Physics2D.Raycast(transform.position, transform.right, _meleeAttackDistance);
+
+            var hit = Physics2D.Raycast(transform.position, transform.right, MeleeAttackDistance);
             if (hit.collider == null)
                 return;
-            if (hit.collider.TryGetComponent<IDamageable>(out var damageable))
+            if (hit.collider.TryGetComponent(out Health damageable))
             {
                 damageable.TakeDamage(_meleeAttackDamage);
             }
         }
 
-        public override void TakeDamage(int damage)
+        protected override void Die()
         {
-            Health.TakeDamage(damage);
-        }
-
-        protected override void OnDied()
-        {
-            Debug.Log("Player Died");
+            Debug.Log("Bro Died");
         }
 
         private void Update()
@@ -81,21 +86,18 @@ namespace Game.Entities
                 Slide();
         }
 
-        protected void Slide()
-        {
-            var direction = DirectionInput.Direction;
-
-            var canSlide = IsTouchingWall() && Rigidbody.velocity.y < _slideSpeed && direction.x != 0;
-            if (canSlide)
-                Rigidbody.velocity = new Vector2(0, _slideSpeed);
-        }
-
         private bool IsTouchingWall()
         {
             var direction = transform.right;
 
-            var collider = Physics2D.Raycast(transform.position, direction, _wallCheckDistance);
+            var collider = Physics2D.Raycast(transform.position, direction, WallCheckDistance);
             return collider;
+        }
+        protected void Slide()
+        {
+            var direction = DirectionInput.Direction;
+            var canSlide = IsTouchingWall() && Rigidbody.velocity.y < _slideSpeed && direction.x != 0;
+            if (canSlide) Rigidbody.velocity = new Vector2(0, _slideSpeed);
         }
     }
 }

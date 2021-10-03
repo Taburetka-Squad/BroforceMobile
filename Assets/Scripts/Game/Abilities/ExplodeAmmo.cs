@@ -1,5 +1,6 @@
-﻿using Game.Damage;
+﻿
 
+using Game.Healths;
 using UnityEngine;
 
 namespace Game.Abilities
@@ -15,7 +16,7 @@ namespace Game.Abilities
 
             foreach (var collider in colliders)
             {
-                if (collider.TryGetComponent<IDamageable>(out var damageable))
+                if (collider.TryGetComponent(out Health damageable))
                 {
                     damageable.TakeDamage(_damage);
                 }

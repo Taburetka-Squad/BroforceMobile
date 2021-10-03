@@ -3,17 +3,12 @@ using UnityEngine;
 
 namespace Game.Healths
 {
-    public class Health
+    public class Health : MonoBehaviour
     {
         public event Action Died;
 
-        private int _hitPoints;
-
-        public Health(int hitPoints)
-        {
-            _hitPoints = hitPoints;
-        }
-
+        [SerializeField] private int _hitPoints;
+        
         public void TakeDamage(int damage)
         {
             _hitPoints -= damage;

@@ -6,13 +6,9 @@ namespace Game.Entities
     {
         // AI
         protected override bool CanJump { get; }
+        
 
-        public override void TakeDamage(int damage)
-        {
-            
-        }
-
-        protected override void OnDied()
+        protected override void Die()
         {
             Debug.Log("Enemy Died");
         }

@@ -1,4 +1,4 @@
-﻿using Game.Damage;
+﻿using Game.Healths;
 using Game.Pools;
 using UnityEngine;
 
@@ -15,7 +15,7 @@ namespace Game.Projectiles
 
         protected bool TryDamageObject(GameObject obj)
         {
-            if (obj.TryGetComponent(out IDamageable damageable))
+            if (obj.TryGetComponent(out Health damageable))
             {
                 damageable.TakeDamage(_damageAmount);
                 return true;

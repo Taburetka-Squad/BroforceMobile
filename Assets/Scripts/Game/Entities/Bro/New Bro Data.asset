@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a5f251ebf48439497d7d645999c6085, type: 3}
+  m_Name: New Bro Data
+  m_EditorClassIdentifier: 
+  _prefab: {fileID: 0}
+  _healthData: {fileID: 0}
+  _weaponData: {fileID: 0}
+  _speed: 0
+  _jumpForce: 0
+  _ability: {fileID: 0}
+  _meleeAttackDistance: 0
+  _meleeAttackDamage: 0
+  _slideSpeed: 0
+  _wallCheckDistance: 0
+  _hitRate: 0

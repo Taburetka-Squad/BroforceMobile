@@ -6,30 +6,22 @@ using UnityEngine;
 namespace Game.Entities
 {
     [CreateAssetMenu(menuName = "EntityData", order = 0)]
-    public class EntityData : ScriptableObject
+    public abstract class EntityData : ScriptableObject
     {
-        public Entity Prefab => _prefab;
         public WeaponData WeaponData => _weaponData;
-        public HealthData HealthData => _healthData;
 
         public float Speed => _speed;
         public float JumpForce => _jumpForce;
-
+        public float JumpDelay => _jumpDelay;
+        
         [Header("References")]
-        [SerializeField] private Entity _prefab;
-        [SerializeField] private HealthData _healthData;
         [SerializeField] private WeaponData _weaponData;
 
         [Header("Parameters")]
         [SerializeField] private float _speed;
         [SerializeField] private float _jumpForce;
-        
-        public Entity CreateInstance()
-        {
-            var entity = Instantiate(_prefab);
-            entity.Initialize(this);
+        [SerializeField] private float _jumpDelay;
 
-            return entity;
-        }
+        public abstract Entity CreateInstance();
     }
 }

@@ -1,7 +1,7 @@
-﻿using DefaultNamespace;
+﻿using System.Collections;
+using DefaultNamespace;
 using UnityEngine;
 using Game.Weapons;
-using Game.Damage;
 using Game.Healths;
 using Game.Inputs;
 
@@ -9,23 +9,17 @@ namespace Game.Entities
 {
     [RequireComponent(typeof(Rigidbody2D))]
     [RequireComponent(typeof(BoxCollider2D))]
-    public abstract class Entity : MonoBehaviour, IDamageable
+    [RequireComponent(typeof(Health))]
+    public abstract class Entity : MonoBehaviour
     {
-        protected WeaponSlot WeaponSlot => _weaponSlot;
-
-        [Header("References")]
         [SerializeField] 
         protected BoxCollider2D GroundCollider;
-        [SerializeField] 
-        protected EntityData EntityData;
 
-        [Header("Parameters")] 
-        [SerializeField]
+        protected WeaponSlot WeaponSlot => _weaponSlot;
+        
         private float _speed;
-        [SerializeField]
         private float _jumpForce;
-        [SerializeField] 
-        private float _wallJumpDelay;
+        private float _jumpDelay;
 
         protected abstract bool CanJump { get; }
         private float _lastJumpTime;
@@ -33,26 +27,33 @@ namespace Game.Entities
         protected IShootInput ShootInput = new KeyBoardShootInput();
         
         protected Rigidbody2D Rigidbody;
-        protected Health Health;
+        private Health _health;
         private WeaponSlot _weaponSlot;
 
         private void Awake()
         {
             Rigidbody = GetComponent<Rigidbody2D>();
-            Initialize(EntityData);
+            _health = GetComponent<Health>();
         }
+        
         public void Initialize(EntityData data)
         {
-            EntityData = data;
-
-            Health = data.HealthData.GetInstance();
-            Health.Died += OnDied;
+            _speed = data.Speed;
+            _jumpForce = data.JumpForce;
+            _jumpDelay = data.JumpDelay;
+            
+            _health.Died += OnDied;
 
             _weaponSlot = new WeaponSlot(data.WeaponData, transform);
         }
 
-        public abstract void TakeDamage(int damage);
-        protected abstract void OnDied();
+        private void OnDied()
+        {
+            _health.Died -= OnDied;
+            Die();
+        }
+
+        protected abstract void Die();
 
         protected void Move()
         {
@@ -68,7 +69,7 @@ namespace Game.Entities
         }
         protected void Jump()
         {
-            var isTimeOver = Time.time > _lastJumpTime + _wallJumpDelay;
+            var isTimeOver = Time.time > _lastJumpTime + _jumpDelay;
 
             if (isTimeOver && CanJump)
             {

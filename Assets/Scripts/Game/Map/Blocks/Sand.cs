@@ -1,42 +1,22 @@
-﻿using System;
-using Game.Damage;
-using Game.Healths;
+﻿using Game.Healths;
 using UnityEngine;
 
 namespace Game.Map.Blocks
 {
-    public class Sand : Block, IDie
+    public class Sand : Block
     {
-        [Header("References")] 
-        [SerializeField]
-        private HealthData _healthData;
-        
-        public event Action Died;
-        protected Health Health;
-        
         public override void OnMapInitialized()
         {
-            Health = _healthData.GetInstance();
-            Health.Died += OnDied;
-            
             if (!TryGetBottomNeighbor(out var bottomNeighbor)) return;
 
-            if (bottomNeighbor.TryGetComponent(out IDie die))
+            if (bottomNeighbor.TryGetComponent(out Health die))
             {
                 die.Died += OnBottomNeighborDie;
             }
         }
-
-        public void TakeDamage(int damage)
-        {
-            Health.TakeDamage(damage);
-        }
         
-        private void OnDied()
+        protected override void Die()
         {
-            Died?.Invoke();
-            Health.Died -= OnDied;
-            Died = null;
             Destroy(gameObject);
         }
 
@@ -46,12 +26,10 @@ namespace Game.Map.Blocks
             collider = hit.collider;
             return hit.collider != null;
         }
-
         private void OnBottomNeighborDie()
         {
             Fall();
         }
-
         private void Fall()
         {
             if (Rigidbody2D != null)

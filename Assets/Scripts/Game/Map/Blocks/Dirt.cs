@@ -1,36 +1,15 @@
-﻿using System;
-using Game.Damage;
-using Game.Healths;
-using UnityEngine;
-
-namespace Game.Map.Blocks
+﻿namespace Game.Map.Blocks
 {
-    public class Dirt : Block, IDie
+    public class Dirt : Block
     {
-        [Header("References")] 
-        [SerializeField]
-        private HealthData _healthData;
-        
-        public event Action Died;
-        protected Health Health;
-        
         public override void OnMapInitialized()
         {
-            Health = _healthData.GetInstance();
-            Health.Died += OnDied;
+            
         }
 
-        private void OnDied()
+        protected override void Die()
         {
-            Died?.Invoke();
-            Health.Died -= OnDied;
-            Died = null;
             Destroy(gameObject);
-        }
-
-        public void TakeDamage(int damage)
-        {
-            Health.TakeDamage(damage);
         }
     }
 }

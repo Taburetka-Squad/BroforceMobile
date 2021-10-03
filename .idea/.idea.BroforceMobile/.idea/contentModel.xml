@@ -67,24 +67,22 @@
               <e p="RocketRainAbility.cs" t="Include" />
               <e p="ScriptableAbility.cs" t="Include" />
             </e>
-            <e p="CheckPoint.cs" t="Include" />
-            <e p="Damage" t="Include">
-              <e p="IDamageable.cs" t="Include" />
-              <e p="IDie.cs" t="Include" />
-            </e>
+            <e p="Difficulty.cs" t="Include" />
             <e p="Entities" t="Include">
+              <e p="Bro" t="Include">
+                <e p="Bro.cs" t="Include" />
+                <e p="BroData.cs" t="Include" />
+              </e>
               <e p="Enemies" t="Include">
                 <e p="Enemy.cs" t="Include" />
               </e>
               <e p="Entity.cs" t="Include" />
               <e p="EntityData.cs" t="Include" />
-              <e p="Player" t="Include">
-                <e p="Player.cs" t="Include" />
-              </e>
             </e>
+            <e p="Game.cs" t="Include" />
+            <e p="GameData.cs" t="Include" />
             <e p="Healths" t="Include">
               <e p="Health.cs" t="Include" />
-              <e p="HealthData.cs" t="Include" />
             </e>
             <e p="Inputs" t="Include">
               <e p="AbilityInput" t="Include">
@@ -115,11 +113,13 @@
                 <e p="Sand.cs" t="Include" />
               </e>
               <e p="BlockTilemap.cs" t="Include" />
+              <e p="CheckPoint.cs" t="Include" />
               <e p="SpawnPoint.cs" t="Include" />
               <e p="Tiles" t="Include">
                 <e p="BlockTile.cs" t="Include" />
               </e>
             </e>
+            <e p="Player.cs" t="Include" />
             <e p="Pools" t="Include">
               <e p="IPoolReturn.cs" t="Include" />
               <e p="Pool.cs" t="Include" />
@@ -132,6 +132,7 @@
               </e>
               <e p="Projectile.cs" t="Include" />
             </e>
+            <e p="Settings.cs" t="Include" />
             <e p="Weapons" t="Include">
               <e p="Weapon.cs" t="Include" />
               <e p="WeaponData.cs" t="Include" />
