@@ -1,7 +1,9 @@
 ﻿using System;
+
+using UnityEngine;
+
 using Game.Damage;
 using Game.Healths;
-using UnityEngine;
 
 namespace Game.Map.Blocks
 {
@@ -14,18 +16,18 @@ namespace Game.Map.Blocks
         public event Action Died;
         protected Health Health;
         
-        public override void OnMapInitialized()
-        {
-            Health = _healthData.GetInstance();
-            Health.Died += OnDied;
+        //public override void OnMapInitialized()
+        //{
+        //    Health = _healthData.GetInstance();
+        //    Health.Died += OnDied;
             
-            if (!TryGetBottomNeighbor(out var bottomNeighbor)) return;
+        //    if (!TryGetBottomNeighbor(out var bottomNeighbor)) return;
 
-            if (bottomNeighbor.TryGetComponent(out IDie die))
-            {
-                die.Died += OnBottomNeighborDie;
-            }
-        }
+        //    if (bottomNeighbor.TryGetComponent(out IDie die))
+        //    {
+        //        die.Died += OnBottomNeighborDie;
+        //    }
+        //}
 
         public void TakeDamage(int damage)
         {
@@ -37,6 +39,7 @@ namespace Game.Map.Blocks
             Died?.Invoke();
             Health.Died -= OnDied;
             Died = null;
+
             Destroy(gameObject);
         }
 
@@ -44,6 +47,7 @@ namespace Game.Map.Blocks
         {
             var hit = Physics2D.Raycast(transform.position, Vector2.down, 1);
             collider = hit.collider;
+            
             return hit.collider != null;
         }
 
@@ -54,10 +58,10 @@ namespace Game.Map.Blocks
 
         private void Fall()
         {
-            if (Rigidbody2D != null)
+            if (Rigidbody != null)
             {
-                Rigidbody2D.bodyType = RigidbodyType2D.Dynamic;
-                Rigidbody2D.gravityScale = 1;
+                Rigidbody.bodyType = RigidbodyType2D.Dynamic;
+                Rigidbody.gravityScale = 1;
             }
         }
     }

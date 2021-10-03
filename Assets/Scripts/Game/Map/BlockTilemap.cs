@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel;
-using Game.Map.Blocks;
+
 using UnityEngine;
-using Game.Map.Tiles;
 using UnityEngine.Tilemaps;
+
+using Game.Map.Blocks;
+using Game.Map.Tiles;
 
 namespace Game.Map
 {
@@ -23,10 +24,10 @@ namespace Game.Map
         private void Initialize()
         {
             SpawnBlocks();
-            foreach (var block in _blocks)
-            {
-                block.OnMapInitialized();
-            }
+            //foreach (var block in _blocks)
+            //{
+            //    block.OnMapInitialized();
+            //}
         }
 
         private void SpawnBlocks()
@@ -40,10 +41,9 @@ namespace Game.Map
                 _blocks.Add(block);
             }
         }
-
         public Block SpawnBlock(BlockTile tile, Vector3Int localPosition)
         {
-            var position = _tilemap.CellToWorld(localPosition);
+            var position = _tilemap.GetCellCenterWorld(localPosition);
             var rotation = _tilemap.GetTransformMatrix(localPosition).rotation;
 
             var block = tile.SpawnBlock(position, rotation, transform);
@@ -56,7 +56,6 @@ namespace Game.Map
         {
             return _tilemap.GetTile<BlockTile>(localPosition);
         }
-
         private void RemoveTile(Vector3Int localPosition)
         {
             _tilemap.SetTile(localPosition, null);
@@ -68,7 +67,6 @@ namespace Game.Map
 
             return (Vector2Int) _tilemap.WorldToCell(center);
         }
-
         public Vector2 GetTileCenter(Vector2 position)
         {
             return new Vector2(position.x + 0.5f, position.y + 0.5f);

@@ -1,7 +1,9 @@
 ﻿using System;
+
+using UnityEngine;
+
 using Game.Damage;
 using Game.Healths;
-using UnityEngine;
 
 namespace Game.Map.Blocks
 {
@@ -14,11 +16,11 @@ namespace Game.Map.Blocks
         public event Action Died;
         protected Health Health;
         
-        public override void OnMapInitialized()
-        {
-            Health = _healthData.GetInstance();
-            Health.Died += OnDied;
-        }
+        //public override void OnMapInitialized()
+        //{
+        //    Health = _healthData.GetInstance();
+        //    Health.Died += OnDied;
+        //}
 
         private void OnDied()
         {

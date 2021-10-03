@@ -8,13 +8,12 @@ namespace Game.Map.Tiles
     [CreateAssetMenu(menuName = "Game/Tiles/BlockTile")]
     public class BlockTile : Tile
     {
-        [SerializeField] private Block _prefab;
+        [Header("References")]
+        [SerializeField] private BlockData _blockData;
 
         public Block SpawnBlock(Vector2 position, Quaternion rotation, Transform container)
         {
-            var block = Instantiate(_prefab, position, rotation, container);
-            block.Initialize(sprite, color);
-            return block;
+            return _blockData.CreateInstance(position, rotation, container, sprite, color);
         }
     }
 }
