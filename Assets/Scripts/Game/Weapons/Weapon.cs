@@ -20,7 +20,6 @@ namespace Game.Weapons
             _data = data;
             _shootDelay = 1 / _data.FireRate;
         }
-
         public void Shoot()
         {
             var elapsedTime = Time.time - _lastShootTime;

@@ -1,7 +1,6 @@
 using Game.Abilities;
 using Game.Healths;
 using UnityEngine;
-using Game.Inputs;
 
 namespace Game.Entities
 {
@@ -9,9 +8,7 @@ namespace Game.Entities
     {
         private const float WallCheckDistance = 0.6f;
         private const float MeleeAttackDistance = 0.6f;
-
-        private IAbilityInput _abilityInput = new KeyBoardAbilityInput();
-        private IMeleeAttackInput _meleeAttackInput = new KeyBoardMeleeAttackInput();
+        
         private IAbility _ability;
 
         private float _hitDelay;
@@ -34,17 +31,9 @@ namespace Game.Entities
             _ability = data.Ability;
             _slideSpeed = data.SlideSpeed;
             _meleeAttackDamage = data.MeleeAttackDamage;
-
-            Subscribe();
-        }
-        private void Subscribe()
-        {
-            ShootInput.Shot += WeaponSlot.CurrentWeapon.Shoot;
-            _abilityInput.AbilityUsed += OnAbilityUsed;
-            _meleeAttackInput.MeleeAttackUsed += UseMeleeAttack;
         }
 
-        private void OnAbilityUsed()
+        private void UseAbility()
         {
             _ability.Use(transform);
         }
@@ -55,8 +44,10 @@ namespace Game.Entities
 
             if (canHit == false) return;
             _lastHitTime = Time.time;
-
+        
             var hit = Physics2D.Raycast(transform.position, transform.right, MeleeAttackDistance);
+
+
             if (hit.collider == null)
                 return;
             if (hit.collider.TryGetComponent(out Health damageable))
@@ -64,7 +55,7 @@ namespace Game.Entities
                 damageable.TakeDamage(_meleeAttackDamage);
             }
         }
-
+        
         protected override void Die()
         {
             Debug.Log("Bro Died");
@@ -72,19 +63,31 @@ namespace Game.Entities
 
         private void Update()
         {
-            DirectionInput.ReadInput();
-            ShootInput.ReadInput();
-            _abilityInput.ReadInput();
-            _meleeAttackInput.ReadInput();
+            if (ShootInput.CanShoot)
+            {
+                WeaponSlot.CurrentWeapon.Shoot();
+            }
+            
+            if (Input.GetKey(KeyCode.Q))
+            {
+                UseMeleeAttack();
+            }
+
+            if (Input.GetKey(KeyCode.Mouse1))
+            {
+                UseAbility();
+            }
+            
             Move();
 
             Rotate();
             if (DirectionInput.Direction.y > 0)
                 Jump();
             else
-
                 Slide();
+            
         }
+
 
         private bool IsTouchingWall()
         {
@@ -93,7 +96,7 @@ namespace Game.Entities
             var collider = Physics2D.Raycast(transform.position, direction, WallCheckDistance);
             return collider;
         }
-        protected void Slide()
+        private void Slide()
         {
             var direction = DirectionInput.Direction;
             var canSlide = IsTouchingWall() && Rigidbody.velocity.y < _slideSpeed && direction.x != 0;
