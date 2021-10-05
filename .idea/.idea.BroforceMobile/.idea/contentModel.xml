@@ -69,15 +69,19 @@
             </e>
             <e p="Difficulty.cs" t="Include" />
             <e p="Entities" t="Include">
-              <e p="AI" t="Include">
-                <e p="DummyAI.cs" t="Include" />
-              </e>
-              <e p="Bro" t="Include">
-                <e p="Bro.cs" t="Include" />
-                <e p="BroData.cs" t="Include" />
-              </e>
-              <e p="Enemies" t="Include">
-                <e p="Enemy.cs" t="Include" />
+              <e p="ArmedEntities" t="Include">
+                <e p="ArmedEntity.cs" t="Include" />
+                <e p="ArmedEntityData.cs" t="Include" />
+                <e p="Bro" t="Include">
+                  <e p="Bro.cs" t="Include" />
+                  <e p="BroData.cs" t="Include" />
+                </e>
+                <e p="Enemies" t="Include">
+                  <e p="AI" t="Include">
+                    <e p="DummyAI.cs" t="Include" />
+                  </e>
+                  <e p="Enemy.cs" t="Include" />
+                </e>
               </e>
               <e p="Entity.cs" t="Include" />
               <e p="EntityData.cs" t="Include" />
@@ -92,6 +96,7 @@
                 <e p="IDirectionInput.cs" t="Include" />
                 <e p="KeyBoardDirectionInput.cs" t="Include" />
               </e>
+              <e p="IInput.cs" t="Include" />
               <e p="ShootInput" t="Include">
                 <e p="IShootInput.cs" t="Include" />
                 <e p="KeyBoardShootInput.cs" t="Include" />

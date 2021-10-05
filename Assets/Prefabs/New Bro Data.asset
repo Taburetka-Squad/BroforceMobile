@@ -12,14 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a5f251ebf48439497d7d645999c6085, type: 3}
   m_Name: New Bro Data
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 0}
-  _healthData: {fileID: 0}
+  _speed: 10
+  _jumpForce: 100
+  _jumpDelay: 3
   _weaponData: {fileID: 0}
-  _speed: 0
-  _jumpForce: 0
+  _prefab: {fileID: 0}
+  _broPrefab: {fileID: 0}
   _ability: {fileID: 0}
-  _meleeAttackDistance: 0
   _meleeAttackDamage: 0
   _slideSpeed: 0
-  _wallCheckDistance: 0
-  _hitRate: 0

@@ -16,9 +16,6 @@ namespace Game.Entities
         [SerializeField] protected BoxCollider2D GroundCollider;
 
         protected IDirectionInput DirectionInput = new KeyBoardDirectionInput();
-        protected IShootInput ShootInput = new KeyBoardShootInput();
-
-        protected WeaponSlot WeaponSlot => _weaponSlot;
 
         private float _speed;
         private float _jumpForce;
@@ -28,8 +25,7 @@ namespace Game.Entities
 
         protected Rigidbody2D Rigidbody;
         private Health _health;
-
-        private WeaponSlot _weaponSlot;
+        
         private float _lastJumpTime;
 
         private void Awake()
@@ -44,8 +40,6 @@ namespace Game.Entities
             _jumpDelay = data.JumpDelay;
 
             _health.Died += OnDied;
-
-            _weaponSlot = new WeaponSlot(data.WeaponData, transform);
         }
 
         private void OnDied()

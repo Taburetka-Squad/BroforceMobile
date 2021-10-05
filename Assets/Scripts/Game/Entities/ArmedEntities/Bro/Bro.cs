@@ -1,12 +1,14 @@
-using System;
 using Game.Abilities;
+using Game.Entities.ArmedEntities;
 using Game.Healths;
 using UnityEngine;
 
 namespace Game.Entities
 {
-    public class Bro : Entity
+    public class Bro : ArmedEntity
     {
+        [SerializeField] private BroData _data;
+
         private const float WallCheckDistance = 0.6f;
         private const float MeleeAttackDistance = 0.6f;
         
@@ -24,6 +26,10 @@ namespace Game.Entities
             && IsTouchingWall()
             || GroundCollider.IsTouchingLayers();
 
+        private void Start()
+        {
+            Initialize(_data);
+        }
 
         public void Initialize(BroData data)
         {
@@ -57,7 +63,7 @@ namespace Game.Entities
                 damageable.TakeDamage(_meleeAttackDamage);
             }
         }
-        
+
         protected override void Die()
         {
             Debug.Log("Bro Died");
@@ -66,10 +72,10 @@ namespace Game.Entities
         private void Update()
         {
             _direction = DirectionInput.Direction;
-            
+
             if (ShootInput.CanShoot)
             {
-                WeaponSlot.CurrentWeapon.Shoot();
+                Shoot();
             }
             
             if (Input.GetKey(KeyCode.Q))

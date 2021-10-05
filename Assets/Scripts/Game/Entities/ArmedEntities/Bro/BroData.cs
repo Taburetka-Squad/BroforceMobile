@@ -1,12 +1,14 @@
 ﻿using Game.Abilities;
+using Game.Entities.ArmedEntities;
 using UnityEngine;
 
 namespace Game.Entities
 {
-    [CreateAssetMenu(menuName = "BroData", order = 0)]
-    public class BroData : EntityData
+    [CreateAssetMenu(menuName = "EntityData/BroData", order = 0)]
+    public class BroData : ArmedEntityData
     {
-        public Bro BroPrefab => _broPrefab;
+        public override Entity Prefab => _broPrefab;
+
         public ScriptableAbility Ability => _ability;
         public int MeleeAttackDamage => _meleeAttackDamage;
         public float SlideSpeed => _slideSpeed;
@@ -16,9 +18,11 @@ namespace Game.Entities
         [SerializeField] private int _meleeAttackDamage;
         [SerializeField] private float _slideSpeed;
 
-        public override Entity CreateInstance()
+        public Entity CreateInstance()
         {
-            return Instantiate(BroPrefab);
+            var instance = Instantiate(_broPrefab);
+            instance.Initialize(this);
+            return instance;
         }
     }
 }

@@ -1,9 +1,10 @@
 using System.Collections;
+using Game.Entities.ArmedEntities;
 using UnityEngine;
 
 namespace Game.Entities
 {
-    public class DummyAI : Entity
+    public class DummyAI : ArmedEntity
     {
         [SerializeField] private float _viewDistance;
         [SerializeField] private float _startFireDelay;
