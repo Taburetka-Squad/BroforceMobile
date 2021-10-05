@@ -7,8 +7,6 @@ namespace Game.Entities
     [CreateAssetMenu(menuName = "EntityData/BroData", order = 0)]
     public class BroData : ArmedEntityData
     {
-        public override Entity Prefab => _broPrefab;
-
         public ScriptableAbility Ability => _ability;
         public int MeleeAttackDamage => _meleeAttackDamage;
         public float SlideSpeed => _slideSpeed;

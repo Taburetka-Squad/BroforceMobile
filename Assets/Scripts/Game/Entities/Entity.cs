@@ -1,10 +1,7 @@
 ﻿using DefaultNamespace;
 using UnityEngine;
-using Game.Weapons;
 using Game.Healths;
-using Game.Inputs;
 using Game.Inputs.DirectionInput;
-using Game.Inputs.ShootInput;
 
 namespace Game.Entities
 {

@@ -15,9 +15,10 @@ MonoBehaviour:
   _speed: 10
   _jumpForce: 100
   _jumpDelay: 3
-  _weaponData: {fileID: 0}
-  _prefab: {fileID: 0}
-  _broPrefab: {fileID: 0}
-  _ability: {fileID: 0}
-  _meleeAttackDamage: 0
-  _slideSpeed: 0
+  _entityPrefab: {fileID: 1459315355141393841, guid: ecb595c3586a7ad40b4dcd9df7351c0a, type: 3}
+  _weaponData: {fileID: 11400000, guid: fd27c8cb6d7eb5e4c8f9299cd79dcc14, type: 2}
+  _armedPrefab: {fileID: 1459315355141393841, guid: ecb595c3586a7ad40b4dcd9df7351c0a, type: 3}
+  _broPrefab: {fileID: 1459315355141393841, guid: ecb595c3586a7ad40b4dcd9df7351c0a, type: 3}
+  _ability: {fileID: 11400000, guid: 76a9d599bf3f0f349830ed7fd7f56c82, type: 2}
+  _meleeAttackDamage: 1
+  _slideSpeed: -0.75

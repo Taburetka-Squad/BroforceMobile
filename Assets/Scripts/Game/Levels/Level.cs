@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Game.Map;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -35,6 +36,17 @@ namespace Game.Levels
         
         #region Editor
 #if UNITY_EDITOR
+        
+        private bool isNotified;
+        
+        private void OnValidate()
+        {
+            if (_checkPoints == null && !isNotified)
+            {
+                print("Не забудь заполнить массив чекпоинтов");
+            }
+        }
+
         [ContextMenu("FillCheckPointsArray")]
         private void FillCheckPointsArray()
         {

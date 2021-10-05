@@ -3,10 +3,8 @@
 namespace Game.Entities
 {
     [CreateAssetMenu(menuName = "EntityData/EntityData", order = 0)]
-    public abstract class EntityData : ScriptableObject
+    public class EntityData : ScriptableObject
     {
-        public abstract Entity Prefab { get; }
-
         public float Speed => _speed;
         public float JumpForce => _jumpForce;
         public float JumpDelay => _jumpDelay;
@@ -15,10 +13,11 @@ namespace Game.Entities
         [SerializeField] private float _speed;
         [SerializeField] private float _jumpForce;
         [SerializeField] private float _jumpDelay;
+        [SerializeField] private Entity _entityPrefab;
 
         public Entity CreateInstance()
         {
-            var instance = Instantiate(Prefab);
+            var instance = Instantiate(_entityPrefab);
             instance.Initialize(this);
             return instance;
         }
