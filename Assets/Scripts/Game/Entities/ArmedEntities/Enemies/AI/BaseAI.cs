@@ -13,7 +13,7 @@ namespace Game.Entities
         
         protected bool IsPlayer(RaycastHit2D hit)
         {
-            return hit.collider.TryGetComponent(out Player player);
+            return hit.collider.TryGetComponent(out Bro bro);
         }
         protected RaycastHit2D Look()
         {
@@ -23,7 +23,7 @@ namespace Game.Entities
         {
             yield return new WaitForSeconds(_startFireDelay);
 
-            WeaponSlot.CurrentWeapon.Shoot();
+            Shoot();
         }
     }
 }

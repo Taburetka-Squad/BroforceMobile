@@ -9,7 +9,7 @@ namespace Game.Entities
         protected override bool CanJump => false;
         protected override void Die()
         {
-            throw new System.NotImplementedException();
+            
         }
 
         private void Update()
