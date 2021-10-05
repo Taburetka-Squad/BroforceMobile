@@ -69,10 +69,6 @@
             </e>
             <e p="Difficulty.cs" t="Include" />
             <e p="Entities" t="Include">
-              <e p="AI" t="Include">
-                <e p="BaseAI.cs" t="Include" />
-                <e p="WanderAI.cs" t="Include" />
-              </e>
               <e p="ArmedEntities" t="Include">
                 <e p="ArmedEntity.cs" t="Include" />
                 <e p="ArmedEntityData.cs" t="Include" />
@@ -82,7 +78,9 @@
                 </e>
                 <e p="Enemies" t="Include">
                   <e p="AI" t="Include">
+                    <e p="BaseAI.cs" t="Include" />
                     <e p="DummyAI.cs" t="Include" />
+                    <e p="WanderAI.cs" t="Include" />
                   </e>
                   <e p="Enemy.cs" t="Include" />
                 </e>
@@ -115,6 +113,7 @@
                 <e p="Block.cs" t="Include" />
                 <e p="Dirt.cs" t="Include" />
                 <e p="Sand.cs" t="Include" />
+                <e p="Steel.cs" t="Include" />
               </e>
               <e p="BlockTilemap.cs" t="Include" />
               <e p="CheckPoint.cs" t="Include" />

@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 namespace Game.Entities
 {
     public class WanderAI : BaseAI
@@ -17,11 +13,9 @@ namespace Game.Entities
             React();
         }
 
-        protected override void React()
+        protected override bool React()
         {
-            
+            return false;
         }
-
-
     }
 }

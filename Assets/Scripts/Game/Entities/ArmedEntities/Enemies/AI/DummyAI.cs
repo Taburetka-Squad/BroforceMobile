@@ -4,18 +4,16 @@ namespace Game.Entities
     {
         protected override bool CanJump => false;
 
-        private void Update()
+        private void FixedUpdate()
         {
-            React();
+            if(React())
+                Fire();
         }
         
-        protected override void React()
+        protected override bool React()
         {
             var result = Look();
-            var canFire = result.collider != null && IsPlayer(result);
-
-            if (canFire)
-                StartCoroutine(Fire());
+            return result.collider != null && IsPlayer(result);
         }
         
         protected override void Die()

@@ -13,13 +13,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GroundCollider: {fileID: 2992676236253278267}
-  EntityData: {fileID: 11400000, guid: bd3706895ace70d4d86567780181533b, type: 2}
-  _speed: 0
-  _jumpForce: 0
-  _wallJumpDelay: 0
   _viewDistance: 10
   _startFireDelay: 2
-  _fireDuration: 3
+  _data: {fileID: 11400000, guid: 3203aa7868d9b5a49bd8f08e6a5c5876, type: 2}
 --- !u!1001 &4166903354363318169
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49,11 +45,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9098832138269941008, guid: 0541ed76d2221e54b8080ecb75f0b6f0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.1135478
       objectReference: {fileID: 0}
     - target: {fileID: 9098832138269941008, guid: 0541ed76d2221e54b8080ecb75f0b6f0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 8.088728
       objectReference: {fileID: 0}
     - target: {fileID: 9098832138269941008, guid: 0541ed76d2221e54b8080ecb75f0b6f0, type: 3}
       propertyPath: m_LocalPosition.z
