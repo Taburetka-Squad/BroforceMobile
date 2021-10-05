@@ -9,9 +9,6 @@ namespace Game.Entities
         [SerializeField] private float _startFireDelay;
         [SerializeField] private float _fireDuration;
 
-        private const int _right = 1;
-        private const int _left = -1;
-
         protected override bool CanJump => false;
 
         private void Update()
@@ -19,26 +16,26 @@ namespace Game.Entities
             React();
         }
 
-        public override void TakeDamage(int damage) { }
-        protected override void OnDied() { }
+        protected override void Die()
+        {
+        }
 
         private void React()
         {
-            var rightRay = Physics2D.Raycast(transform.position, Vector2.right, _viewDistance);
-
-            if (IsPlayer(rightRay))
+            var ray = Physics2D.Raycast(transform.position, Vector2.right, _viewDistance);
+            if (ray.collider)
+                return;
+            
+            if (IsPlayer(ray.collider))
                 StartCoroutine(Fire());
         }
-        private bool IsPlayer(RaycastHit2D hit)
-        {
-            if (hit.collider != null && hit.collider.TryGetComponent(out Player player))
-            {
-                return true;
-            }
 
-            return false;
+        private bool IsPlayer(Collider2D collider)
+        {
+            return collider.TryGetComponent(out Player _);
         }
-        IEnumerator Fire()
+
+        private IEnumerator Fire()
         {
             yield return new WaitForSeconds(_startFireDelay);
 

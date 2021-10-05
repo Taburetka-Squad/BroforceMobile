@@ -69,6 +69,9 @@
             </e>
             <e p="Difficulty.cs" t="Include" />
             <e p="Entities" t="Include">
+              <e p="AI" t="Include">
+                <e p="DummyAI.cs" t="Include" />
+              </e>
               <e p="Bro" t="Include">
                 <e p="Bro.cs" t="Include" />
                 <e p="BroData.cs" t="Include" />
@@ -85,18 +88,9 @@
               <e p="Health.cs" t="Include" />
             </e>
             <e p="Inputs" t="Include">
-              <e p="AbilityInput" t="Include">
-                <e p="IAbilityInput.cs" t="Include" />
-                <e p="KeyBoardAbilityInput.cs" t="Include" />
-              </e>
               <e p="DirectionInput" t="Include">
                 <e p="IDirectionInput.cs" t="Include" />
                 <e p="KeyBoardDirectionInput.cs" t="Include" />
-              </e>
-              <e p="IInput.cs" t="Include" />
-              <e p="MeleeAttackInput" t="Include">
-                <e p="IMeleeAttackInput.cs" t="Include" />
-                <e p="KeyBoardMeleeAttackInput.cs" t="Include" />
               </e>
               <e p="ShootInput" t="Include">
                 <e p="IShootInput.cs" t="Include" />

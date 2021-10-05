@@ -1,9 +1,7 @@
-﻿using System;
-
-namespace Game.Inputs
+﻿namespace Game.Inputs.ShootInput
 {
-    public interface IShootInput : IInput
+    public interface IShootInput
     {
-        event Action Shot;
+        bool CanShoot { get; }
     }
 }

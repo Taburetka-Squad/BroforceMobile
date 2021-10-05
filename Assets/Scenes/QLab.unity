@@ -218,36 +218,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4147831932365807164, guid: ecb595c3586a7ad40b4dcd9df7351c0a, type: 3}
   m_PrefabInstance: {fileID: 216119692}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1854209287 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7102849433184123338, guid: 7aedce037fcafcc4a967cb485bfd9b24, type: 3}
-  m_PrefabInstance: {fileID: 7102849433912133932}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1854209289 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7102849433184123335, guid: 7aedce037fcafcc4a967cb485bfd9b24, type: 3}
-  m_PrefabInstance: {fileID: 7102849433912133932}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1854209287}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64cd4b2ed7f2f6d4d88c8f22eb819c7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1854209295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1854209287}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6741f7785ac84d47a60827f97f27b65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _tilemap: {fileID: 1854209289}
-  _placingTileBlock: {fileID: 11400000, guid: 4acd7c0bbf2ad2f46b056fb7f074ce16, type: 2}
 --- !u!1001 &1915350866
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1119,5 +1089,6 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[23].second.m_TileObjectToInstantiateIndex
       value: 65535
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7102849433184123335, guid: 7aedce037fcafcc4a967cb485bfd9b24, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7aedce037fcafcc4a967cb485bfd9b24, type: 3}

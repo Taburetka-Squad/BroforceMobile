@@ -1,9 +1,8 @@
-﻿using Game;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace DefaultNamespace
 {
-    public interface IDirectionInput : IInput
+    public interface IDirectionInput
     {
         Vector2 Direction { get; }
     }

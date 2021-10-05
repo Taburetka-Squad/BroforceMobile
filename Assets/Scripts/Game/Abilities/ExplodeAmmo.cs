@@ -1,6 +1,4 @@
-﻿
-
-using Game.Healths;
+﻿using Game.Healths;
 using UnityEngine;
 
 namespace Game.Abilities

@@ -1,3 +1,4 @@
+using System;
 using Game.Abilities;
 using Game.Healths;
 using UnityEngine;
@@ -16,6 +17,7 @@ namespace Game.Entities
         private int _meleeAttackDamage;
         
         private float _lastHitTime;
+        private Vector2 _direction;
 
         protected override bool CanJump =>
             DirectionInput.Direction.x != 0
@@ -63,6 +65,8 @@ namespace Game.Entities
 
         private void Update()
         {
+            _direction = DirectionInput.Direction;
+            
             if (ShootInput.CanShoot)
             {
                 WeaponSlot.CurrentWeapon.Shoot();
@@ -77,18 +81,18 @@ namespace Game.Entities
             {
                 UseAbility();
             }
+        }
+        private void FixedUpdate()
+        {
+            Move(_direction);
+            Rotate(_direction);
             
-            Move();
-
-            Rotate();
             if (DirectionInput.Direction.y > 0)
                 Jump();
             else
-                Slide();
-            
+                Slide(_direction);
         }
-
-
+        
         private bool IsTouchingWall()
         {
             var direction = transform.right;
@@ -96,9 +100,8 @@ namespace Game.Entities
             var collider = Physics2D.Raycast(transform.position, direction, WallCheckDistance);
             return collider;
         }
-        private void Slide()
+        private void Slide(Vector2 direction)
         {
-            var direction = DirectionInput.Direction;
             var canSlide = IsTouchingWall() && Rigidbody.velocity.y < _slideSpeed && direction.x != 0;
             if (canSlide) Rigidbody.velocity = new Vector2(0, _slideSpeed);
         }

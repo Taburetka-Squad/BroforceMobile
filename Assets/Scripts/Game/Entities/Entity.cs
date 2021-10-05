@@ -1,9 +1,9 @@
-﻿using System.Collections;
-using DefaultNamespace;
+﻿using DefaultNamespace;
 using UnityEngine;
 using Game.Weapons;
 using Game.Healths;
 using Game.Inputs;
+using Game.Inputs.DirectionInput;
 using Game.Inputs.ShootInput;
 
 namespace Game.Entities
@@ -55,14 +55,12 @@ namespace Game.Entities
         }
         protected abstract void Die();
 
-        protected void Move()
+        protected void Move(Vector2 direction)
         {
-            var direction = DirectionInput.Direction;
             Rigidbody.velocity = new Vector2(direction.x * _speed, Rigidbody.velocity.y);
         }
-        protected void Rotate()
+        protected void Rotate(Vector2 direction)
         {
-            var direction = DirectionInput.Direction;
             if (direction.x == 0) return;
 
             transform.right = Vector2.right * direction;
