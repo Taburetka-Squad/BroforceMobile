@@ -7,6 +7,10 @@ namespace Game.Entities
     public class WanderAI : BaseAI
     {
         protected override bool CanJump => false;
+        protected override void Die()
+        {
+            throw new System.NotImplementedException();
+        }
 
         private void Update()
         {
@@ -18,7 +22,6 @@ namespace Game.Entities
             
         }
 
-        public override void TakeDamage(int damage) { }
-        protected override void OnDied() { }
+
     }
 }

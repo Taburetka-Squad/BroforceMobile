@@ -69,6 +69,10 @@
             </e>
             <e p="Difficulty.cs" t="Include" />
             <e p="Entities" t="Include">
+              <e p="AI" t="Include">
+                <e p="BaseAI.cs" t="Include" />
+                <e p="WanderAI.cs" t="Include" />
+              </e>
               <e p="ArmedEntities" t="Include">
                 <e p="ArmedEntity.cs" t="Include" />
                 <e p="ArmedEntityData.cs" t="Include" />

@@ -1,22 +1,16 @@
 using System.Collections;
-using System.Collections.Generic;
+using Game.Entities.ArmedEntities;
 using UnityEngine;
 
 namespace Game.Entities
 {
-    public abstract class BaseAI : Entity
+    public abstract class BaseAI : ArmedEntity
     {
         [SerializeField] private float _viewDistance;
         [SerializeField] private float _startFireDelay;
 
-        protected virtual void React()
-        {
-            var result = Look();
-            var canFire = result.collider != null && IsPlayer(result);
-
-            if (canFire)
-                StartCoroutine(Fire());
-        }
+        protected abstract void React();
+        
         protected bool IsPlayer(RaycastHit2D hit)
         {
             return hit.collider.TryGetComponent(out Player player);
