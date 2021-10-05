@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47128f13d9e0cdb4893774a521fc687d, type: 3}
   m_Name: TestBulletData
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 5738485720485726697, guid: 01c98ca9b674f2840a3da29b3117c400, type: 3}
+  _prefab: {fileID: 0}
   _damage: 1
   _speed: 20
   _maxDistance: 20
