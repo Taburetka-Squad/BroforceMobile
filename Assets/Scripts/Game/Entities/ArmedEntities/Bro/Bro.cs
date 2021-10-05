@@ -7,10 +7,8 @@ namespace Game.Entities
 {
     public class Bro : ArmedEntity
     {
-        [SerializeField] private BroData _data;
-
-        private const float WallCheckDistance = 0.6f;
-        private const float MeleeAttackDistance = 0.6f;
+        private const float WallCheckDistance = 0.51f;
+        private const float MeleeAttackDistance = 0.51f;
         
         private IAbility _ability;
 
@@ -25,12 +23,7 @@ namespace Game.Entities
             DirectionInput.Direction.x != 0
             && IsTouchingWall()
             || GroundCollider.IsTouchingLayers();
-
-        private void Start()
-        {
-            Initialize(_data);
-        }
-
+        
         public void Initialize(BroData data)
         {
             base.Initialize(data);
@@ -78,12 +71,12 @@ namespace Game.Entities
                 Shoot();
             }
             
-            if (Input.GetKey(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.Q))
             {
                 UseMeleeAttack();
             }
 
-            if (Input.GetKey(KeyCode.Mouse1))
+            if (Input.GetKeyDown(KeyCode.Mouse1))
             {
                 UseAbility();
             }

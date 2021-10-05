@@ -2,12 +2,12 @@
 
 namespace Game.Map
 {
-    public class SpawnPoint : MonoBehaviour
+    public class SpawnPoint : Point
     {
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.cyan;
-            Gizmos.DrawWireSphere(transform.position,3);
+            Gizmos.DrawSphere(transform.position,0.2f);
         }
     }
 }

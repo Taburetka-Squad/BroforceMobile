@@ -18,7 +18,7 @@ namespace Game.Entities
         [SerializeField] private int _meleeAttackDamage;
         [SerializeField] private float _slideSpeed;
 
-        public Entity CreateInstance()
+        public Bro CreateInstance()
         {
             var instance = Instantiate(_broPrefab);
             instance.Initialize(this);

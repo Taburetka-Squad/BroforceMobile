@@ -88,6 +88,7 @@
             </e>
             <e p="Game.cs" t="Include" />
             <e p="GameData.cs" t="Include" />
+            <e p="GameTest.cs" t="Include" />
             <e p="Healths" t="Include">
               <e p="Health.cs" t="Include" />
             </e>
@@ -113,6 +114,7 @@
               </e>
               <e p="BlockTilemap.cs" t="Include" />
               <e p="CheckPoint.cs" t="Include" />
+              <e p="Point.cs" t="Include" />
               <e p="SpawnPoint.cs" t="Include" />
               <e p="Tiles" t="Include">
                 <e p="BlockTile.cs" t="Include" />

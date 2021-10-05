@@ -7,11 +7,13 @@ namespace Game.Levels
 {
     public class Level : MonoBehaviour
     {
+        public SpawnPoint PlayerSpawnPoint => _playerSpawnPoint;
+
         [SerializeField] private Tilemap _tilemap;
         [SerializeField] private SpawnPoint _playerSpawnPoint;
 
         private SpawnPoint[] _enemiesSpawnPoints;
-        private CheckPoint[] _checkPoints;
+        [SerializeField] private CheckPoint[] _checkPoints;
 
         private CheckPoint _lastPassedCheckPoint;
         private BlockTilemap _blockTilemap;
@@ -30,8 +32,8 @@ namespace Game.Levels
         {
             _lastPassedCheckPoint = checkPoint;
         }
-
-
+        
+        #region Editor
 #if UNITY_EDITOR
         [ContextMenu("FillCheckPointsArray")]
         private void FillCheckPointsArray()
@@ -57,5 +59,6 @@ namespace Game.Levels
             _enemiesSpawnPoints = spawnPoints.ToArray();
         }
 #endif
+        #endregion
     }
 }
