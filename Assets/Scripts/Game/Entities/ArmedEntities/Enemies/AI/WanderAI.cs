@@ -1,21 +1,25 @@
+using System.Collections;
+using UnityEngine;
+
 namespace Game.Entities
 {
-    public class WanderAI : BaseAI
+    public class WanderAI : DummyAI
     {
+        [SerializeField] private float _movementRange;
+        [SerializeField] private float _movementDelay;
         protected override bool CanJump => false;
-        protected override void Die()
-        {
-            
-        }
 
-        private void Update()
+        private void FixedUpdate()
         {
-            React();
-        }
+            if (CanFire())
+                Fire();
 
-        protected override bool React()
-        {
-            return false;
+
         }
+        protected IEnumerator CanMove()
+        {
+            yield return new WaitForSeconds(1);
+        }
+        protected override void Die() { }
     }
 }

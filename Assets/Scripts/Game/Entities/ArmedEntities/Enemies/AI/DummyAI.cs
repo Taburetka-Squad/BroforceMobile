@@ -6,19 +6,15 @@ namespace Game.Entities
 
         private void FixedUpdate()
         {
-            if(React())
+            if(CanFire())
                 Fire();
         }
         
-        protected override bool React()
+        protected override bool CanFire()
         {
             var result = Look();
             return result.collider != null && IsPlayer(result);
         }
-        
-        protected override void Die()
-        {
-        }
-
+        protected override void Die() { }
     }
 }

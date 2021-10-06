@@ -14,7 +14,7 @@ namespace Game.Entities
             Initialize(_data);
         }
 
-        protected abstract bool React();
+        protected abstract bool CanFire();
         
         protected bool IsPlayer(RaycastHit2D hit)
         {
