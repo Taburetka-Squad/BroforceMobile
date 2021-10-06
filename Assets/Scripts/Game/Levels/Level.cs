@@ -33,12 +33,24 @@ namespace Game.Levels
         {
             _lastPassedCheckPoint = checkPoint;
         }
-        
+
+        public void MoveToLastCheckPoint(Transform targetTransform)
+        {
+            if (_lastPassedCheckPoint != null)
+            {
+                _lastPassedCheckPoint.MoveObjectToMe(targetTransform);
+                return;
+            }
+            
+            _playerSpawnPoint.MoveObjectToMe(targetTransform);
+        }
+
         #region Editor
+
 #if UNITY_EDITOR
-        
+
         private bool isNotified;
-        
+
         private void OnValidate()
         {
             if (_checkPoints == null && !isNotified)
@@ -57,9 +69,9 @@ namespace Game.Levels
         private void FillEnemiesSpawnPointsArray()
         {
             var spawnPoints = new List<SpawnPoint>();
-            
+
             spawnPoints.AddRange(FindObjectsOfType<SpawnPoint>());
-            
+
             for (int i = 0; i < spawnPoints.Count; i++)
             {
                 if (spawnPoints[i] == _playerSpawnPoint)
@@ -71,6 +83,7 @@ namespace Game.Levels
             _enemiesSpawnPoints = spawnPoints.ToArray();
         }
 #endif
+
         #endregion
     }
 }

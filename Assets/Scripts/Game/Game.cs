@@ -1,25 +1,23 @@
-﻿using UnityEngine;
+﻿using Cinemachine;
+using UnityEngine;
 
 namespace Game
 {
-    public class Game
+    public class Game : MonoBehaviour
     {
-        public Player Player { get; private set; }
-
-        public Game(GameData data)
+        [SerializeField] private GameDataFactory _gameDataFactory;
+        [SerializeField] private CinemachineVirtualCamera _cinemachine;
+        private Player _player;
+        private GameData _data;
+        
+        public void Start()
         {
-            Start(data);
-        }
-
-        public void Start(GameData data)
-        {
-            var level = data.CreateLevelInstance();
-
-            var bro = data.Bro;
-            level.PlayerSpawnPoint.MoveObjectToMe(bro.gameObject);
+            _data = _gameDataFactory.GetGameData(Difficulty.Easy);
             
-            Player = new Player(1, bro);
-            Player.BroDied += OnBroDied;
+            var level = _data.CreateLevelInstance();
+
+            _player = new Player(_data.StartCountPlayerLives, level, _data.Factory, _cinemachine);
+            _player.BroDied += OnBroDied;
         }
 
         private void OnBroDied()

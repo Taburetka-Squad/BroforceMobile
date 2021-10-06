@@ -3,7 +3,7 @@
 
 namespace Game.Inputs.ShootInput
 {
-    public interface IShootInput : IInput
+    public interface IShootInput
     {
         public bool CanShoot { get; }
         event Action Shot;

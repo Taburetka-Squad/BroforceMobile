@@ -149,10 +149,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 177885275}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ba2b33ac3604f70a6587568d6330eaf, type: 3}
+  m_Script: {fileID: 11500000, guid: cf274f15a1d744a7b8acca884bfb9e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameData: {fileID: 11400000, guid: 7739770417a5bbb46a54ec65e9e0509c, type: 2}
+  _gameDataFactory: {fileID: 11400000, guid: 56da7d96826aa334287e126c9780e0ce, type: 2}
   _cinemachine: {fileID: 2110850706}
 --- !u!4 &177885277
 Transform:

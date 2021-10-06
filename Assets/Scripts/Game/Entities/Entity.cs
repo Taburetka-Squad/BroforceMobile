@@ -54,7 +54,7 @@ namespace Game.Entities
         {
             if (direction.x == 0) return;
 
-            transform.right = Vector2.right * direction;
+            transform.right = Vector2.right * direction.x;
         }
         protected void Jump()
         {
@@ -63,7 +63,7 @@ namespace Game.Entities
             if (isTimeOver && CanJump)
             {
                 _lastJumpTime = Time.time;
-                Rigidbody.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
+                Rigidbody.velocity = Vector2.up * _jumpForce;
             }
         }
     }

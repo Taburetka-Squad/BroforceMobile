@@ -1,5 +1,6 @@
 ﻿using Game.Abilities;
 using Game.Entities.ArmedEntities;
+using Game.Entities.ArmedEntities.Bro;
 using UnityEngine;
 
 namespace Game.Entities
@@ -10,11 +11,13 @@ namespace Game.Entities
         public ScriptableAbility Ability => _ability;
         public int MeleeAttackDamage => _meleeAttackDamage;
         public float SlideSpeed => _slideSpeed;
+        public BroType BroType => _broBroType;
         
         [SerializeField] private Bro _broPrefab;
         [SerializeField] private ScriptableAbility _ability;
         [SerializeField] private int _meleeAttackDamage;
         [SerializeField] private float _slideSpeed;
+        [SerializeField] private BroType _broBroType;
 
         public Bro CreateInstance()
         {

@@ -76,6 +76,8 @@
                 <e p="Bro" t="Include">
                   <e p="Bro.cs" t="Include" />
                   <e p="BroData.cs" t="Include" />
+                  <e p="BroFactory.cs" t="Include" />
+                  <e p="BroType.cs" t="Include" />
                 </e>
                 <e p="Enemies" t="Include">
                   <e p="AI" t="Include">
@@ -91,7 +93,7 @@
             </e>
             <e p="Game.cs" t="Include" />
             <e p="GameData.cs" t="Include" />
-            <e p="GameTest.cs" t="Include" />
+            <e p="GameDataFactory.cs" t="Include" />
             <e p="Healths" t="Include">
               <e p="Health.cs" t="Include" />
             </e>
@@ -100,7 +102,6 @@
                 <e p="IDirectionInput.cs" t="Include" />
                 <e p="KeyBoardDirectionInput.cs" t="Include" />
               </e>
-              <e p="IInput.cs" t="Include" />
               <e p="ShootInput" t="Include">
                 <e p="IShootInput.cs" t="Include" />
                 <e p="KeyBoardShootInput.cs" t="Include" />

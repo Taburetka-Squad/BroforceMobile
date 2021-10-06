@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47128f13d9e0cdb4893774a521fc687d, type: 3}
-  m_Name: TestBulletData
+  m_Script: {fileID: 11500000, guid: b9d2e6c76cdc4f99ae3a01a19b023107, type: 3}
+  m_Name: New Game Data Factory
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 5738485720485726697, guid: 01c98ca9b674f2840a3da29b3117c400, type: 3}
-  _damage: 1
-  _speed: 20
-  _maxDistance: 20
+  _broDatas:
+  - {fileID: 11400000, guid: 7739770417a5bbb46a54ec65e9e0509c, type: 2}

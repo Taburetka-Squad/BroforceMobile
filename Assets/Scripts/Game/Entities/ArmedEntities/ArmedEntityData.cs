@@ -10,11 +10,11 @@ namespace Game.Entities.ArmedEntities
 
         [Header("References")]
         [SerializeField] private WeaponData _weaponData;
-        [SerializeField] private ArmedEntity _armedPrefab;
+        [SerializeField] private ArmedEntity _armedEntityPrefab;
         
         public ArmedEntity CreateInstance()
         {
-            var instance = Instantiate(_armedPrefab);
+            var instance = Instantiate(_armedEntityPrefab);
             instance.Initialize(this);
             return instance;
         }

@@ -4,9 +4,9 @@ namespace Game.Map
 {
     public class Point : MonoBehaviour
     {
-        public void MoveObjectToMe(GameObject gameObject)
+        public void MoveObjectToMe(Transform targetTransform)
         {
-            gameObject.transform.position = transform.position;
+            targetTransform.transform.position = transform.position;
         }
     }
 }

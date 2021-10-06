@@ -7,8 +7,8 @@ namespace Game.Entities
 {
     public class Bro : ArmedEntity
     {
-        private const float WallCheckDistance = 0.51f;
-        private const float MeleeAttackDistance = 0.51f;
+        private const float WallCheckDistance = 0.52f;
+        private const float MeleeAttackDistance = 0.52f;
         
         private IAbility _ability;
 
@@ -59,7 +59,7 @@ namespace Game.Entities
 
         protected override void Die()
         {
-            Debug.Log("Bro Died");
+            Destroy(gameObject);
         }
 
         private void Update()
