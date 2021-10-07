@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Game.Inputs
 {
-    public class KeyBoardShootInput : IShootInput
+    public class KeyBoardAttackInput : IAttackInput
     {
         public event Action Shot;
         public bool CanShoot => Input.GetKey(KeyCode.Mouse0);

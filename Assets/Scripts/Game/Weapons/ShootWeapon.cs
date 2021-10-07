@@ -5,39 +5,45 @@ using Game.Projectiles.Bullets;
 
 namespace Game.Weapons
 {
-    public class Weapon : MonoBehaviour
+    public class ShootWeapon : IAttack
     {
-        [SerializeField] private Transform _firePoint;
+        private Transform _firePoint;
 
-        private WeaponData _data;
+        private BulletData _bulleData;
         private float _shootDelay;
         private float _lastShootTime;
 
         private Pool<Bullet> _bulletPool = new Pool<Bullet>();
 
-        public void Initialize(WeaponData data)
+        public ShootWeapon(ShootWeaponData data, Transform firePoint)
         {
-            _data = data;
-            _shootDelay = 1 / _data.FireRate;
+            _bulleData = data.BulletData;
+            _firePoint = firePoint;
+            _shootDelay = 1 / data.FireRate;
         }
-        public void Shoot()
+
+        public void Attack()
+        {
+            Shoot();
+        }
+        private void Shoot()
         {
             var elapsedTime = Time.time - _lastShootTime;
             var canShoot = elapsedTime > _shootDelay;
 
             if (canShoot == false) return;
             _lastShootTime = Time.time;
-            
+
             var bullet = GetBullet();
             bullet.Initialize(_firePoint);
         }
-        
+
         private Bullet GetBullet()
         {
             if (_bulletPool.HasInactiveObjects())
                 return _bulletPool.GetInactiveObject();
 
-            var bullet = _data.BulletData.CreateInstance();
+            var bullet = _bulleData.CreateInstance();
             _bulletPool.Add(bullet);
 
             return bullet;

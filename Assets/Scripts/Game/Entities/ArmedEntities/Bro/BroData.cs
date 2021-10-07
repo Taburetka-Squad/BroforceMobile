@@ -12,12 +12,15 @@ namespace Game.Entities
         public int MeleeAttackDamage => _meleeAttackDamage;
         public float SlideSpeed => _slideSpeed;
         public BroType BroType => _broBroType;
+        public float MeleeAttackCooldown => _meleeAttackCooldown;
         
         [SerializeField] private Bro _broPrefab;
         [SerializeField] private ScriptableAbility _ability;
         [SerializeField] private int _meleeAttackDamage;
         [SerializeField] private float _slideSpeed;
         [SerializeField] private BroType _broBroType;
+        [SerializeField] private int _meleeAttackCooldown;
+        
 
         public Bro CreateInstance()
         {

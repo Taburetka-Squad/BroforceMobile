@@ -1,4 +1,4 @@
-﻿using Game.Weapons;
+﻿using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Game.Entities.ArmedEntities
@@ -6,17 +6,20 @@ namespace Game.Entities.ArmedEntities
     [CreateAssetMenu(menuName = "EntityData/ArmedEntityData")]
     public class ArmedEntityData : EntityData
     {
-        public WeaponData WeaponData => _weaponData;
-
-        [Header("References")]
-        [SerializeField] private WeaponData _weaponData;
-        [SerializeField] private ArmedEntity _armedEntityPrefab;
+        public IAttack Attack => _attack;
         
-        public ArmedEntity CreateInstance()
+        [Header("References")]
+       
+        [SerializeField] private ArmedEntity _armedEntityPrefab;
+
+        private IAttack _attack;
+
+        private void OnValidate()
         {
-            var instance = Instantiate(_armedEntityPrefab);
-            instance.Initialize(this);
-            return instance;
+            if (_attack != null)
+            {
+                
+            }
         }
     }
 }

@@ -2,39 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c97c43c-d2ae-4947-b594-a59615abe769" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Bro/BroFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Bro/BroFactory.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Bro/BroType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Bro/BroType.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GameDataFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GameDataFactory.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/IAttack.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/IAttack.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/MeleeAttack.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/MeleeAttack.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/WeaponPrefab.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/WeaponPrefab.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BroforceMobile/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BroforceMobile/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BroforceMobile/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BroforceMobile/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BroforceMobile/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BroforceMobile/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Entities/Bro/Bro.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/Entities/Bro/Bro.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Entities/Bro/New Bro Data.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Entities/Bro/New Bro Data.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Entities/Guns/TestBulletData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/Entities/Guns/TestBulletData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Level.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/Level.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/New Game Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/New Game Data.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/New Bro Data.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/New Bro Data.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/QLab.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/QLab.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/ArmedEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/ArmedEntity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/ArmedEntityData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/ArmedEntityData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Bro/Bro.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Bro/Bro.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Bro/BroData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Bro/BroData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Entity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Game.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/GameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GameData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/GameTest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/GameTest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/DirectionInput/IDirectionInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/DirectionInput/IDirectionInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/IInput.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/IInput.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/ShootInput/IShootInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/ShootInput/IShootInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Levels/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Levels/Level.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Map/Point.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Map/Point.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Enemies/AI/BaseAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Enemies/AI/BaseAI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/ShootInput/IShootInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/ShootInput/IAttackInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/ShootInput/IShootInput.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/ShootInput/IAttackInput.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/ShootInput/KeyBoardShootInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/ShootInput/KeyBoardAttackInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/ShootInput/KeyBoardShootInput.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/ShootInput/KeyBoardAttackInput.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/ShootWeapon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/Weapon.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/ShootWeapon.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/WeaponData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/ShootWeaponData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/WeaponData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/ShootWeaponData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/WeaponSlot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/WeaponSlot.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +39,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Enemies/AI/DummyAI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Abilities/Rocket.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Healths/Health.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/IAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Map/Point.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Enemies/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BCE5E9CF-72A6-4554-937D-40E2CE78291E/d8/ee16a12d/Tile.cs" root0="SKIP_HIGHLIGHTING" />
@@ -65,7 +57,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Abilities/ScriptableAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Bro/Bro.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Map/BlockTilemap.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Weapons/WeaponSlot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Dirt.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Inputs/DirectionInput/IDirectionInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Bro/BroData.cs" root0="FORCE_HIGHLIGHTING" />
@@ -78,19 +69,21 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Map/Tiles/BlockTile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Block.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Entities/Entity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Inputs/ShootInput/KeyBoardShootInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Inputs/ShootInput/KeyBoardAttackInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/ArmedEntityData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Pools/IPoolReturn.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Weapons/WeaponData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Weapons/ShootWeaponData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Abilities/IAbility.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Weapons/WeaponPrefab.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Abilities/GrenadeAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Abilities/Grenade.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Inputs/DirectionInput/KeyBoardDirectionInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Bro/BroType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Inputs/ShootInput/IShootInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/MeleeAttack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Inputs/ShootInput/IAttackInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Map/CheckPoint.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Weapons/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Weapons/ShootWeapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Enemies/AI/WanderAI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Entities/EntityData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/ArmedEntity.cs" root0="FORCE_HIGHLIGHTING" />
@@ -101,15 +94,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Map/BlockTilemap.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Player/Player.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Settings.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Difficulty.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Player/Bro.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Damage/Health.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Healths/HealthData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Block.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Dirt.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Sand.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Enemies/Enemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Projectiles/Projectile.cs" />
@@ -121,7 +105,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/ShootInput/KeyBoardShootInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntity/ArmedEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/AI/DummyAI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/ArmedEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Bro/Bro.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Bro/BroData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/DirectionInput/KeyBoardDirectionInput.cs" />
@@ -134,12 +117,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/EntityData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Enemies/AI/DummyAI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Enemies/AI/WanderAI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Enemies/AI/BaseAI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Projectiles/Bullets/Bullet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/ShootInput/IShootInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/DirectionInput/IDirectionInput.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Bro/BroData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/ArmedEntityData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Bro/BroType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Entity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/GameDataFactory.cs" />
@@ -148,10 +128,23 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Map/Point.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Bro/BroFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Levels/Level.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Bro/Bro.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/GameTest.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Game.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Enemies/AI/BaseAI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/IWeapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/WeaponSlot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/IAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Bro/BroData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Bro/Bro.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/ArmedEntity.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Attack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/MeleeAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/ShootWeapon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/WeaponData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/ArmedEntityData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/ShootWeaponData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/WeaponPrefab.cs" />
       </list>
     </option>
   </component>
@@ -177,10 +170,10 @@
       <option name="pid" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="11460">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="11460" />
+      <option name="pid" />
       <method v="2" />
     </configuration>
   </component>
@@ -220,6 +213,9 @@
       <workItem from="1633459221405" duration="303000" />
       <workItem from="1633528092439" duration="3752000" />
       <workItem from="1633536721626" duration="4104000" />
+      <workItem from="1633612668795" duration="670000" />
+      <workItem from="1633613480807" duration="2914000" />
+      <workItem from="1633616459820" duration="7000" />
     </task>
     <servers />
   </component>

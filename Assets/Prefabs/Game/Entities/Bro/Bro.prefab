@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GroundCollider: {fileID: 6309062718255529102}
+  _meleeAttack: {fileID: 5795179041531431170, guid: 9863c1e354ee4cc47af76de9650c3f9b, type: 3}
 --- !u!114 &4844621081279265466
 MonoBehaviour:
   m_ObjectHideFlags: 0

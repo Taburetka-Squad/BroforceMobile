@@ -97,14 +97,15 @@
             <e p="Healths" t="Include">
               <e p="Health.cs" t="Include" />
             </e>
+            <e p="IAttack.cs" t="Include" />
             <e p="Inputs" t="Include">
               <e p="DirectionInput" t="Include">
                 <e p="IDirectionInput.cs" t="Include" />
                 <e p="KeyBoardDirectionInput.cs" t="Include" />
               </e>
               <e p="ShootInput" t="Include">
-                <e p="IShootInput.cs" t="Include" />
-                <e p="KeyBoardShootInput.cs" t="Include" />
+                <e p="IAttackInput.cs" t="Include" />
+                <e p="KeyBoardAttackInput.cs" t="Include" />
               </e>
             </e>
             <e p="Levels" t="Include">
@@ -125,6 +126,7 @@
                 <e p="BlockTile.cs" t="Include" />
               </e>
             </e>
+            <e p="MeleeAttack.cs" t="Include" />
             <e p="Player.cs" t="Include" />
             <e p="Pools" t="Include">
               <e p="IPoolReturn.cs" t="Include" />
@@ -140,9 +142,9 @@
             </e>
             <e p="Settings.cs" t="Include" />
             <e p="Weapons" t="Include">
-              <e p="Weapon.cs" t="Include" />
-              <e p="WeaponData.cs" t="Include" />
-              <e p="WeaponSlot.cs" t="Include" />
+              <e p="ShootWeapon.cs" t="Include" />
+              <e p="ShootWeaponData.cs" t="Include" />
+              <e p="WeaponPrefab.cs" t="Include" />
             </e>
           </e>
         </e>

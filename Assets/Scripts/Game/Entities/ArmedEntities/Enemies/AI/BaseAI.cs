@@ -26,7 +26,7 @@ namespace Game.Entities
         }
         protected void Fire()
         {
-            WeaponSlot.CurrentWeapon.Shoot();
+            Attack();
         }
     }
 }
