@@ -7,20 +7,20 @@ namespace Game.Weapons
 {
     public class ShootWeapon : IAttack
     {
-        private Transform _firePoint;
+        private readonly ShootWeaponData _data;
+        private readonly Transform _firePoint;
 
-        private BulletData _bulleData;
-        private float _shootDelay;
         private float _lastShootTime;
-
-        private Pool<Bullet> _bulletPool = new Pool<Bullet>();
+        private readonly Pool<Bullet> _bulletPool = new Pool<Bullet>();
 
         public ShootWeapon(ShootWeaponData data, Transform firePoint)
         {
-            _bulleData = data.BulletData;
+            _data = data;
+
             _firePoint = firePoint;
-            _shootDelay = 1 / data.FireRate;
         }
+
+        private float ShootDelay => 1f / _data.FireRate;
 
         public void Attack()
         {
@@ -29,7 +29,7 @@ namespace Game.Weapons
         private void Shoot()
         {
             var elapsedTime = Time.time - _lastShootTime;
-            var canShoot = elapsedTime > _shootDelay;
+            var canShoot = elapsedTime > ShootDelay;
 
             if (canShoot == false) return;
             _lastShootTime = Time.time;
@@ -43,7 +43,7 @@ namespace Game.Weapons
             if (_bulletPool.HasInactiveObjects())
                 return _bulletPool.GetInactiveObject();
 
-            var bullet = _bulleData.CreateInstance();
+            var bullet = _data.BulletData.CreateInstance();
             _bulletPool.Add(bullet);
 
             return bullet;

@@ -17,9 +17,8 @@ namespace Game.Weapons
 
         public IAttack CreateInstance(Transform parent)
         {
-            var weapon = Instantiate(_prefab);
-            var shootWeapon = new ShootWeapon(this ,weapon.FirePoint);
-            return shootWeapon;
+            var weapon = Instantiate(_prefab, parent);
+            return new ShootWeapon(this, weapon.FirePoint);
         }
     }
 }
