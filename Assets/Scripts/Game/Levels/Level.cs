@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Threading.Tasks;
+
+using UnityEngine;
+
 using Cinemachine;
 
 namespace Game.Levels
@@ -33,10 +36,10 @@ namespace Game.Levels
                 _gameMapPrefabs.Enqueue(prefab);
             }
 
-            SwitchToNextMap();
+            IR.UnityApplication.StartDynamicCoroutine(SwitchToNextMap());
         }
 
-        private async void SwitchToNextMap()
+        private IEnumerator SwitchToNextMap()
         {
             if (_currentGameMap != null)
             {
@@ -45,13 +48,13 @@ namespace Game.Levels
 
             if (_gameMapPrefabs.Count > 0)
             {
-                await Task.Delay(500);
+                yield return new WaitForSecondsRealtime(0.5f);
                 
                 CreateCurrentMapInstance();
                 _gameMapPrefabs.Dequeue();
 
                 CreatePlayer();
-                return;
+                yield break;
             }
 
             LevelPassed?.Invoke();
