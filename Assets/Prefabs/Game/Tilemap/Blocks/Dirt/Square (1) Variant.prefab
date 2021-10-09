@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04fd6587e5f549c2b5694a1673817678, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _healthData: {fileID: 11400000, guid: 7d12199c6cb8fc749a4a21d0234de7a6, type: 2}
+  _startHitPoints: 1
 --- !u!1001 &4732185833219486992
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,5 +1,4 @@
-﻿using Game.Entities;
-using Game.Levels;
+﻿using Game.Levels;
 using UnityEngine;
 
 namespace Game
@@ -7,19 +6,11 @@ namespace Game
     [CreateAssetMenu(menuName = "GameData", order = 0)]
     public class GameData : ScriptableObject
     {
-        public Bro Bro => _broData.CreateInstance();
-
-        [SerializeField] private int _startCountPlayerLives;
+        public Difficulty Difficulty => _difficulty;
+        public LevelData LevelData => _levelData;
+        
         [SerializeField] private Difficulty _difficulty;
-        [SerializeField] private Level _prefab;
-        [SerializeField] private BroData _broData; 
-
-        public Level CreateLevelInstance()
-        {
-            var instance = Instantiate(_prefab);
-            instance.Initialzie();
-            return instance;
-        }
+        [SerializeField] private LevelData _levelData;
 
     }
 }

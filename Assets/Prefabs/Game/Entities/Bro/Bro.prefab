@@ -13,16 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GroundCollider: {fileID: 6309062718255529102}
-  EntityData: {fileID: 11400000, guid: d60a28503620cd946a2975280693d843, type: 2}
-  _speed: 5
-  _jumpForce: 100
-  _wallJumpDelay: 0.4
-  _ability: {fileID: 11400000, guid: 76a9d599bf3f0f349830ed7fd7f56c82, type: 2}
-  _meleeAttackDistance: 1
-  _meleeAttackDamage: 1
-  _slideSpeed: 0.5
-  _wallCheckDistance: 0.6
-  _hitRate: 1
+  _weaponSpawnPoint: {fileID: 0}
 --- !u!1001 &5176189263226815276
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32,7 +23,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1111008546474678289, guid: 0541ed76d2221e54b8080ecb75f0b6f0, type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Bro
       objectReference: {fileID: 0}
     - target: {fileID: 1178764049552555938, guid: 0541ed76d2221e54b8080ecb75f0b6f0, type: 3}
       propertyPath: m_Size.x

@@ -1,30 +1,26 @@
-﻿using UnityEngine;
+﻿using Cinemachine;
+using Game.Levels;
+using UnityEngine;
 
 namespace Game
 {
-    public class Game
+    public class Game : MonoBehaviour
     {
-        public Player Player { get; private set; }
+        [SerializeField] private GameDataFactory _gameDataFactory;
+        [SerializeField] private CinemachineVirtualCamera _cinemachine;
+        private GameData _data;
 
-        public Game(GameData data)
+        public void Start()
         {
-            Start(data);
+            _data = _gameDataFactory.GetGameData(Difficulty.Easy);
+
+            var level = new Level(_data.LevelData, _cinemachine);
+            level.LevelPassed += OnLevelPassed;
         }
 
-        public void Start(GameData data)
+        private void OnLevelPassed()
         {
-            var level = data.CreateLevelInstance();
-
-            var bro = data.Bro;
-            level.PlayerSpawnPoint.MoveObjectToMe(bro.gameObject);
-            
-            Player = new Player(1, bro);
-            Player.BroDied += OnBroDied;
-        }
-
-        private void OnBroDied()
-        {
-            Debug.Log("Game Ended");
+            print("Level Complete");
         }
     }
 }

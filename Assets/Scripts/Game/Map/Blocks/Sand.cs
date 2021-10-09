@@ -9,9 +9,9 @@ namespace Game.Map.Blocks
         {
             if (!TryGetBottomNeighbor(out var bottomNeighbor)) return;
 
-            if (bottomNeighbor.TryGetComponent(out Health die))
+            if (bottomNeighbor.TryGetComponent(out IDamageable die))
             {
-                die.Died += OnBottomNeighborDie;
+                die.Health.Died += OnBottomNeighborDie;
             }
         }
         

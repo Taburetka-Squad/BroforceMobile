@@ -7,9 +7,10 @@ namespace Game.Entities
 {
     [RequireComponent(typeof(Rigidbody2D))]
     [RequireComponent(typeof(BoxCollider2D))]
-    [RequireComponent(typeof(Health))]
-    public abstract class Entity : MonoBehaviour
+    public abstract class Entity : MonoBehaviour, IDamageable
     {
+        public Health Health { get; private set; }
+        
         [SerializeField] protected BoxCollider2D GroundCollider;
 
         protected IDirectionInput DirectionInput = new KeyBoardDirectionInput();
@@ -21,27 +22,26 @@ namespace Game.Entities
         protected abstract bool CanJump { get; }
 
         protected Rigidbody2D Rigidbody;
-        private Health _health;
         
         private float _lastJumpTime;
 
         private void Awake()
         {
             Rigidbody = GetComponent<Rigidbody2D>();
-            _health = GetComponent<Health>();
         }
         public void Initialize(EntityData data)
         {
             _speed = data.Speed;
             _jumpForce = data.JumpForce;
             _jumpDelay = data.JumpDelay;
-
-            _health.Died += OnDied;
+            
+            Health = new Health(data.BaseHitPoints);
+            Health.Died += OnDied;
         }
 
         private void OnDied()
         {
-            _health.Died -= OnDied;
+            Health.Died -= OnDied;
             Die();
         }
         protected abstract void Die();
@@ -54,7 +54,7 @@ namespace Game.Entities
         {
             if (direction.x == 0) return;
 
-            transform.right = Vector2.right * direction;
+            transform.right = Vector2.right * direction.x;
         }
         protected void Jump()
         {
@@ -63,8 +63,9 @@ namespace Game.Entities
             if (isTimeOver && CanJump)
             {
                 _lastJumpTime = Time.time;
-                Rigidbody.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
+                Rigidbody.velocity = Vector2.up * _jumpForce;
             }
         }
+
     }
 }

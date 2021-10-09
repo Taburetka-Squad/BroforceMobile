@@ -43,15 +43,16 @@
                   <e p="BuildAOTAutomation.cs" t="Include" />
                   <e p="EnsureOdinInspectorDefine.cs" t="Include" />
                   <e p="FixBrokenUnityObjectWrapperDrawer.cs" t="Include" />
-                  <e p="SerializedNetworkBehaviour.cs" t="Include" />
                   <e p="Sirenix.OdinInspector.CompatibilityLayer.Editor.asmdef" t="Include" />
                   <e p="SyncListDrawer.cs" t="Include" />
                   <e p="SyncVarAttributeDrawer.cs" t="Include" />
                   <e p="Vector2IntMinMaxAttributeDrawer.cs" t="Include" />
                   <e p="VectorIntDrawers.cs" t="Include" />
-                  <e p="VectorIntFormatters.cs" t="Include" />
                   <e p="VectorIntPropertyResolvers.cs" t="Include" />
                 </e>
+                <e p="SerializedNetworkBehaviour.cs" t="Include" />
+                <e p="Sirenix.OdinInspector.CompatibilityLayer.asmdef" t="Include" />
+                <e p="VectorIntFormatters.cs" t="Include" />
               </e>
             </e>
           </e>
@@ -67,6 +68,19 @@
               <e p="RocketRainAbility.cs" t="Include" />
               <e p="ScriptableAbility.cs" t="Include" />
             </e>
+            <e p="Attacks" t="Include">
+              <e p="IAttack.cs" t="Include" />
+              <e p="Melee" t="Include">
+                <e p="MeleeAttack.cs" t="Include" />
+                <e p="MeleeScriptableAttack.cs" t="Include" />
+              </e>
+              <e p="ScriptableAttack.cs" t="Include" />
+              <e p="Shoot" t="Include">
+                <e p="ShootAttack.cs" t="Include" />
+                <e p="ShootScriptableAttack.cs" t="Include" />
+                <e p="WeaponPrefab.cs" t="Include" />
+              </e>
+            </e>
             <e p="Difficulty.cs" t="Include" />
             <e p="Entities" t="Include">
               <e p="ArmedEntities" t="Include">
@@ -75,6 +89,8 @@
                 <e p="Bro" t="Include">
                   <e p="Bro.cs" t="Include" />
                   <e p="BroData.cs" t="Include" />
+                  <e p="BroFactory.cs" t="Include" />
+                  <e p="BroType.cs" t="Include" />
                 </e>
                 <e p="Enemies" t="Include">
                   <e p="AI" t="Include">
@@ -90,23 +106,25 @@
             </e>
             <e p="Game.cs" t="Include" />
             <e p="GameData.cs" t="Include" />
-            <e p="GameTest.cs" t="Include" />
+            <e p="GameDataFactory.cs" t="Include" />
             <e p="Healths" t="Include">
               <e p="Health.cs" t="Include" />
+              <e p="IDamageable.cs" t="Include" />
             </e>
             <e p="Inputs" t="Include">
               <e p="DirectionInput" t="Include">
                 <e p="IDirectionInput.cs" t="Include" />
                 <e p="KeyBoardDirectionInput.cs" t="Include" />
               </e>
-              <e p="IInput.cs" t="Include" />
               <e p="ShootInput" t="Include">
-                <e p="IShootInput.cs" t="Include" />
-                <e p="KeyBoardShootInput.cs" t="Include" />
+                <e p="IAttackInput.cs" t="Include" />
+                <e p="KeyBoardAttackInput.cs" t="Include" />
               </e>
             </e>
             <e p="Levels" t="Include">
+              <e p="GameMap.cs" t="Include" />
               <e p="Level.cs" t="Include" />
+              <e p="LevelData.cs" t="Include" />
             </e>
             <e p="Map" t="Include">
               <e p="Blocks" t="Include">
@@ -137,11 +155,6 @@
               <e p="Projectile.cs" t="Include" />
             </e>
             <e p="Settings.cs" t="Include" />
-            <e p="Weapons" t="Include">
-              <e p="Weapon.cs" t="Include" />
-              <e p="WeaponData.cs" t="Include" />
-              <e p="WeaponSlot.cs" t="Include" />
-            </e>
           </e>
         </e>
       </e>
@@ -150,6 +163,7 @@
       <e p="Hierarchy2Runtime.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
+      <e p="Sirenix.OdinInspector.CompatibilityLayer.csproj" t="IncludeRecursive" />
       <e p="Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj" t="IncludeRecursive" />
       <e p="Temp\Bin" t="ExcludeRecursive" />
     </e>

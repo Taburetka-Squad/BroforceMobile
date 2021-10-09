@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a5f251ebf48439497d7d645999c6085, type: 3}
+  m_Name: 1
+  m_EditorClassIdentifier: 
+  _speed: 7
+  _jumpForce: 20
+  _jumpDelay: 0.5
+  _baseHitPoints: 0
+  _entityPrefab: {fileID: 0}
+  _armedEntityPrefab: {fileID: 0}
+  _scriptableAttack: {fileID: 11400000, guid: 0df4e7fc9d8a133418da8168de37978a, type: 2}
+  _broPrefab: {fileID: 1459315355141393841, guid: ecb595c3586a7ad40b4dcd9df7351c0a, type: 3}
+  _ability: {fileID: 11400000, guid: 76a9d599bf3f0f349830ed7fd7f56c82, type: 2}
+  _slideSpeed: -0.75
+  _broBroType: 0
+  _meleeScriptableAttack: {fileID: 11400000, guid: db241eff97daad845a1ed7300ab70afe, type: 2}
