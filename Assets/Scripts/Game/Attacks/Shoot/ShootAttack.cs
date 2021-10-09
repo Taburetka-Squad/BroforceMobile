@@ -5,15 +5,15 @@ using Game.Projectiles.Bullets;
 
 namespace Game.Weapons
 {
-    public class ShootWeapon : IAttack
+    public class ShootAttack : IAttack
     {
-        private readonly ShootWeaponData _data;
+        private readonly ShootScriptableAttack _data;
         private readonly Transform _firePoint;
 
         private float _lastShootTime;
         private readonly Pool<Bullet> _bulletPool = new Pool<Bullet>();
 
-        public ShootWeapon(ShootWeaponData data, Transform firePoint)
+        public ShootAttack(ShootScriptableAttack data, Transform firePoint)
         {
             _data = data;
 

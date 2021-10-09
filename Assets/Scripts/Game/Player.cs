@@ -1,47 +1,47 @@
 ﻿using System;
 using Cinemachine;
 using Game.Entities;
-using Game.Healths;
 using Game.Levels;
+using Object = UnityEngine.Object;
 
 namespace Game
 {
-    public class Player
+    public class Player : IDisposable
     {
         public event Action BroDied;
 
-        public Bro CurrentBro { get; private set; }
+        private Bro _currentBro;
 
-        private readonly Level _level;
-        private readonly BroFactory _broFactory;
-        private readonly CinemachineVirtualCamera _cinemachine;
+        private GameMap _gameMap;
+        private BroFactory _broFactory;
+        private CinemachineVirtualCamera _cinemachine;
 
         private int _currentLives;
 
-        public Player(int currentLives, Level level, BroFactory broFactory, CinemachineVirtualCamera cinemachine)
+        public Player(int currentLives, GameMap gameMap, BroFactory broFactory, CinemachineVirtualCamera cinemachine)
         {
             _currentLives = currentLives;
             _broFactory = broFactory;
             _cinemachine = cinemachine;
-            _level = level;
+            _gameMap = gameMap;
 
             SpawnBro();
         }
 
         private void SpawnBro()
         {
-            CurrentBro = _broFactory.GetRandomBro();
-            _level.MoveToLastCheckPoint(CurrentBro.transform);
+            _currentBro = _broFactory.GetRandomBro();
+            _gameMap.MoveToLastCheckPoint(_currentBro.transform);
 
-            _cinemachine.Follow = CurrentBro.transform;
+            _cinemachine.Follow = _currentBro.transform;
 
-            CurrentBro.gameObject.GetComponent<Health>().Died += OnDied;
+            _currentBro.Health.Died += OnDied;
         }
 
         private void OnDied()
         {
             _currentLives -= 1;
-            CurrentBro.gameObject.GetComponent<Health>().Died -= OnDied;
+            _currentBro.Health.Died -= OnDied;
 
             SpawnBro();
             
@@ -49,6 +49,13 @@ namespace Game
             {
                 BroDied?.Invoke();
             }
+        }
+
+        public void Dispose()
+        {
+            BroDied = null;
+            _currentBro.Health.Died -= OnDied;
+            Object.Destroy(_currentBro.gameObject);
         }
     }
 }

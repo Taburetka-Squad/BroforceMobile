@@ -15,9 +15,9 @@ namespace Game.Projectiles
 
         protected bool TryDamageObject(GameObject obj)
         {
-            if (obj.TryGetComponent(out Health damageable))
+            if (obj.TryGetComponent(out IDamageable damageable))
             {
-                damageable.TakeDamage(_damageAmount);
+                damageable.Health.TakeDamage(_damageAmount);
                 return true;
             }
 

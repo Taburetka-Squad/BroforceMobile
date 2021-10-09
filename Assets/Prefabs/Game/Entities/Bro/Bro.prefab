@@ -13,20 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GroundCollider: {fileID: 6309062718255529102}
-  _meleeAttack: {fileID: 5795179041531431170, guid: 9863c1e354ee4cc47af76de9650c3f9b, type: 3}
---- !u!114 &4844621081279265466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5241799464340462397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32e04cbfb24b4f3e8f271a7ca15d8bb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _hitPoints: 1
+  _weaponSpawnPoint: {fileID: 0}
 --- !u!1001 &5176189263226815276
 PrefabInstance:
   m_ObjectHideFlags: 0

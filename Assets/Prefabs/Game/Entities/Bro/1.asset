@@ -15,11 +15,12 @@ MonoBehaviour:
   _speed: 7
   _jumpForce: 20
   _jumpDelay: 0.5
+  _baseHitPoints: 0
   _entityPrefab: {fileID: 0}
   _armedEntityPrefab: {fileID: 0}
+  _scriptableAttack: {fileID: 11400000, guid: 0df4e7fc9d8a133418da8168de37978a, type: 2}
   _broPrefab: {fileID: 1459315355141393841, guid: ecb595c3586a7ad40b4dcd9df7351c0a, type: 3}
   _ability: {fileID: 11400000, guid: 76a9d599bf3f0f349830ed7fd7f56c82, type: 2}
-  _meleeAttackDamage: 1
   _slideSpeed: -0.75
   _broBroType: 0
-  _meleeAttackCooldown: 0
+  _meleeScriptableAttack: {fileID: 11400000, guid: db241eff97daad845a1ed7300ab70afe, type: 2}

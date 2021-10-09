@@ -8,7 +8,7 @@ namespace Game.Entities
     {
         private const float WallCheckDistance = 0.52f;
         
-        [SerializeField] private MeleeAttack _meleeAttack;
+        private IAttack _meleeAttack;
 
         private IAbility _ability;
 
@@ -24,6 +24,7 @@ namespace Game.Entities
         {
             base.Initialize(data);
 
+            _meleeAttack = data.ScriptableAttack.GetInstance(transform);
             _ability = data.Ability;
             _slideSpeed = data.SlideSpeed;
         }

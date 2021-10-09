@@ -8,12 +8,12 @@ namespace Game
     {
         private const float MeleeAttackDistance = 0.52f;
 
-        private readonly MeleeAttackData _data;
+        private readonly MeleeScriptableAttack _data;
         private readonly Transform _transform;
 
         private float _lastHitTime;
 
-        public MeleeAttack(MeleeAttackData data, Transform transform)
+        public MeleeAttack(MeleeScriptableAttack data, Transform transform)
         {
             _data = data;
             _transform = transform;
@@ -34,8 +34,8 @@ namespace Game
             if (hit.collider == null)
                 return;
 
-            if (hit.collider.TryGetComponent(out Health damageable))
-                damageable.TakeDamage(_data.Damage);
+            if (hit.collider.TryGetComponent(out IDamageable damageable))
+                damageable.Health.TakeDamage(_data.Damage);
         }
     }
 }

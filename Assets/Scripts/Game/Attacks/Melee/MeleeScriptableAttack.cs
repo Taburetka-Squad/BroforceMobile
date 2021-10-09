@@ -3,7 +3,7 @@
 namespace Game
 {
     [CreateAssetMenu(menuName = "Game/Weapons/MeleeAttack")]
-    public class MeleeAttackData : ScriptableObject
+    public class MeleeScriptableAttack : ScriptableAttack
     {
         public int Damage => _damage;
         public float HitRate => _fireRate;
@@ -11,10 +11,10 @@ namespace Game
         [Header("Parameters")]
         [SerializeField] private int _damage;
         [SerializeField] private float _fireRate;
-
-        public IAttack CreateInstance(Transform transform)
+        
+        public override IAttack GetInstance(Transform parent)
         {
-            return new MeleeAttack(this, transform);
+            return new MeleeAttack(this, parent);
         }
     }
 }

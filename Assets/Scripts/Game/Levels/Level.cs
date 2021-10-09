@@ -1,89 +1,96 @@
 ﻿using System;
 using System.Collections.Generic;
-using Game.Map;
-using UnityEngine;
-using UnityEngine.Tilemaps;
+using System.Threading.Tasks;
+using Cinemachine;
 
 namespace Game.Levels
 {
-    public class Level : MonoBehaviour
+    public class Level
     {
-        public SpawnPoint PlayerSpawnPoint => _playerSpawnPoint;
+        public event Action LevelPassed;
 
-        [SerializeField] private Tilemap _tilemap;
-        [SerializeField] private SpawnPoint _playerSpawnPoint;
+        private LevelData _data;
+        private Queue<GameMap> _gameMapPrefabs;
+        private CinemachineVirtualCamera _cinemachine;
 
-        private SpawnPoint[] _enemiesSpawnPoints;
-        [SerializeField] private CheckPoint[] _checkPoints;
+        private GameMap _currentGameMap;
+        private Player _player;
 
-        private CheckPoint _lastPassedCheckPoint;
-        private BlockTilemap _blockTilemap;
-
-        public void Initialzie()
+        public Level(LevelData data, CinemachineVirtualCamera cinemachine)
         {
-            _blockTilemap = new BlockTilemap(_tilemap);
+            _data = data;
+            _cinemachine = cinemachine;
 
-            foreach (var checkPoint in _checkPoints)
+            Start();
+        }
+
+        private void Start()
+        {
+            _gameMapPrefabs = new Queue<GameMap>();
+
+            foreach (var prefab in _data.GameMapPrefabs)
             {
-                checkPoint.Reached += OnCheckPointReached;
+                _gameMapPrefabs.Enqueue(prefab);
             }
+
+            SwitchToNextMap();
         }
 
-        private void OnCheckPointReached(CheckPoint checkPoint)
+        private async void SwitchToNextMap()
         {
-            _lastPassedCheckPoint = checkPoint;
-        }
-
-        public void MoveToLastCheckPoint(Transform targetTransform)
-        {
-            if (_lastPassedCheckPoint != null)
+            if (_currentGameMap != null)
             {
-                _lastPassedCheckPoint.MoveObjectToMe(targetTransform);
+                _currentGameMap.Destroy();
+            }
+
+            if (_gameMapPrefabs.Count > 0)
+            {
+                await Task.Delay(500);
+                
+                CreateCurrentMapInstance();
+                _gameMapPrefabs.Dequeue();
+
+                CreatePlayer();
                 return;
             }
-            
-            _playerSpawnPoint.MoveObjectToMe(targetTransform);
+
+            LevelPassed?.Invoke();
         }
 
-        #region Editor
-
-#if UNITY_EDITOR
-
-        private bool isNotified;
-
-        private void OnValidate()
+        private void CreateCurrentMapInstance()
         {
-            if (_checkPoints == null && !isNotified)
-            {
-                print("Не забудь заполнить массив чекпоинтов");
-            }
+            var prefab = _gameMapPrefabs.Peek();
+
+            _currentGameMap = _data.CreateMapInstance(prefab);
+            _currentGameMap.MapPassed += OnMapPassed;
         }
 
-        [ContextMenu("FillCheckPointsArray")]
-        private void FillCheckPointsArray()
+        private void OnMapPassed()
         {
-            _checkPoints = FindObjectsOfType<CheckPoint>();
+            _currentGameMap.MapPassed -= OnMapPassed;
+            _player.Dispose();
+            SwitchToNextMap();
         }
 
-        [ContextMenu("FillEnemiesSpawnPointsArray")]
-        private void FillEnemiesSpawnPointsArray()
+        private void CreatePlayer()
         {
-            var spawnPoints = new List<SpawnPoint>();
+            var map = _currentGameMap;
+            var startLives = _data.StartCountPlayerLives;
 
-            spawnPoints.AddRange(FindObjectsOfType<SpawnPoint>());
-
-            for (int i = 0; i < spawnPoints.Count; i++)
-            {
-                if (spawnPoints[i] == _playerSpawnPoint)
-                {
-                    spawnPoints.RemoveAt(i);
-                }
-            }
-
-            _enemiesSpawnPoints = spawnPoints.ToArray();
+            _player = new Player(startLives, map, _data.Factory, _cinemachine);
+            _player.BroDied += OnBroDied;
         }
-#endif
 
-        #endregion
+        private void OnBroDied()
+        {
+            _player.BroDied -= OnBroDied;
+            Restart();
+        }
+
+        private void Restart()
+        {
+            _player.Dispose();
+            Start();
+        }
     }
 }

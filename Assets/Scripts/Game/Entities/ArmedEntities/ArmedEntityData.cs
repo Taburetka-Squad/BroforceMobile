@@ -1,25 +1,16 @@
-﻿using Sirenix.OdinInspector;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Game.Entities.ArmedEntities
 {
     [CreateAssetMenu(menuName = "EntityData/ArmedEntityData")]
     public class ArmedEntityData : EntityData
     {
-        public IAttack Attack => _attack;
+        public ScriptableAttack ScriptableAttack => _scriptableAttack;
         
         [Header("References")]
        
         [SerializeField] private ArmedEntity _armedEntityPrefab;
-
-        private IAttack _attack;
-
-        private void OnValidate()
-        {
-            if (_attack != null)
-            {
-                
-            }
-        }
+        [SerializeField] private ScriptableAttack _scriptableAttack;
+        
     }
 }

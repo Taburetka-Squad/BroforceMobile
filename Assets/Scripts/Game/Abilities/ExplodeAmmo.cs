@@ -6,7 +6,7 @@ namespace Game.Abilities
     public class ExplodeAmmo : MonoBehaviour
     {
         [SerializeField, Range(0, 100)] private float _explosionRadius;
-        [SerializeField] private int _damage;
+        [SerializeField] private int _damageAmount;
         
         private void Explode()
         {
@@ -14,9 +14,9 @@ namespace Game.Abilities
 
             foreach (var collider in colliders)
             {
-                if (collider.TryGetComponent(out Health damageable))
+                if (collider.TryGetComponent(out IDamageable damageable))
                 {
-                    damageable.TakeDamage(_damage);
+                    damageable.Health.TakeDamage(_damageAmount);
                 }
             }
             

@@ -1,4 +1,5 @@
 ﻿using Cinemachine;
+using Game.Levels;
 using UnityEngine;
 
 namespace Game
@@ -7,22 +8,19 @@ namespace Game
     {
         [SerializeField] private GameDataFactory _gameDataFactory;
         [SerializeField] private CinemachineVirtualCamera _cinemachine;
-        private Player _player;
         private GameData _data;
-        
+
         public void Start()
         {
             _data = _gameDataFactory.GetGameData(Difficulty.Easy);
-            
-            var level = _data.CreateLevelInstance();
 
-            _player = new Player(_data.StartCountPlayerLives, level, _data.Factory, _cinemachine);
-            _player.BroDied += OnBroDied;
+            var level = new Level(_data.LevelData, _cinemachine);
+            level.LevelPassed += OnLevelPassed;
         }
 
-        private void OnBroDied()
+        private void OnLevelPassed()
         {
-            Debug.Log("Game Ended");
+            print("Level Complete");
         }
     }
 }
