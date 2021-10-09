@@ -24,7 +24,8 @@
     "com.unity.modules.uielements" : "1.0.0",
     "com.unity.modules.umbra" : "1.0.0",
     "com.av.smart-inspector" : "0.8.0-pre.1",
-	"com.unity.2d.tilemap.extras": "https://github.com/Unity-Technologies/2d-extras.git#2020.3"
+	"com.unity.2d.tilemap.extras": "https://github.com/Unity-Technologies/2d-extras.git#2020.3",
+	"com.fluid.behavior-tree": "2.2.0"
   },
   "scopedRegistries" : [
     {
@@ -32,6 +33,13 @@
       "url" : "https://package.openupm.com",
       "scopes" : [
         "com.av.smart-inspector"
+      ]
+    },
+	{
+      "name": "NPM",
+      "url": "https://registry.npmjs.org",
+      "scopes": [
+        "com.fluid"
       ]
     }
   ]
