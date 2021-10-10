@@ -1,15 +1,16 @@
 {
     "name": "Sirenix.OdinInspector.CompatibilityLayer.Editor",
-    "references": [
-        "Sirenix.OdinInspector.CompatibilityLayer"
-    ],
+    "rootNamespace": "",
+    "references": [],
     "includePlatforms": [
         "Editor"
     ],
     "excludePlatforms": [],
     "allowUnsafeCode": true,
-    "autoReferenced": true,
     "overrideReferences": false,
     "precompiledReferences": [],
-    "defineConstraints": []
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

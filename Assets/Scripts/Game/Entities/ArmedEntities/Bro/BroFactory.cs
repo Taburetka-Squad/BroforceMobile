@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Linq;
-using Game.Entities.ArmedEntities.Bro;
+
 using UnityEngine;
 using Random = UnityEngine.Random;
+
+using Game.Entities.ArmedEntities.Bro;
 
 namespace Game.Entities
 {
@@ -25,7 +27,6 @@ namespace Game.Entities
         }
 
 #if UNITY_EDITOR
-
         private void OnValidate()
         {
             foreach (var data in _broDatas)
@@ -38,7 +39,7 @@ namespace Game.Entities
                         throw new Exception("Дата такого типа уже есть " + data.BroType);
                 }
             }
-#endif
         }
+#endif
     }
 }
