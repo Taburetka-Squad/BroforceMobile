@@ -24,9 +24,9 @@ namespace Game.Weapons
 
         public void Attack()
         {
-            Shoot();
+            TryShoot();
         }
-        private void Shoot()
+        private void TryShoot()
         {
             var elapsedTime = Time.time - _lastShootTime;
             var canShoot = elapsedTime > ShootDelay;
@@ -34,8 +34,26 @@ namespace Game.Weapons
             if (canShoot == false) return;
             _lastShootTime = Time.time;
 
+            Shoot();
+        }
+        private void Shoot()
+        {
+            SpreadFirepoint();
+
             var bullet = GetBullet();
             bullet.Initialize(_firePoint);
+
+            ResetFirepoint();
+        }
+
+        private void SpreadFirepoint()
+        {
+            var angle = Random.Range(-_data.SpreadAngle, _data.SpreadAngle);
+            _firePoint.localRotation = Quaternion.Euler(0, 0, angle);
+        }
+        private void ResetFirepoint()
+        {
+            _firePoint.localRotation = Quaternion.identity;
         }
 
         private Bullet GetBullet()
