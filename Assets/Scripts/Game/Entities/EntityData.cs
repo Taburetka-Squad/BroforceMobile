@@ -16,12 +16,5 @@ namespace Game.Entities
         [SerializeField] private float _jumpDelay;
         [SerializeField] private int _baseHitPoints;
         [SerializeField] private Entity _entityPrefab;
-
-        public Entity CreateInstance()
-        {
-            var instance = Instantiate(_entityPrefab);
-            instance.Initialize(this);
-            return instance;
-        }
     }
 }

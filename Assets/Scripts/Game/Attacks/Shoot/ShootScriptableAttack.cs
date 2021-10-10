@@ -8,14 +8,15 @@ namespace Game.Weapons
     {
         public BulletData BulletData => _bulletData;
         public float FireRate => _fireRate;
+        public float SpreadAngle => _spreadAngle;
 
-        [Header("References")] [SerializeField]
-        private WeaponPrefab _prefab;
-
+        [Header("References")]
+        [SerializeField] private WeaponPrefab _prefab;
         [SerializeField] private BulletData _bulletData;
 
-        [Header("Parameters")] [SerializeField]
-        private float _fireRate;
+        [Header("Parameters")]
+        [SerializeField] private float _fireRate;
+        [SerializeField] private float _spreadAngle;
 
         public override IAttack GetInstance(Transform parent)
         {

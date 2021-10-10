@@ -8,13 +8,12 @@ namespace Game
     {
         [SerializeField] private GameDataFactory _gameDataFactory;
         [SerializeField] private CinemachineVirtualCamera _cinemachine;
-        private GameData _data;
 
         public void Start()
         {
-            _data = _gameDataFactory.GetGameData(Difficulty.Easy);
+            var data = _gameDataFactory.GetGameData(Difficulty.Easy);
 
-            var level = new Level(_data.LevelData, _cinemachine);
+            var level = new Level(data.LevelData, _cinemachine);
             level.LevelPassed += OnLevelPassed;
         }
 

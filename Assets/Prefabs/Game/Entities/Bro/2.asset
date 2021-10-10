@@ -23,4 +23,4 @@ MonoBehaviour:
   _ability: {fileID: 11400000, guid: 8efc6036cf39ec54689850317dd0abbf, type: 2}
   _slideSpeed: -0.75
   _broBroType: 1
-  _meleeScriptableAttack: {fileID: 11400000, guid: db241eff97daad845a1ed7300ab70afe, type: 2}
+  _scriptableMeleeAttack: {fileID: 11400000, guid: db241eff97daad845a1ed7300ab70afe, type: 2}

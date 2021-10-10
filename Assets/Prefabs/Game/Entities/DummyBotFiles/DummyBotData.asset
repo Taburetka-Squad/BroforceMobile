@@ -9,8 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c63b0842e7cc3ad4fa72a0519a7d1928, type: 3}
-  m_Name: New Melee Attack Data
+  m_Script: {fileID: 11500000, guid: e72985c74c274f82b3382ef5dfb10b05, type: 3}
+  m_Name: DummyBotData
   m_EditorClassIdentifier: 
-  _damage: 1
-  _fireRate: 1
+  _speed: 10
+  _jumpForce: 20
+  _jumpDelay: 0
+  _baseHitPoints: 0
+  _entityPrefab: {fileID: 3657268586370044372, guid: 122eca32dd24a5640999f8b9818bac85, type: 3}
