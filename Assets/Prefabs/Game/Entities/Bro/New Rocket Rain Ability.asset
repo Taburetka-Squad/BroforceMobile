@@ -15,4 +15,4 @@ MonoBehaviour:
   _prefab: {fileID: 653577811203471128, guid: 96614d0164afd1f42805e1ae347ddae6, type: 3}
   _rocketCountPerOneUse: 5
   _speed: 30
-  _launchDelay: 1
+  _launchDelay: 0.1

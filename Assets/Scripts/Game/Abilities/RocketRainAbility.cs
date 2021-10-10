@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 namespace Game.Abilities
 {
@@ -8,9 +9,14 @@ namespace Game.Abilities
         [SerializeField] private Rocket _prefab;
         [SerializeField] private int _rocketCountPerOneUse;
         [SerializeField] private float _speed;
-        [SerializeField] private int _launchDelay;
+        [SerializeField] private float _launchDelay;
 
         public override void Use(Transform startTransform)
+        {
+            IR.UnityApplication.StartDynamicCoroutine(Launch(startTransform));
+        }
+
+        private IEnumerator Launch(Transform startTransform)
         {
             for (var i = 0; i < _rocketCountPerOneUse; i++)
             {
@@ -19,8 +25,7 @@ namespace Game.Abilities
                 var rocket = Instantiate(_prefab, position, Quaternion.Euler(0,0,startTransform.right.x * 90));
                 rocket.Launch(startTransform.right, _speed);
                 
-                // await Task.Delay(_launchDelay * 100);
-                // fucking async
+                yield return new WaitForSeconds(_launchDelay);
             }
         }
     }
