@@ -11,6 +11,5 @@ namespace Game.Entities.ArmedEntities
        
         [SerializeField] private ArmedEntity _armedEntityPrefab;
         [SerializeField] private ScriptableAttack _scriptableAttack;
-        
     }
 }

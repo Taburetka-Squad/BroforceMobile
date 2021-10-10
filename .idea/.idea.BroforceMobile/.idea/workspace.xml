@@ -2,63 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c97c43c-d2ae-4947-b594-a59615abe769" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Attacks/Melee.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Attacks/ScriptableAttack.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Attacks/ScriptableAttack.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Attacks/Shoot.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Healths/IDamageable.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Healths/IDamageable.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Levels/GameMap.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Levels/GameMap.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Levels/LevelData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Levels/LevelData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Company.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Company.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/CompanyData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/CompanyData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Helicopter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Helicopter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/IFall.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/IFall.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/WorldMap.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/WorldMap.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BroforceMobile/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BroforceMobile/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BroforceMobile/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BroforceMobile/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/RainbowAssets/!Core/Source/RainbowCore.src.unitypackage.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/RainbowAssets/RainbowFolders/Editor/Source/RainbowFolders.src.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Entities/Bro/1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/Entities/Bro/1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Entities/Bro/2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/Entities/Bro/2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Entities/Bro/Bro.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/Entities/Bro/Bro.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Entities/Bro/GameObject (1).prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Entities/Bro/GameObject (1).prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Entities/Projectiles/Grenade.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/Entities/Projectiles/Grenade.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Entities/Projectiles/Rocket.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/Entities/Projectiles/Rocket.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Level.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Level.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/New Game Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/New Game Data.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Tilemap/Blocks/Dirt/Square (1) Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/Tilemap/Blocks/Dirt/Square (1) Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/New Melee Attack Data.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/New Melee Attack Data.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Tilemap/Blocks/Sand/Square Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/Tilemap/Blocks/Sand/Square Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Tilemap/Blocks/Steel/Square Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/Tilemap/Blocks/Steel/Square Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Abilities/ExplodeAmmo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Abilities/ExplodeAmmo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/ArmedEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/ArmedEntity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/ArmedEntityData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/ArmedEntityData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Bro/Bro.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Bro/Bro.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Bro/BroData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Bro/BroData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Entity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/EntityData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/EntityData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Game.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/GameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GameData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Healths/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Healths/Health.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/IAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Attacks/IAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/IAttack.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Attacks/IAttack.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Levels/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Levels/Level.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Levels/Level.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Levels/Level.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Map/BlockTilemap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Map/BlockTilemap.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Block.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Block.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/DirectionInput/KeyBoardDirectionInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/DirectionInput/KeyBoardDirectionInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/ShootInput/IAttackInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/ShootInput/IAttackInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/ShootInput/KeyBoardAttackInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/ShootInput/KeyBoardAttackInput.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Sand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Sand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/MeleeAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Attacks/Melee/MeleeAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/MeleeAttack.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Attacks/Melee/MeleeAttack.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/MeleeAttackData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Attacks/Melee/MeleeScriptableAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/MeleeAttackData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Attacks/Melee/MeleeScriptableAttack.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Projectiles/Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Projectiles/Projectile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Weapons.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Attacks.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/ShootWeapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Attacks/Shoot/ShootAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/ShootWeapon.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Attacks/Shoot/ShootAttack.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/ShootWeaponData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Attacks/Shoot/ShootScriptableAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/ShootWeaponData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Attacks/Shoot/ShootScriptableAttack.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/WeaponPrefab.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Attacks/Shoot/WeaponPrefab.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/WeaponPrefab.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Attacks/Shoot/WeaponPrefab.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,24 +46,29 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Attacks/IAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Map/Point.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Attacks/Melee/MeleeScriptableAttack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/IFall.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Enemies/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Helicopter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BCE5E9CF-72A6-4554-937D-40E2CE78291E/d8/ee16a12d/Tile.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Abilities/RocketRainAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Abilities/ExplodeAmmo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/GameDataFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Difficulty.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Levels/LevelData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/CompanyData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.tayx.graphy@008ca2e1b6/Runtime/GraphyDebugger.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Map/SpawnPoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Steel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Game.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Projectiles/Bullets/BulletData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Bro/BroFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/WorldMap.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Projectiles/Bullets/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Abilities/ScriptableAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Bro/Bro.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Map/BlockTilemap.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Dirt.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Company.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Inputs/DirectionInput/IDirectionInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Bro/BroData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Pools/Pool.cs" root0="FORCE_HIGHLIGHTING" />
@@ -132,14 +107,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Projectiles/Bullets/Bullet.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/ShootInput/IShootInput.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/DirectionInput/IDirectionInput.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Bro/BroType.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/GameDataFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/GameParametrs.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Map/Point.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Bro/BroFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/GameTest.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Enemies/AI/BaseAI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/IWeapon.cs" />
@@ -151,15 +118,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/WeaponPrefab.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Levels/MapData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Levels/Map.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/GameData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/MeleeAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ScriptableAttackFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/AbstractAttackFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/MeleeAttackData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/AttackFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Bro/BroData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Bro/Bro.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/ArmedEntityData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/ShootWeaponData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/ArmedEntity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ScriptableAttack.cs" />
@@ -169,19 +133,30 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Healths/IDamageable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Healths/Health.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Projectiles/Projectile.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/EntityData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Abilities/ExplodeAmmo.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Sand.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Map/Tiles/BlockTile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Entity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Attacks/Shoot/ShootScriptableAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Block.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Game.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Levels/LevelData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Attacks/Melee/MeleeAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Map/BlockTilemap.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Levels/GameMap.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/DirectionInput/KeyBoardDirectionInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/ShootInput/KeyBoardAttackInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Inputs/ShootInput/IAttackInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/GameData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Helicopter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/IFall.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Sand.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/EntityData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/ArmedEntityData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Bro/BroData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/WorldMap.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Game.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/CompanyData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Company.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Levels/Level.cs" />
       </list>
     </option>
@@ -193,8 +168,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34991798" />
-    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.300164" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30010834" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -208,10 +183,10 @@
       <option name="pid" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="3188">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="7344">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="3188" />
+      <option name="pid" value="7344" />
       <method v="2" />
     </configuration>
   </component>
@@ -257,6 +232,9 @@
       <workItem from="1633616674012" duration="3856000" />
       <workItem from="1633705158163" duration="1865000" />
       <workItem from="1633773745273" duration="4445000" />
+      <workItem from="1633854959900" duration="252000" />
+      <workItem from="1633855237240" duration="418000" />
+      <workItem from="1633855690355" duration="2721000" />
     </task>
     <servers />
   </component>
@@ -270,74 +248,74 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="478" height="464" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1633776743419" />
-    <state width="1877" height="345" key="GridCell.Tab.0.bottom" timestamp="1633778226608">
+    <state width="1877" height="345" key="GridCell.Tab.0.bottom" timestamp="1633856548107">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1633778226608" />
-    <state width="1877" height="345" key="GridCell.Tab.0.center" timestamp="1633778226608">
+    <state width="1877" height="345" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1633856548107" />
+    <state width="1877" height="345" key="GridCell.Tab.0.center" timestamp="1633856548107">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1633778226608" />
-    <state width="1877" height="345" key="GridCell.Tab.0.left" timestamp="1633778226608">
+    <state width="1877" height="345" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1633856548107" />
+    <state width="1877" height="345" key="GridCell.Tab.0.left" timestamp="1633856548107">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1633778226608" />
-    <state width="1877" height="345" key="GridCell.Tab.0.right" timestamp="1633778226608">
+    <state width="1877" height="345" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1633856548107" />
+    <state width="1877" height="345" key="GridCell.Tab.0.right" timestamp="1633856548107">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1633778226608" />
-    <state width="1877" height="345" key="GridCell.Tab.1.bottom" timestamp="1633778226609">
+    <state width="1877" height="345" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1633856548107" />
+    <state width="1877" height="345" key="GridCell.Tab.1.bottom" timestamp="1633856548107">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1633778226609" />
-    <state width="1877" height="345" key="GridCell.Tab.1.center" timestamp="1633778226608">
+    <state width="1877" height="345" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1633856548107" />
+    <state width="1877" height="345" key="GridCell.Tab.1.center" timestamp="1633856548107">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1633778226608" />
-    <state width="1877" height="345" key="GridCell.Tab.1.left" timestamp="1633778226608">
+    <state width="1877" height="345" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1633856548107" />
+    <state width="1877" height="345" key="GridCell.Tab.1.left" timestamp="1633856548107">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1633778226608" />
-    <state width="1877" height="345" key="GridCell.Tab.1.right" timestamp="1633778226608">
+    <state width="1877" height="345" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1633856548107" />
+    <state width="1877" height="345" key="GridCell.Tab.1.right" timestamp="1633856548107">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1633778226608" />
-    <state width="1877" height="345" key="GridCell.Tab.2.bottom" timestamp="1633778226608">
+    <state width="1877" height="345" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1633856548107" />
+    <state width="1877" height="345" key="GridCell.Tab.2.bottom" timestamp="1633856548107">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1633778226608" />
-    <state width="1877" height="345" key="GridCell.Tab.2.center" timestamp="1633778226608">
+    <state width="1877" height="345" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1633856548107" />
+    <state width="1877" height="345" key="GridCell.Tab.2.center" timestamp="1633856548107">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1633778226608" />
-    <state width="1877" height="345" key="GridCell.Tab.2.left" timestamp="1633778226608">
+    <state width="1877" height="345" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1633856548107" />
+    <state width="1877" height="345" key="GridCell.Tab.2.left" timestamp="1633856548107">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1633778226608" />
-    <state width="1877" height="345" key="GridCell.Tab.2.right" timestamp="1633778226608">
+    <state width="1877" height="345" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1633856548107" />
+    <state width="1877" height="345" key="GridCell.Tab.2.right" timestamp="1633856548107">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1633778226608" />
-    <state width="1877" height="345" key="GridCell.Tab.3.bottom" timestamp="1633778226608">
+    <state width="1877" height="345" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1633856548107" />
+    <state width="1877" height="345" key="GridCell.Tab.3.bottom" timestamp="1633856548107">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1633778226608" />
-    <state width="1877" height="345" key="GridCell.Tab.3.center" timestamp="1633778226608">
+    <state width="1877" height="345" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1633856548107" />
+    <state width="1877" height="345" key="GridCell.Tab.3.center" timestamp="1633856548107">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1633778226608" />
-    <state width="1877" height="345" key="GridCell.Tab.3.left" timestamp="1633778226608">
+    <state width="1877" height="345" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1633856548107" />
+    <state width="1877" height="345" key="GridCell.Tab.3.left" timestamp="1633856548107">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1633778226608" />
-    <state width="1877" height="345" key="GridCell.Tab.3.right" timestamp="1633778226608">
+    <state width="1877" height="345" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1633856548107" />
+    <state width="1877" height="345" key="GridCell.Tab.3.right" timestamp="1633856548107">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="345" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1633778226608" />
-    <state x="832" y="219" key="RiderGenerateDialog" timestamp="1633774381699">
+    <state width="1877" height="345" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1633856548107" />
+    <state x="832" y="219" key="RiderGenerateDialog" timestamp="1633856071854">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="832" y="219" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1633774381699" />
+    <state x="832" y="219" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1633856071854" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1632590056044">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -346,5 +324,50 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1632415685852" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Sand.cs</url>
+          <line>51</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Sand.cs" initialLine="51">
+            <startOffsets>
+              <option value="1195" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1196" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Sand.cs</url>
+          <line>53</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Sand.cs" initialLine="52">
+            <startOffsets>
+              <option value="1245" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1292" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Sand.cs</url>
+          <line>54</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Sand.cs" initialLine="53">
+            <startOffsets>
+              <option value="1309" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1338" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -81,6 +81,8 @@
                 <e p="WeaponPrefab.cs" t="Include" />
               </e>
             </e>
+            <e p="Company.cs" t="Include" />
+            <e p="CompanyData.cs" t="Include" />
             <e p="Difficulty.cs" t="Include" />
             <e p="Entities" t="Include">
               <e p="ArmedEntities" t="Include">
@@ -111,6 +113,7 @@
               <e p="Health.cs" t="Include" />
               <e p="IDamageable.cs" t="Include" />
             </e>
+            <e p="Helicopter.cs" t="Include" />
             <e p="Inputs" t="Include">
               <e p="DirectionInput" t="Include">
                 <e p="IDirectionInput.cs" t="Include" />
@@ -130,6 +133,7 @@
               <e p="Blocks" t="Include">
                 <e p="Block.cs" t="Include" />
                 <e p="Dirt.cs" t="Include" />
+                <e p="IFall.cs" t="Include" />
                 <e p="Sand.cs" t="Include" />
                 <e p="Steel.cs" t="Include" />
               </e>
@@ -155,6 +159,7 @@
               <e p="Projectile.cs" t="Include" />
             </e>
             <e p="Settings.cs" t="Include" />
+            <e p="WorldMap.cs" t="Include" />
           </e>
         </e>
       </e>

@@ -11,6 +11,5 @@ namespace Game
         
         [SerializeField] private Difficulty _difficulty;
         [SerializeField] private LevelData _levelData;
-
     }
 }

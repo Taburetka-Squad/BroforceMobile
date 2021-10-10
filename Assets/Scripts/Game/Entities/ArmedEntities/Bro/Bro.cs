@@ -24,7 +24,7 @@ namespace Game.Entities
         {
             base.Initialize(data);
 
-            _meleeAttack = data.ScriptableAttack.GetInstance(transform);
+            _meleeAttack = data.Attack.GetInstance(transform);
             _ability = data.Ability;
             _slideSpeed = data.SlideSpeed;
         }
