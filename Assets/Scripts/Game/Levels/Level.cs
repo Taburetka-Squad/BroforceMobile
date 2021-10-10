@@ -72,7 +72,7 @@ namespace Game.Levels
         {
             _currentGameMap.MapPassed -= OnMapPassed;
             _player.Dispose();
-            SwitchToNextMap();
+            IR.UnityApplication.StartDynamicCoroutine(SwitchToNextMap());
         }
 
         private void CreatePlayer()
