@@ -1,13 +1,13 @@
-﻿using UnityEngine;
+﻿using Game.Entities.ArmedEntities;
+using UnityEngine;
 
 namespace Game.Entities
 {
-    class Enemy : Entity
+    public class Enemy : ArmedEntity
     {
         // AI
-        protected override bool CanJump { get; }
+        protected override bool CanJump => false;
         
-
         protected override void Die()
         {
             Debug.Log("Enemy Died");

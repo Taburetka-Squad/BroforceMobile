@@ -20,6 +20,9 @@ namespace Game.Abilities
         {
             for (var i = 0; i < _rocketCountPerOneUse; i++)
             {
+                if (startTransform == null)
+                    yield break;
+                
                 var position = startTransform.position;
 
                 var rocket = Instantiate(_prefab, position, Quaternion.Euler(0,0,startTransform.right.x * 90));

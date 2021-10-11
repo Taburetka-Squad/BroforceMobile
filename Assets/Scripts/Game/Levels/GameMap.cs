@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using Game.Entities;
 using Game.Map;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -11,21 +11,36 @@ namespace Game.Levels
         public event Action MapPassed;
 
         [SerializeField] private Tilemap _tilemap;
-        [SerializeField] private SpawnPoint _playerSpawnPoint;
+        [SerializeField] private BroSpawnPoint _playerSpawnPoint;
 
-        private SpawnPoint[] _enemiesSpawnPoints;
+        [SerializeField] private EnemySpawnPoint[] _enemiesSpawnPoints;
         [SerializeField] private CheckPoint[] _checkPoints;
 
         private CheckPoint _lastPassedCheckPoint;
         private BlockTilemap _blockTilemap;
+       
 
-        public void Initialzie()
+        public void Initialzie(EnemyFactory enemyFactory)
         {
+            SpawnEnemies(enemyFactory);
+
             _blockTilemap = new BlockTilemap(_tilemap, transform);
 
             foreach (var checkPoint in _checkPoints)
             {
                 checkPoint.Reached += OnCheckPointReached;
+            }
+        }
+
+        private void SpawnEnemies(EnemyFactory enemyFactory)
+        {
+            foreach (var enemiesSpawnPoint in _enemiesSpawnPoints)
+            {
+                var type = enemiesSpawnPoint.EnemyType;
+                var enemy = enemyFactory.GetEnemy(type);
+                
+                enemiesSpawnPoint.MoveObjectToMe(enemy.transform);
+                enemy.transform.SetParent(transform);
             }
         }
 
@@ -58,7 +73,7 @@ namespace Game.Levels
         #region Editor
 
 #if UNITY_EDITOR
-        
+
         private void OnValidate()
         {
             if (_checkPoints == null)
@@ -76,19 +91,7 @@ namespace Game.Levels
         [ContextMenu("FillEnemiesSpawnPointsArray")]
         private void FillEnemiesSpawnPointsArray()
         {
-            var spawnPoints = new List<SpawnPoint>();
-
-            spawnPoints.AddRange(FindObjectsOfType<SpawnPoint>());
-
-            for (int i = 0; i < spawnPoints.Count; i++)
-            {
-                if (spawnPoints[i] == _playerSpawnPoint)
-                {
-                    spawnPoints.RemoveAt(i);
-                }
-            }
-
-            _enemiesSpawnPoints = spawnPoints.ToArray();
+            _enemiesSpawnPoints = FindObjectsOfType<EnemySpawnPoint>();
         }
 #endif
 
