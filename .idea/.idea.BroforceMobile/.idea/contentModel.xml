@@ -100,6 +100,9 @@
                     <e p="WanderAI.cs" t="Include" />
                   </e>
                   <e p="Enemy.cs" t="Include" />
+                  <e p="EnemyData.cs" t="Include" />
+                  <e p="EnemyFactory.cs" t="Include" />
+                  <e p="EnemyType.cs" t="Include" />
                 </e>
               </e>
               <e p="Entity.cs" t="Include" />
@@ -137,7 +140,9 @@
                 <e p="Steel.cs" t="Include" />
               </e>
               <e p="BlockTilemap.cs" t="Include" />
+              <e p="BroSpawnPoint.cs" t="Include" />
               <e p="CheckPoint.cs" t="Include" />
+              <e p="EnemySpawnPoint.cs" t="Include" />
               <e p="Point.cs" t="Include" />
               <e p="SpawnPoint.cs" t="Include" />
               <e p="Tiles" t="Include">

@@ -13,11 +13,12 @@ namespace Game.Levels
         [SerializeField] private int _startCountPlayerLives;
         [SerializeField] private GameMap[] _gameMapPrefab;
         [SerializeField] private BroFactory _broFactory;
+        [SerializeField] private EnemyFactory _enemyFactory;
 
         public GameMap CreateMapInstance(GameMap gameMapPrefab)
         {
             var instance = Instantiate(gameMapPrefab);
-            instance.Initialzie();
+            instance.Initialzie(_enemyFactory);
             return instance;
         }
     }

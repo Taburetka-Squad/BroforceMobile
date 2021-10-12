@@ -2,7 +2,7 @@
 
 namespace Game.Map
 {
-    public class SpawnPoint : Point
+    public abstract class SpawnPoint : Point
     {
         private void OnDrawGizmos()
         {

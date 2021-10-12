@@ -2,7 +2,7 @@
 
 namespace Game.Map
 {
-    public class Point : MonoBehaviour
+    public abstract class Point : MonoBehaviour
     {
         public void MoveObjectToMe(Transform targetTransform)
         {

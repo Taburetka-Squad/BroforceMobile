@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game.Entities
 {
-    public abstract class BaseAI : ArmedEntity
+    public abstract class BaseAI : Enemy
     {
         [SerializeField] private float _viewDistance;
         [SerializeField] private float _startFireDelay;

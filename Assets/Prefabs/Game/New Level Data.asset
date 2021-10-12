@@ -16,3 +16,4 @@ MonoBehaviour:
   _gameMapPrefab:
   - {fileID: 4311187798747528213, guid: d07288a778053cc479c272705f2f018e, type: 3}
   _broFactory: {fileID: 11400000, guid: 8ebcd969228500e49999db9cc6cb98f3, type: 2}
+  _enemyFactory: {fileID: 11400000, guid: 47547706578f51744952ca850cd94e22, type: 2}

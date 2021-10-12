@@ -2,13 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c97c43c-d2ae-4947-b594-a59615abe769" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Enemies/EnemyData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Enemies/EnemyData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Enemies/EnemyFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Enemies/EnemyFactory.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Enemies/EnemyType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Enemies/EnemyType.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Map/BroSpawnPoint.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Map/BroSpawnPoint.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Map/EnemySpawnPoint.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Map/EnemySpawnPoint.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BroforceMobile/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BroforceMobile/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BroforceMobile/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BroforceMobile/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Entities/Bro/New Rocket Rain Ability.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/Entities/Bro/New Rocket Rain Ability.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Map.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/Map.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Tilemap/Blocks/Sand/Square Variant Variant.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Tilemap/Blocks/Sand/Square Variant Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Tilemap/Blocks/Sand/Sand.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game/Tilemap/Blocks/Sand/Sand.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Tilemap/Blocks/Sand/Square Variant (1) Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game/Tilemap/Blocks/Sand/Square Variant (1) Variant.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/QLab.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/QLab.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Abilities/RocketRainAbility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Abilities/RocketRainAbility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Enemies/AI/BaseAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Enemies/AI/BaseAI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Enemies/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Enemies/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Levels/GameMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Levels/GameMap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Levels/LevelData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Levels/LevelData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Map/Point.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Map/Point.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Map/SpawnPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Map/SpawnPoint.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,12 +51,15 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Abilities/ExplodeAmmo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/GameDataFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Difficulty.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Enemies/EnemyData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Levels/LevelData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/CompanyData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.tayx.graphy@008ca2e1b6/Runtime/GraphyDebugger.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Map/EnemySpawnPoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Map/SpawnPoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Steel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Game.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Enemies/EnemyFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Projectiles/Bullets/BulletData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Bro/BroFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/WorldMap.cs" root0="FORCE_HIGHLIGHTING" />
@@ -47,6 +67,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Abilities/ScriptableAbility.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Bro/Bro.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Map/BlockTilemap.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Map/BroSpawnPoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Dirt.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Company.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Inputs/DirectionInput/IDirectionInput.cs" root0="FORCE_HIGHLIGHTING" />
@@ -83,19 +104,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Enemies/AI/BaseAI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/GameData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BCE5E9CF-72A6-4554-937D-40E2CE78291E/cf/cc219d39/TileBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Enemies/EnemyType.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Enemies/AI/BaseAI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/IWeapon.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/WeaponSlot.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/IAttack.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Attack.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/ShootWeapon.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/WeaponData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Weapons/WeaponPrefab.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Levels/MapData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Levels/Map.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/MeleeAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ScriptableAttackFactory.cs" />
@@ -117,7 +130,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/Entity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Attacks/Shoot/ShootScriptableAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Map/Blocks/Block.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Levels/LevelData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Attacks/Melee/MeleeAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Map/BlockTilemap.cs" />
@@ -136,8 +148,18 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/CompanyData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Company.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Levels/Level.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Abilities/RocketRainAbility.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Map/BroSpawnPoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Map/EnemySpawnPoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Levels/LevelData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Enemies/AI/BaseAI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Enemies/EnemyData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Enemies/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Enemies/EnemyFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entities/ArmedEntities/Enemies/EnemyType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Map/Point.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Map/SpawnPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Levels/GameMap.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Abilities/RocketRainAbility.cs" />
       </list>
     </option>
   </component>
@@ -216,7 +238,9 @@
       <workItem from="1633855237240" duration="418000" />
       <workItem from="1633855690355" duration="2748000" />
       <workItem from="1633860129512" duration="284000" />
-      <workItem from="1633860572551" duration="389000" />
+      <workItem from="1633860572551" duration="699000" />
+      <workItem from="1633865058023" duration="1439000" />
+      <workItem from="1633955263496" duration="2036000" />
     </task>
     <servers />
   </component>
@@ -302,9 +326,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1632590056044" />
-    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1632415685852">
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1633865609524">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1632415685852" />
+    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1633865609524" />
   </component>
 </project>
