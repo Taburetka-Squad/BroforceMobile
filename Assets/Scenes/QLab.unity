@@ -168,28 +168,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &718709664
+--- !u!1001 &1012475144
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3373378584941458253, guid: 122eca32dd24a5640999f8b9818bac85, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3943122359388362632, guid: 122eca32dd24a5640999f8b9818bac85, type: 3}
       propertyPath: m_Name
       value: DummyBot
       objectReference: {fileID: 0}
+    - target: {fileID: 3943122359388362632, guid: 122eca32dd24a5640999f8b9818bac85, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5158410587378111113, guid: 122eca32dd24a5640999f8b9818bac85, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5158410587378111113, guid: 122eca32dd24a5640999f8b9818bac85, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.07
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5158410587378111113, guid: 122eca32dd24a5640999f8b9818bac85, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 28.38
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5158410587378111113, guid: 122eca32dd24a5640999f8b9818bac85, type: 3}
       propertyPath: m_LocalPosition.z
@@ -246,7 +254,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22451668, guid: 0abab5bb77339e4428787a870eb31bd3, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 22451668, guid: 0abab5bb77339e4428787a870eb31bd3, type: 3}
       propertyPath: m_AnchorMax.x

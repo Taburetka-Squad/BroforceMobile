@@ -7,7 +7,7 @@ namespace Game.Entities
     {
         [SerializeField] private float _viewDistance;
         [SerializeField] private float _startFireDelay;
-        [SerializeField] private ArmedEntityData _data;
+        [SerializeField] protected ArmedEntityData _data;
 
         private void Start()
         {

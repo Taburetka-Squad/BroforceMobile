@@ -12,6 +12,7 @@ namespace Game.Entities
         private void Start()
         {
             _tree = new BehaviorTreeBuilder(gameObject).Do("1121212", Fire).End().Build();
+            base.Initialize(_data);
         }
         private void Update()
         {
