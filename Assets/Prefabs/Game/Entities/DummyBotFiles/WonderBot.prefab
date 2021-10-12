@@ -1,23 +1,25 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &3657268586370044372
+--- !u!114 &8843571223246070185
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3943122359388362632}
+  m_GameObject: {fileID: 5438080837477354915}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e6939f23cf98364f8b535330b645fe6, type: 3}
+  m_Script: {fileID: 11500000, guid: b4537cd7d7b47e548a3a751586ba4277, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GroundCollider: {fileID: 2992676236253278267}
+  GroundCollider: {fileID: 6072864949521951248}
   _weaponSpawnPoint: {fileID: 0}
   _viewDistance: 10
   _startFireDelay: 1
-  _data: {fileID: 11400000, guid: 3203aa7868d9b5a49bd8f08e6a5c5876, type: 2}
---- !u!1001 &4166903354363318169
+  _data: {fileID: 11400000, guid: 3d3a8d7aebf5cf946a15dab6208e5721, type: 2}
+  _movementRange: 5
+  _movementDelay: 2
+--- !u!1001 &4908054805076350386
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -26,19 +28,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1111008546474678289, guid: 0541ed76d2221e54b8080ecb75f0b6f0, type: 3}
       propertyPath: m_Name
-      value: DummyBot
+      value: WonderBot
       objectReference: {fileID: 0}
-    - target: {fileID: 1658298234020166868, guid: 0541ed76d2221e54b8080ecb75f0b6f0, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 3c5984cb6f61fc545a82cb8dfdf99692, type: 2}
     - target: {fileID: 7851893413208522453, guid: 0541ed76d2221e54b8080ecb75f0b6f0, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 0.12549019
       objectReference: {fileID: 0}
     - target: {fileID: 7851893413208522453, guid: 0541ed76d2221e54b8080ecb75f0b6f0, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851893413208522453, guid: 0541ed76d2221e54b8080ecb75f0b6f0, type: 3}
+      propertyPath: m_Color.r
+      value: 0.206117
       objectReference: {fileID: 0}
     - target: {fileID: 9098832138269941008, guid: 0541ed76d2221e54b8080ecb75f0b6f0, type: 3}
       propertyPath: m_RootOrder
@@ -46,11 +48,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9098832138269941008, guid: 0541ed76d2221e54b8080ecb75f0b6f0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.1135478
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9098832138269941008, guid: 0541ed76d2221e54b8080ecb75f0b6f0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.088728
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9098832138269941008, guid: 0541ed76d2221e54b8080ecb75f0b6f0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -86,13 +88,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0541ed76d2221e54b8080ecb75f0b6f0, type: 3}
---- !u!1 &3943122359388362632 stripped
+--- !u!1 &5438080837477354915 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1111008546474678289, guid: 0541ed76d2221e54b8080ecb75f0b6f0, type: 3}
-  m_PrefabInstance: {fileID: 4166903354363318169}
+  m_PrefabInstance: {fileID: 4908054805076350386}
   m_PrefabAsset: {fileID: 0}
---- !u!61 &2992676236253278267 stripped
+--- !u!61 &6072864949521951248 stripped
 BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 1178764049552555938, guid: 0541ed76d2221e54b8080ecb75f0b6f0, type: 3}
-  m_PrefabInstance: {fileID: 4166903354363318169}
+  m_PrefabInstance: {fileID: 4908054805076350386}
   m_PrefabAsset: {fileID: 0}
