@@ -1,20 +1,17 @@
-﻿using DefaultNamespace;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Game.Inputs.DirectionInput
 {
     public class KeyBoardDirectionInput : IDirectionInput
     {
-        public Vector2 Direction =>
-            new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-
-
-     /*   public void ReadInput()
+        public Vector2 Direction { get; private set; }
+        
+        public void ReadInput()
         {
-            var horizontalDirection = Input.GetAxisRaw("Horizontal");
-            var verticalDirection = Input.GetAxisRaw("Vertical");
+            var horizontalDirection = UnityEngine.Input.GetAxisRaw("Horizontal");
+            var verticalDirection = UnityEngine.Input.GetAxisRaw("Vertical");
 
             Direction = new Vector2(horizontalDirection, verticalDirection);
-        }*/
+        }
     }
 }

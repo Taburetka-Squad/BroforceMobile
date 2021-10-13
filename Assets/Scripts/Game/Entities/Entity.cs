@@ -2,6 +2,7 @@
 using UnityEngine;
 using Game.Healths;
 using Game.Inputs.DirectionInput;
+using Input = Game.Inputs.Input;
 
 namespace Game.Entities
 {
@@ -10,10 +11,11 @@ namespace Game.Entities
     public abstract class Entity : MonoBehaviour, IDamageable
     {
         public Health Health { get; private set; }
-        
+
         [SerializeField] protected BoxCollider2D GroundCollider;
 
-        protected IDirectionInput DirectionInput = new KeyBoardDirectionInput();
+        protected Input Input;
+        protected IDirectionInput DirectionInput;
 
         private float _speed;
         private float _jumpForce;
@@ -22,19 +24,23 @@ namespace Game.Entities
         protected abstract bool CanJump { get; }
 
         protected Rigidbody2D Rigidbody;
-        
+
         private float _lastJumpTime;
 
         private void Awake()
         {
             Rigidbody = GetComponent<Rigidbody2D>();
         }
+
         public void Initialize(EntityData data)
         {
+            Input = new Input();
+            Input.AddInputToUpdateQueue(DirectionInput);
+            
             _speed = data.Speed;
             _jumpForce = data.JumpForce;
             _jumpDelay = data.JumpDelay;
-            
+
             Health = new Health(data.BaseHitPoints);
             Health.Died += OnDied;
         }
@@ -44,18 +50,21 @@ namespace Game.Entities
             Health.Died -= OnDied;
             Die();
         }
+
         protected abstract void Die();
 
         protected void Move(Vector2 direction)
         {
             Rigidbody.velocity = new Vector2(direction.x * _speed, Rigidbody.velocity.y);
         }
+
         protected void Rotate(Vector2 direction)
         {
             if (direction.x == 0) return;
 
             transform.right = Vector2.right * direction.x;
         }
+
         protected void Jump()
         {
             var isTimeOver = Time.time > _lastJumpTime + _jumpDelay;
@@ -66,6 +75,5 @@ namespace Game.Entities
                 Rigidbody.velocity = Vector2.up * _jumpForce;
             }
         }
-
     }
 }

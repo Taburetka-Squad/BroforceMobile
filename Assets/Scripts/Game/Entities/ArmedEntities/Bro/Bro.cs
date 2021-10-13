@@ -42,18 +42,13 @@ namespace Game.Entities
         private void Update()
         {
             _direction = DirectionInput.Direction;
-
-            if (AttackInput.CanShoot)
-            {
-                Attack();
-            }
-
-            if (Input.GetKeyDown(KeyCode.Q))
+            
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Q))
             {
                 _meleeAttack.Attack();
             }
 
-            if (Input.GetKeyDown(KeyCode.Mouse1))
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Mouse1))
             {
                 UseAbility();
             }

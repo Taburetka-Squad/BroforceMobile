@@ -18,8 +18,9 @@ namespace Game.Entities.ArmedEntities
         {
             base.Initialize(data);
             _attack = data.ScriptableAttack.GetInstance(transform);
-
-            //      AttackInput.Shot += Attack;
+            
+            Input.AddInputToUpdateQueue(AttackInput);
+            AttackInput.Shot += Attack;
         }
 
         protected void Attack()

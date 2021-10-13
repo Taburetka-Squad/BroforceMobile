@@ -3,7 +3,7 @@
 namespace Game.Entities
 {
     [CreateAssetMenu(menuName = "EntityData/EntityData", order = 0)]
-    public class EntityData : ScriptableObject
+    public abstract class EntityData : ScriptableObject
     {
         public float Speed => _speed;
         public float JumpForce => _jumpForce;

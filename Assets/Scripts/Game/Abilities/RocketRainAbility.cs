@@ -24,9 +24,10 @@ namespace Game.Abilities
                     yield break;
                 
                 var position = startTransform.position;
-
-                var rocket = Instantiate(_prefab, position, Quaternion.Euler(0,0,startTransform.right.x * 90));
-                rocket.Launch(startTransform.right, _speed);
+                var right = startTransform.right;
+                
+                var rocket = Instantiate(_prefab, position, Quaternion.Euler(0,0,right.x * 90));
+                rocket.Launch(right, _speed);
                 
                 yield return new WaitForSeconds(_launchDelay);
             }

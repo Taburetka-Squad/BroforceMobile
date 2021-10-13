@@ -57,6 +57,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="AppStart.cs" t="Include" />
           <e p="Game" t="Include">
             <e p="Abilities" t="Include">
               <e p="ExplodeAmmo.cs" t="Include" />
@@ -121,6 +122,8 @@
                 <e p="IDirectionInput.cs" t="Include" />
                 <e p="KeyBoardDirectionInput.cs" t="Include" />
               </e>
+              <e p="IInput.cs" t="Include" />
+              <e p="Input.cs" t="Include" />
               <e p="ShootInput" t="Include">
                 <e p="IAttackInput.cs" t="Include" />
                 <e p="KeyBoardAttackInput.cs" t="Include" />
