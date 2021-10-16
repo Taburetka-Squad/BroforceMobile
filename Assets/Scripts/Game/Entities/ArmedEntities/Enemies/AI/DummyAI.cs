@@ -10,19 +10,13 @@ namespace Game.Entities
 
         private void Start()
         {
-            _tree = new BehaviorTreeBuilder(gameObject).Sequence().Condition(CanShoot).Do(FireLog).Do(Fire).End().Build();
+            _tree = new BehaviorTreeBuilder(gameObject).Sequence().Condition(CanShoot).Do(Fire).End().Build();
 
             Initialize(_data);
         }
         private void Update()
         {
             _tree.Tick();
-        }
-
-        private TaskStatus FireLog()
-        {
-            Debug.Log("Бот выстрелил");
-            return TaskStatus.Success;
         }
     }
 }

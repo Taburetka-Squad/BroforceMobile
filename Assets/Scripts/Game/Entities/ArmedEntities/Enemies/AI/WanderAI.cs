@@ -7,16 +7,21 @@ namespace Game.Entities
 {
     public class WanderAI : Enemy
     {
-        [SerializeField] private float _movementRange;
         [SerializeField] private float _movementDelay;
+
+        private float _lastMoveTime;
         protected override bool CanJump => false;
 
         private void Start()
         {
-            _tree = new BehaviorTreeBuilder(gameObject).Sequence().
-                Condition(CanMove).Do(Go).WaitTime(_movementDelay).
-                Condition(CanShoot).Do(Fire).
-                End().Build();
+            _tree = new BehaviorTreeBuilder(gameObject).Parallel().
+                Sequence().
+                    Condition(CanShoot).Do(Fire).
+                End().
+                Sequence().
+                    Condition(CanMove).Do(Go).
+                End().
+                Build();
 
             Initialize(_data);
         }
@@ -27,12 +32,17 @@ namespace Game.Entities
 
         private bool CanMove()
         {
-            return true;
+            if (Time.time > _lastMoveTime + _movementDelay)
+            {
+                _lastMoveTime = Time.time;
+                return true;
+            }
+
+            return false;
         }
         private TaskStatus Go()
         {
             Vector2 moveDirection = new Vector2(Random.Range(-1, 2), 0);
-            Debug.Log(moveDirection);
 
             Move(moveDirection);
             Rotate(moveDirection);

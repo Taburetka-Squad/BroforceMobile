@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be9b57eceb94730a60b78f6bfa3e939, type: 3}
+  m_Name: TapLevelData
+  m_EditorClassIdentifier: 
+  _startCountPlayerLives: 2
+  _gameMapPrefab:
+  - {fileID: 5542508947234321977, guid: 3352b000d7dae924aa60fea7fad1a21d, type: 3}
+  _broFactory: {fileID: 11400000, guid: 8ebcd969228500e49999db9cc6cb98f3, type: 2}
+  _enemyFactory: {fileID: 11400000, guid: 47547706578f51744952ca850cd94e22, type: 2}

@@ -19,6 +19,7 @@ namespace Game.Entities
         protected override void Die()
         {
             Debug.Log("Enemy Died");
+            Destroy(gameObject);
         }
 
         private void Start()
@@ -48,7 +49,8 @@ namespace Game.Entities
         }
         private RaycastHit2D Look()
         {
-            return Physics2D.Raycast(transform.position, Vector2.right, _viewDistance);
+            Debug.DrawRay(transform.position, transform.right * _viewDistance);
+            return Physics2D.Raycast(transform.position, transform.right, _viewDistance);
         }
     }
 }

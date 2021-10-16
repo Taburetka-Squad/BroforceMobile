@@ -15,7 +15,7 @@ MonoBehaviour:
   _speed: 7
   _jumpForce: 20
   _jumpDelay: 0.5
-  _baseHitPoints: 0
+  _baseHitPoints: 1
   _entityPrefab: {fileID: 0}
   _armedEntityPrefab: {fileID: 0}
   _scriptableAttack: {fileID: 11400000, guid: 0df4e7fc9d8a133418da8168de37978a, type: 2}

@@ -211,6 +211,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WonderBot
       objectReference: {fileID: 0}
+    - target: {fileID: 8843571223246070185, guid: 8931876bdb4c2aa488c00497f3fa362d, type: 3}
+      propertyPath: _movementDelay
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8931876bdb4c2aa488c00497f3fa362d, type: 3}
 --- !u!1001 &1915350866

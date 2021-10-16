@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GroundCollider: {fileID: 6072864949521951248}
   _weaponSpawnPoint: {fileID: 0}
-  _viewDistance: 10
+  _viewDistance: 5
   _startFireDelay: 1
   _data: {fileID: 11400000, guid: 3d3a8d7aebf5cf946a15dab6208e5721, type: 2}
   _movementRange: 5
-  _movementDelay: 2
+  _movementDelay: 1
 --- !u!1001 &4908054805076350386
 PrefabInstance:
   m_ObjectHideFlags: 0
